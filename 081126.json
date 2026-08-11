@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "title": "Cybersecurity briefing",
+    "overview": {
+      "executive_summary": "The cycle is dominated by ransomware and infrastructure exposure, with Gunra targeting government, critical infrastructure, and other organizations through double extortion. Newly exploited flaws in SonicWall SMA1000 and Progress Kemp LoadMaster create urgent patching priorities, while a Polish heat-and-power plant incident highlights the operational risk of private network access to industrial systems. Supply-chain compromises affecting WordPress plugins and AI coding tools show how trusted software and services can become channels for account creation or data theft. Research also points to evolving threats against Windows Plug and Play, passkeys, and organizations using AI-enabled workflows.",
+      "sections": [
+        {
+          "heading": "Gunra ransomware expands its reach",
+          "what_happened": "CISA reported that Gunra is a ransomware-as-a-service operation whose affiliates target government, critical infrastructure, and other organizations. The operators use double extortion by encrypting data and threatening to publish stolen information, and the advisory includes detection and mitigation guidance.",
+          "why_it_matters": "Organizations in exposed sectors face both operational disruption and data-publication pressure.",
+          "recommended_attention": "Prioritize patching internet-facing systems, protect offline immutable backups, and segment networks."
+        },
+        {
+          "heading": "Ransomware gangs exploit SonicWall SMA1000 flaws",
+          "what_happened": "CISA confirmed that ransomware groups are exploiting two recently patched vulnerabilities in SonicWall SMA1000 appliances, including a maximum-severity server-side request forgery flaw.",
+          "why_it_matters": "Affected appliances can provide attackers with an entry point into organizational networks.",
+          "recommended_attention": "Verify patch status and investigate exposed SMA1000 systems for signs of exploitation."
+        },
+        {
+          "heading": "Critical LoadMaster flaw actively exploited",
+          "what_happened": "CISA warned that hackers are exploiting a critical-severity command injection vulnerability in Progress Kemp LoadMaster.",
+          "why_it_matters": "Internet-facing load-balancing infrastructure is a high-value target and compromise could affect access to multiple services.",
+          "recommended_attention": "Apply available fixes and closely monitor LoadMaster devices for suspicious activity."
+        },
+        {
+          "heading": "Private network breach disrupts Polish power plant",
+          "what_happened": "Attackers accessed a Polish combined heat and power plant through the private cellular network used to reach remote operational technology equipment. They shut down a steam turbine and the process-water treatment system; the plant supplies heat to roughly 50,000 residents.",
+          "why_it_matters": "The incident demonstrates how remote-access paths can affect industrial operations and public services.",
+          "recommended_attention": "Review private network access, remote equipment exposure, and operational technology segmentation."
+        },
+        {
+          "heading": "BdThemes supply-chain attack creates WordPress admins",
+          "what_happened": "A threat actor compromised BdThemes infrastructure and modified a remote JSON feed delivered to administrators’ browsers, creating rogue WordPress administrator accounts. WordPress temporarily disabled plugin downloads while investigating.",
+          "why_it_matters": "Trusted plugin update or browser-delivered content can grant attackers administrative control without modifying repository source files.",
+          "recommended_attention": "Audit BdThemes plugin activity and WordPress administrator accounts for unauthorized changes."
+        },
+        {
+          "heading": "Windows Plug and Play path reaches SYSTEM",
+          "what_happened": "Researchers showed that Windows Plug and Play can fetch signed vendor software for an emulated USB device and execute privileged installation components, reaching SYSTEM access on a fully updated Windows 11 machine. The same path may be triggered over Remote Desktop when supported Plug and Play or low-level USB redirection is enabled.",
+          "why_it_matters": "Local or remote device-redirection features could provide a path to highly privileged execution.",
+          "recommended_attention": "Review Plug and Play and Remote Desktop redirection settings and monitor privileged installation activity."
+        },
+        {
+          "heading": "Malicious MCP servers target AI coding workflows",
+          "what_happened": "Researchers described how a malicious tool server connected to an AI coding assistant can split data-theft instructions into individually routine-looking fragments. The technique can target SSH keys, environment secrets, source code, and customer data, including after a direct theft request is refused.",
+          "why_it_matters": "AI assistants may execute a sequence of seemingly benign actions that collectively exfiltrate sensitive information.",
+          "recommended_attention": "Restrict tool-server trust, limit assistant access to secrets, and inspect multi-step tool activity."
+        },
+        {
+          "heading": "Kimsuky builds an offline AI stack",
+          "what_happened": "The North Korean espionage group Kimsuky has begun running artificial intelligence offline on its own servers, connecting document-search tools to collected files and gathering software components for AI-enabled malware development.",
+          "why_it_matters": "Offline AI infrastructure may improve phishing, document analysis, and malware development while reducing reliance on public services.",
+          "recommended_attention": "Monitor for AI-assisted phishing and malware-development indicators in relevant threat activity."
+        },
+        {
+          "heading": "Passkey protections face new attack paths",
+          "what_happened": "Three research efforts demonstrated ways to defeat passkey protections without breaking their underlying cryptography. The approaches reused signed authentication material exposed by Windows, abused a cloud-synced passkey system from malware already on a victim’s machine, and used another attack path described by the researchers.",
+          "why_it_matters": "Phishing-resistant authentication can still be undermined by endpoint compromise and weaknesses in surrounding synchronization or authentication systems.",
+          "recommended_attention": "Assess endpoint protections, passkey synchronization controls, and authentication telemetry."
+        },
+        {
+          "heading": "TrueConf servers used to replace installers",
+          "what_happened": "The Head Mare threat actor exploited vulnerabilities in unpatched TrueConf servers in attacks against Russian companies in instrumentation, electronics, transport, energy, information technology, and software development. The activity involved replacing client installers with PhantomCore.",
+          "why_it_matters": "Compromised collaboration infrastructure can distribute malware to organizations across multiple sectors.",
+          "recommended_attention": "Patch TrueConf servers and validate the integrity of distributed client installers."
+        },
+        {
+          "heading": "LexisNexis services taken offline after suspicious activity",
+          "what_happened": "LexisNexis took its Diligence, Metabase API, and Newsdesk services offline while responding to unusual activity on servers hosted and managed by an unnamed third-party vendor.",
+          "why_it_matters": "The incident shows how third-party infrastructure issues can interrupt multiple services at once.",
+          "recommended_attention": "Monitor service availability and review dependencies on affected LexisNexis platforms."
+        },
+        {
+          "heading": "Valve reports breach affecting Steam hardware customers",
+          "what_happened": "Valve notified Steam hardware customers in Europe that hackers stole their data after compromising its shipping partner, CEVA Logistics.",
+          "why_it_matters": "The incident exposes customer information through a logistics-provider compromise rather than Valve’s own systems.",
+          "recommended_attention": "Affected customers and partners should review breach notifications and monitor accounts for follow-on abuse."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "#StopRansomware: Gunra Ransomware",
+        "published_at": "2026-08-10T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a",
+        "category": "ransomware",
+        "summary": "CISA reported that Gunra is a ransomware-as-a-service operation targeting government, critical infrastructure, and other organizations. It uses double extortion by encrypting data and threatening to publish exfiltrated information.",
+        "why_it_matters": "Organizations in exposed sectors face both disruption and data-publication pressure."
+      },
+      {
+        "title": "CISA: SonicWall SMA1000 flaws now exploited by ransomware gangs",
+        "published_at": "2026-08-10T14:34:32+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/cisa-sonicwall-sma1000-flaws-now-exploited-by-ransomware-gangs/",
+        "category": "vulnerability",
+        "summary": "CISA confirmed that ransomware gangs are exploiting two recently patched SonicWall SMA1000 vulnerabilities, including a maximum-severity server-side request forgery flaw.",
+        "why_it_matters": "Compromised appliances can provide attackers with an entry point into organizational networks."
+      },
+      {
+        "title": "Critical Progress LoadMaster flaw now actively exploited in attacks",
+        "published_at": "2026-08-10T09:49:37+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-progress-loadmaster-flaw-exploited-in-attacks/",
+        "category": "vulnerability",
+        "summary": "CISA warned that hackers are exploiting a critical-severity command injection vulnerability in Progress Kemp LoadMaster.",
+        "why_it_matters": "Load-balancing infrastructure can be a high-value entry point affecting multiple services."
+      },
+      {
+        "title": "Hackers breached a small Polish energy plant via private APN last year",
+        "published_at": "2026-08-10T23:07:21+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-breached-a-small-polish-energy-plant-via-private-apn-last-year/",
+        "category": "breach",
+        "summary": "Hackers breached a Polish heat-and-power plant through a private APN to access an operational technology network. The facility supplies heat to about 50,000 residents.",
+        "why_it_matters": "Remote-access paths to industrial networks can create risks for essential services."
+      },
+      {
+        "title": "BdThemes plugins supply-chain hack creates rogue WordPress admins",
+        "published_at": "2026-08-10T21:12:10+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/bdthemes-plugins-supply-chain-hack-creates-rogue-wordpress-admins/",
+        "category": "breach",
+        "summary": "An attacker compromised BdThemes infrastructure and modified a remote JSON feed delivered to administrators’ browsers to create rogue WordPress administrator accounts.",
+        "why_it_matters": "Trusted plugin-related infrastructure can be abused to obtain administrative control."
+      },
+      {
+        "title": "Researchers Turn USB Auto-Install Into a Full SYSTEM Takeover on Windows 11",
+        "published_at": "2026-08-11T10:48:26+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/researchers-turn-usb-auto-install-into.html",
+        "category": "research",
+        "summary": "Researchers showed that Windows Plug and Play can fetch signed vendor software for an emulated USB device and execute privileged installation components to reach SYSTEM access on fully updated Windows 11. The path can also be triggered over Remote Desktop when certain redirection features are enabled.",
+        "why_it_matters": "Device-redirection features could provide a route to highly privileged execution."
+      },
+      {
+        "title": "Malicious MCP Servers Can Split Instructions to Make AI Coding Agents Exfiltrate Secrets",
+        "published_at": "2026-08-11T10:24:00+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/malicious-mcp-servers-can-split.html",
+        "category": "research",
+        "summary": "A malicious tool server connected to an AI coding assistant can split theft instructions into routine-looking fragments. The technique can target SSH keys, environment secrets, source code, and customer data.",
+        "why_it_matters": "AI assistants may collectively execute benign-looking steps that exfiltrate sensitive information."
+      },
+      {
+        "title": "Kimsuky Builds Offline AI Stack to Boost Phishing and Automate Malware Development",
+        "published_at": "2026-08-10T13:19:58+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/kimsuky-builds-offline-ai-stack-that.html",
+        "category": "malware",
+        "summary": "Kimsuky has begun running artificial intelligence offline on its own servers, connecting document-search tools to collected files and gathering software components for AI-enabled malware development.",
+        "why_it_matters": "Offline AI infrastructure may improve phishing and malware development while reducing reliance on public services."
+      },
+      {
+        "title": "New Passkey Attacks Can Recover Synced Private Keys or Bypass Phishing-Resistant MFA",
+        "published_at": "2026-08-10T12:25:04+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/new-passkey-attacks-can-recover-synced.html",
+        "category": "research",
+        "summary": "Three research efforts demonstrated ways to defeat passkey protections without breaking their cryptography, including reuse of authentication material exposed by Windows and abuse of a cloud-synced passkey system from malware on the victim’s machine.",
+        "why_it_matters": "Endpoint compromise and synchronization weaknesses can undermine phishing-resistant authentication."
+      },
+      {
+        "title": "TrueConf Server Flaws Exploited to Replace Client Installers with PhantomCore",
+        "published_at": "2026-08-10T11:33:41+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/head-mare-exploits-trueconf-flaws-to.html",
+        "category": "vulnerability",
+        "summary": "Head Mare exploited flaws in unpatched TrueConf servers in attacks against Russian companies across several sectors. The activity involved replacing client installers with PhantomCore.",
+        "why_it_matters": "Compromised collaboration infrastructure can distribute malware to many organizations."
+      },
+      {
+        "title": "LexisNexis shuts down services after suspicious activity on servers",
+        "published_at": "2026-08-10T12:11:52+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/lexisnexis-shuts-down-services-after-suspicious-activity-on-servers/",
+        "category": "breach",
+        "summary": "LexisNexis took its Diligence, Metabase API, and Newsdesk services offline while responding to unusual activity on servers hosted and managed by an unnamed third-party vendor.",
+        "why_it_matters": "Third-party infrastructure issues can interrupt several dependent services simultaneously."
+      },
+      {
+        "title": "Valve notifies Steam hardware customers of a data breach",
+        "published_at": "2026-08-10T11:47:55+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/valve-notifies-steam-hardware-customers-of-a-data-breach/",
+        "category": "breach",
+        "summary": "Valve notified Steam hardware customers in Europe that hackers stole their data after compromising its shipping partner, CEVA Logistics.",
+        "why_it_matters": "Customer data can be exposed through a logistics-provider compromise."
+      }
+    ],
+    "generated_at": "2026-08-11T12:00:05.355304+00:00",
+    "window_start": "2026-08-09T12:00:05.355304+00:00",
+    "window_end": "2026-08-11T12:00:05.355304+00:00"
+  },
+  "tts": {
+    "text": "Here’s today’s cybersecurity briefing. First up, CISA says Gunra ransomware is targeting government, critical infrastructure, and other organizations with double extortion: data is encrypted, then threatened for publication. Organizations should prioritize patching internet-facing systems, immutable offline backups, and network segmentation. Two urgent vulnerability stories follow: ransomware gangs are exploiting SonicWall SMA1000 flaws, including a maximum-severity server-side request forgery issue, and attackers are actively exploiting a critical command injection flaw in Progress Kemp LoadMaster. Here’s why that matters: both products can sit at important network boundaries. One thing to keep an eye on is industrial access. Attackers reached a Polish heat-and-power plant through a private cellular network and disrupted a turbine and water-treatment system, although customers lost neither heat nor power. Supply-chain risk is also prominent: compromised BdThemes infrastructure created rogue WordPress administrators, while research shows malicious tool servers can split instructions and trick AI coding assistants into exfiltrating secrets. Finally, researchers report new passkey attack paths, Kimsuky’s offline artificial intelligence stack, and TrueConf server compromises used to replace client installers. LexisNexis and Valve also reported service disruption or customer-data exposure tied to third-party systems."
+  }
+}
