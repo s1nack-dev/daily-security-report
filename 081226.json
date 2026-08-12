@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "title": "Cybersecurity briefing",
+    "overview": {
+      "executive_summary": "The news cycle is dominated by actively exploited vulnerabilities, high-severity product flaws, and attacks affecting critical infrastructure and enterprise software. CISA added three vulnerabilities to its Known Exploited Vulnerabilities Catalog, while separate reports described exploitation of SharePoint, VMware vCenter, and Cisco firewall weaknesses. Ransomware operations are also adapting through decentralized infrastructure, while supply-chain compromises and malware delivered through trusted tools continue to threaten organizations. Healthcare devices, industrial systems, software ecosystems, and IT professionals all feature prominently in the latest risk picture.",
+      "sections": [
+        {
+          "heading": "CISA Adds Three Vulnerabilities to Its Exploited Catalog",
+          "what_happened": "CISA added CVE-2026-20349 affecting Cisco Secure Firewall ASA and FTD, CVE-2026-68820 affecting a Microsoft Windows WinSock driver, and CVE-2026-72898 affecting Metabase to its Known Exploited Vulnerabilities Catalog. CISA said the additions were based on evidence of active exploitation.",
+          "why_it_matters": "These vulnerabilities pose significant risks to federal enterprises and are identified as active attack vectors requiring prioritized remediation on exposed assets.",
+          "recommended_attention": "Prioritize review and remediation of the three listed vulnerabilities, especially on publicly exposed systems."
+        },
+        {
+          "heading": "Johnson Controls Servers Expose Remote Code Execution Risk",
+          "what_happened": "CISA reported vulnerabilities in Johnson Controls C-CURE 9000 and Victor application products. Successful exploitation could allow an unauthenticated attacker with adjacent network access to achieve arbitrary code execution on servers, connected clients, and workstations used by physical security personnel.",
+          "why_it_matters": "The affected products support physical security operations in critical manufacturing environments, creating potential consequences for both enterprise systems and connected clients.",
+          "recommended_attention": "Identify affected C-CURE and Victor deployments and monitor adjacent-network access to these systems."
+        },
+        {
+          "heading": "Pulsetto Stimulator Accepts Unauthenticated Hidden Commands",
+          "what_happened": "CISA reported that affected Pulsetto Vagus Nerve Stimulator firmware accepts undisclosed commands over Bluetooth Low Energy without authentication or encryption. The commands are not issued by the companion application but are processed when the device is powered on, potentially allowing safety mechanisms or stimulation settings to be changed.",
+          "why_it_matters": "The flaw could affect electrical safety controls and stimulation output in a healthcare product deployed worldwide.",
+          "recommended_attention": "Track vendor response and isolate or otherwise mitigate affected devices until remediation guidance is available."
+        },
+        {
+          "heading": "Mira Monitor and App Flaws Threaten Health Data and Accounts",
+          "what_happened": "CISA identified eight vulnerabilities affecting Mira Hormone Monitor firmware and the Mira Android App. The reported impacts include unauthorized access to health profile information, changes to health information, denial of service, session-token disclosure, and control of user accounts.",
+          "why_it_matters": "The vulnerabilities carry a CVSS score of 9.8 and span both medical-device firmware and its companion application.",
+          "recommended_attention": "Inventory affected Mira versions and prioritize protections for health information, session tokens, and user accounts."
+        },
+        {
+          "heading": "ShieldBreak PoC Claims Microsoft Defender Patch Bypass",
+          "what_happened": "A researcher released a proof-of-concept for ShieldBreak, a Microsoft Defender for Windows zero-day. The report says it demonstrates a patch bypass for CVE-2026-50656, also known as RoguePlanet, with SYSTEM access.",
+          "why_it_matters": "A patch bypass involving Defender and SYSTEM-level access could increase the impact of exploitation on Windows systems.",
+          "recommended_attention": "Monitor Microsoft and security-researcher updates and review exposure to the referenced Defender vulnerability."
+        },
+        {
+          "heading": "Microsoft August Updates Address Hundreds of Flaws",
+          "what_happened": "Microsoft released its August 2026 security updates covering 398 flaws, according to one report, while another described the cycle as addressing 400 flaws and three zero-days. One actively exploited issue affects a Windows kernel driver handling network socket operations and can allow escalation to SYSTEM when an attacker already has code running on a machine.",
+          "why_it_matters": "The scale of the update and the presence of active exploitation create broad patch-management pressure across Windows environments.",
+          "recommended_attention": "Prioritize the actively exploited Windows driver issue and assess deployment of the broader August security updates."
+        },
+        {
+          "heading": "SharePoint Flaw Moves Into Ransomware Activity",
+          "what_happened": "CISA confirmed that ransomware gangs have begun abusing a high-severity Microsoft SharePoint remote-code-execution vulnerability. The flaw had been flagged as actively exploited since early July.",
+          "why_it_matters": "Use of the vulnerability by ransomware actors raises the risk of compromise for organizations operating affected SharePoint environments.",
+          "recommended_attention": "Prioritize exposure assessment and remediation for affected SharePoint servers, with particular attention to ransomware indicators."
+        },
+        {
+          "heading": "DeadLock Uses Blockchain-Backed Extortion Infrastructure",
+          "what_happened": "DeadLock ransomware was observed using decentralized infrastructure for victim communications and data-leak operations. Its recovery ecosystem combines the Session messaging network with blockchain-backed services that store and deliver resources used in extortion activity.",
+          "why_it_matters": "Decentralized services may improve the ransomware operation’s resilience against infrastructure disruption and takedown efforts.",
+          "recommended_attention": "Monitor for DeadLock activity and account for decentralized communication and data-leak infrastructure in incident response planning."
+        },
+        {
+          "heading": "Sandworm Campaign Targets IT Workers With Fake Jobs",
+          "what_happened": "Threat actors associated with Sandworm have targeted system administrators and IT professionals through fake job offers. A related report says the campaign used recruiter impersonation to trick IT workers into installing a trojanized WireGuard VPN client capable of running commands.",
+          "why_it_matters": "The targeting of technically privileged personnel creates a pathway into organizational systems through trusted users and software.",
+          "recommended_attention": "Warn IT staff about the campaign and scrutinize VPN-client downloads and software installed during recruitment processes."
+        },
+        {
+          "heading": "Malicious LiteLLM Releases May Have Exposed Organizations",
+          "what_happened": "Two malicious LiteLLM releases were available on PyPI for about 40 minutes and contained credential-stealing code. The code could harvest cloud keys, SSH keys, Kubernetes tokens, database passwords, and other secrets; a dataset from roughly 434,000 captured files potentially mapped exposure to more than 2,100 organizations.",
+          "why_it_matters": "Compromise of a software package used in development or artificial-intelligence environments could expose credentials and downstream infrastructure.",
+          "recommended_attention": "Review LiteLLM installations and rotate potentially exposed credentials, tokens, and keys."
+        },
+        {
+          "heading": "Attackers Shut Turbine at Polish Power Plant",
+          "what_happened": "Attackers breached a Polish combined heat and power plant through the private cellular network used to reach remote equipment. They shut down a steam turbine and the process-water treatment system while remaining active inside the network; the plant supplies heat to roughly 50,000 residents.",
+          "why_it_matters": "The incident demonstrates the potential operational impact of compromising communications paths to industrial equipment, even though customers lost neither heat nor electricity.",
+          "recommended_attention": "Review segmentation and access controls for private cellular networks connected to remote industrial equipment."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+        "published_at": "2026-08-11T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/08/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+        "category": "policy",
+        "summary": "CISA added three vulnerabilities to its Known Exploited Vulnerabilities Catalog: flaws affecting Cisco Secure Firewall ASA and FTD, a Microsoft Windows WinSock driver, and Metabase. The additions were based on evidence of active exploitation.",
+        "why_it_matters": "The catalog additions identify vulnerabilities that pose significant risks and require rapid remediation in federal environments."
+      },
+      {
+        "title": "Johnson Controls C-CURE 9000 and Victor application server (Update A)",
+        "published_at": "2026-08-11T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-01",
+        "category": "vulnerability",
+        "summary": "CISA reported vulnerabilities in Johnson Controls C-CURE 9000 and Victor products that could allow an unauthenticated attacker with adjacent network access to achieve arbitrary code execution on servers, connected clients, and workstations. Affected products support physical security operations.",
+        "why_it_matters": "Compromise could affect critical-manufacturing environments and physical-security personnel workstations."
+      },
+      {
+        "title": "Pulsetto Vagus Nerve Stimulator",
+        "published_at": "2026-08-11T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-223-02",
+        "category": "vulnerability",
+        "summary": "CISA found that Pulsetto Vagus Nerve Stimulator firmware accepts hidden commands over Bluetooth Low Energy without authentication or encryption. The commands can disable electrical safety mechanisms or modify stimulation output settings.",
+        "why_it_matters": "The flaw could affect safety mechanisms and stimulation behavior in a healthcare device."
+      },
+      {
+        "title": "Mira Hormone Monitor, Mira Android App",
+        "published_at": "2026-08-11T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-223-01",
+        "category": "vulnerability",
+        "summary": "CISA identified eight vulnerabilities affecting Mira Hormone Monitor firmware and the Mira Android App. Potential impacts include unauthorized health-profile access, health-information changes, denial of service, session-token disclosure, and account takeover.",
+        "why_it_matters": "The vulnerabilities affect both medical-device firmware and its companion application and carry a CVSS score of 9.8."
+      },
+      {
+        "title": "ShieldBreak Zero-Day PoC Claims Microsoft Defender Patch Bypass With SYSTEM Access",
+        "published_at": "2026-08-12T06:41:38+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html",
+        "category": "research",
+        "summary": "A researcher released a proof-of-concept for ShieldBreak, a Microsoft Defender for Windows zero-day that demonstrates a patch bypass for CVE-2026-50656, also known as RoguePlanet. The report says the bypass provides SYSTEM access.",
+        "why_it_matters": "A Defender patch bypass with SYSTEM access could increase the impact of exploitation on Windows systems."
+      },
+      {
+        "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
+        "published_at": "2026-08-11T20:10:55+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
+        "category": "vulnerability",
+        "summary": "Microsoft released monthly security updates addressing 398 flaws, including an actively exploited Windows kernel-driver issue. The flaw affects network socket operations and can allow an attacker with code already running on a machine to escalate to SYSTEM.",
+        "why_it_matters": "The update’s scale and active exploitation create broad and urgent patch-management requirements."
+      },
+      {
+        "title": "CISA: Microsoft SharePoint flaw now exploited in ransomware attacks",
+        "published_at": "2026-08-11T12:12:16+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-flaw-now-exploited-in-ransomware-attacks/",
+        "category": "ransomware",
+        "summary": "CISA confirmed that ransomware gangs are abusing a high-severity Microsoft SharePoint remote-code-execution vulnerability. The flaw has been flagged as actively exploited since early July.",
+        "why_it_matters": "Ransomware exploitation increases the risk of compromise for organizations operating affected SharePoint servers."
+      },
+      {
+        "title": "DeadLock Ransomware Uses Polygon Smart Contracts to Make Extortion Infra Harder to Disrupt",
+        "published_at": "2026-08-11T16:35:27+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/deadlock-ransomware-uses-polygon-smart.html",
+        "category": "ransomware",
+        "summary": "DeadLock ransomware uses decentralized infrastructure for victim communications and data-leak operations. Its ecosystem combines the Session messaging network with blockchain-backed services that store and deliver resources used in extortion.",
+        "why_it_matters": "Decentralized infrastructure may make the operation more resilient against disruption and takedown efforts."
+      },
+      {
+        "title": "Sandworm-Linked UAC-0145 Uses Fake Job Interviews to Push VPN That Can Run Commands",
+        "published_at": "2026-08-11T18:36:47+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/sandworm-linked-uac-0145-uses-fake-job.html",
+        "category": "malware",
+        "summary": "A Sandworm-linked threat cluster has targeted IT workers by masquerading as recruiters and tricking them into installing malware. The campaign uses a fake WireGuard VPN client capable of running commands.",
+        "why_it_matters": "Targeting IT personnel creates a route to privileged access through trusted users and software."
+      },
+      {
+        "title": "Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations",
+        "published_at": "2026-08-12T08:04:52+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html",
+        "category": "breach",
+        "summary": "Two malicious LiteLLM releases remained on PyPI for about 40 minutes and carried credential-stealing code targeting cloud keys, SSH keys, Kubernetes tokens, database passwords, and other secrets. A dataset built from roughly 434,000 captured files potentially mapped exposure to more than 2,100 organizations.",
+        "why_it_matters": "A compromised package could expose credentials and downstream infrastructure across development and artificial-intelligence environments."
+      },
+      {
+        "title": "Hackers Breach Polish Power Plant Controls via Private Cellular Network and Shut Turbine",
+        "published_at": "2026-08-11T06:55:45+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/hackers-breach-polish-power-plant.html",
+        "category": "other",
+        "summary": "Attackers entered a Polish combined heat and power plant through its private cellular network and shut down a steam turbine and process-water treatment system. The plant supplies heat to roughly 50,000 residents, although customers lost neither heat nor electricity.",
+        "why_it_matters": "The incident highlights operational risks when communications networks provide access to remote industrial equipment."
+      },
+      {
+        "title": "BdThemes Supply Chain Attack Poisons JSON to Create Rogue WordPress Admins",
+        "published_at": "2026-08-11T05:48:44+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/bdthemes-supply-chain-attack-poisons.html",
+        "category": "breach",
+        "summary": "Researchers warned of a supply-chain compromise involving WordPress plugin vendor BdThemes. The compromise prompted the WordPress plugins team to temporarily disable downloads, while the report said no source-code files were modified in the official repository.",
+        "why_it_matters": "The incident shows how plugin distribution paths can be abused to create rogue WordPress administrators without modifying repository source files."
+      }
+    ],
+    "generated_at": "2026-08-12T12:00:04.804352+00:00",
+    "window_start": "2026-08-10T12:00:04.804352+00:00",
+    "window_end": "2026-08-12T12:00:04.804352+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing. First up, CISA added three vulnerabilities to its Known Exploited Vulnerabilities Catalog, affecting Cisco firewalls, a Microsoft Windows driver, and Metabase. That means active exploitation is confirmed, so those systems deserve immediate attention. Microsoft also released its August updates covering nearly four hundred flaws, including a Windows driver issue used to escalate to SYSTEM. One thing to keep an eye on is ShieldBreak, a proof of concept claiming to bypass a Microsoft Defender patch with SYSTEM access. In healthcare, CISA reported serious weaknesses in the Pulsetto vagus nerve stimulator and Mira’s hormone monitor and Android app, affecting safety controls, health data, session tokens, and accounts. Ransomware groups are adapting too: DeadLock is using blockchain-backed infrastructure to make communications and data-leak operations harder to disrupt, while ransomware actors are exploiting a SharePoint flaw. Sandworm-linked attackers are targeting IT workers through fake job offers and a trojanized VPN client. Finally, a malicious LiteLLM release may have exposed secrets at more than two thousand organizations, and attackers briefly shut equipment at a Polish power plant through a private cellular network. The common theme is trusted access becoming a high-impact attack path."
+  }
+}
