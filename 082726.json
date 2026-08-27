@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "title": "Cybersecurity briefing",
+    "overview": {
+      "executive_summary": "This news cycle is dominated by active exploitation of enterprise vulnerabilities, including Citrix NetScaler, Gitea, and Microsoft SharePoint flaws. Major incidents also affected Carhartt, the Bureau of Alcohol, Tobacco, Firearms and Explosives, and Boston Scientific, showing continuing exposure across retail, government, and medical technology. Nation-state and criminal activity remain prominent, alongside phishing services targeting Microsoft 365 sessions and malware campaigns using novel infrastructure. Defensive priorities include rapid patching, breach response, and stronger monitoring of identity and critical systems.",
+      "sections": [
+        {
+          "heading": "Carhartt data breach exposes information of 12.9 million accounts",
+          "what_happened": "The ShinyHunters extortion group published sensitive data from nearly 13 million Carhartt accounts. The disclosure was reported by Have I Been Pwned after data was stolen from the clothing retailer earlier this month.",
+          "why_it_matters": "The incident exposes information connected to a very large number of accounts and creates significant risk for affected users.",
+          "recommended_attention": "Monitor breach notifications and assess whether exposed credentials or account information require protective action."
+        },
+        {
+          "heading": "ATF confirms “major incident” after recent Qilin breach claims",
+          "what_happened": "The U.S. Bureau of Alcohol, Tobacco, Firearms and Explosives confirmed that one of its systems was compromised after the Qilin ransomware gang made breach claims.",
+          "why_it_matters": "A confirmed compromise at a federal regulatory agency indicates potential operational and information-security consequences.",
+          "recommended_attention": "Track official updates and prioritize investigation of the compromised system and any related ransomware activity."
+        },
+        {
+          "heading": "Boston Scientific says cyberattack disrupted operations globally",
+          "what_happened": "Medical technology company Boston Scientific said a cyberattack disrupted some of its information-technology systems and caused operational disruptions globally.",
+          "why_it_matters": "The event links cyber disruption to a medical technology provider with operations across multiple regions.",
+          "recommended_attention": "Monitor service continuity, recovery progress, and any further disclosures about affected systems or data."
+        },
+        {
+          "heading": "CISA orders feds to patch Citrix NetScaler RCE flaw by Saturday",
+          "what_happened": "CISA ordered U.S. government agencies to patch Citrix NetScaler appliances against an actively exploited remote code execution vulnerability by Saturday.",
+          "why_it_matters": "The flaw is being exploited and affects appliances used in federal environments, creating an urgent remediation deadline.",
+          "recommended_attention": "Federal agencies should verify patch deployment on all affected NetScaler ADC and Gateway appliances before the stated deadline."
+        },
+        {
+          "heading": "Hackers target Microsoft SharePoint RCE chain with PoC exploit",
+          "what_happened": "Attackers are targeting a chain of two Microsoft SharePoint vulnerabilities that can enable arbitrary code execution on unpatched servers, according to Defused.",
+          "why_it_matters": "Publicly available proof-of-concept exploitation increases pressure on organizations running unpatched SharePoint servers.",
+          "recommended_attention": "Identify exposed SharePoint systems, apply available updates, and monitor for exploitation attempts."
+        },
+        {
+          "heading": "Critical Gitea RCE Actively Exploited as Reported Attack Drops Miner-Like Payload",
+          "what_happened": "CISA warned that attackers are actively exploiting Gitea vulnerability CVE-2026-60004, a critical remote code execution flaw with a CVSS score of 9.8. The reported attack dropped a miner-like payload.",
+          "why_it_matters": "The flaw can allow an attacker with ordinary repository write access to execute arbitrary shell commands on the server.",
+          "recommended_attention": "Patch affected Gitea deployments and review repository activity, command execution, and unexpected payloads."
+        },
+        {
+          "heading": "CISA Vulnerability Review",
+          "what_happened": "CISA published a review of vulnerability data from fiscal years 2024 and 2025, examining root causes of insecure software, common weaknesses, and practical steps for reducing exploitation risk. The review emphasizes Secure by Design principles and prioritizing vulnerabilities based on risk.",
+          "why_it_matters": "The findings provide a baseline for vulnerability management and identify recurring software weaknesses that contribute to exploitation.",
+          "recommended_attention": "Use the review to reassess vulnerability prioritization and software-development practices."
+        },
+        {
+          "heading": "FBI Disrupts China-Linked QTFY Infrastructure Used to Steal Data From U.S. Organizations",
+          "what_happened": "The U.S. Department of Justice announced disruption of the QScan and QTRouter hacking platforms, which were operated by Chinese threat actors to target critical infrastructure and sensitive networks. The activity was attributed to the China-linked QTFY group.",
+          "why_it_matters": "The operation targeted U.S. organizations and involved infrastructure supporting reconnaissance, proxy management, and operational routing.",
+          "recommended_attention": "Review threat intelligence for QTFY-associated infrastructure and examine exposed critical-network access paths."
+        },
+        {
+          "heading": "NovaCookies Campaigns Abuse Genuine Docusign Notifications to Steal Microsoft 365 Sessions",
+          "what_happened": "Researchers disclosed NovaCookies, a subscription-based adversary-in-the-middle phishing toolkit priced at $320 per month. The service abuses genuine Docusign notifications to proxy Microsoft 365 sign-ins and capture authenticated sessions.",
+          "why_it_matters": "Session theft can let attackers bypass the protection provided by successfully entering credentials.",
+          "recommended_attention": "Strengthen phishing-resistant authentication, investigate unusual Microsoft 365 sessions, and treat unexpected document notifications cautiously."
+        },
+        {
+          "heading": "Spark RAT Targets Cambodia, Abuses Vulnerable OPSWAT Driver to Disable Security Tools",
+          "what_happened": "A campaign targeting individuals and organizations in Cambodia delivers the open-source Spark remote access trojan. Samples use varied lures, including government notices, public health materials, and real-estate content, and abuse a vulnerable OPSWAT driver to disable security tools.",
+          "why_it_matters": "The campaign combines broad social-engineering themes with defense-evasion capabilities.",
+          "recommended_attention": "Monitor for Spark RAT indicators and vulnerable driver abuse, especially in Cambodian-targeted environments."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Carhartt data breach exposes information of 12.9 million accounts",
+        "published_at": "2026-08-27T11:10:04+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/carhartt-data-breach-exposes-information-of-129-million-accounts/",
+        "category": "breach",
+        "summary": "The ShinyHunters extortion group published sensitive data from nearly 13 million Carhartt accounts, according to Have I Been Pwned. The data was reportedly stolen from the retailer earlier this month.",
+        "why_it_matters": "A very large number of accounts may be affected by the disclosed data."
+      },
+      {
+        "title": "ATF confirms “major incident” after recent Qilin breach claims",
+        "published_at": "2026-08-27T08:13:50+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/atf-confirms-major-incident-after-recent-qilin-breach-claims/",
+        "category": "ransomware",
+        "summary": "The Bureau of Alcohol, Tobacco, Firearms and Explosives confirmed that one of its systems was compromised after breach claims by the Qilin ransomware gang.",
+        "why_it_matters": "The confirmed compromise affects a U.S. federal regulatory agency."
+      },
+      {
+        "title": "Boston Scientific says cyberattack disrupted operations globally",
+        "published_at": "2026-08-26T15:19:21+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/boston-scientific-says-cyberattack-disrupted-operations-globally/",
+        "category": "breach",
+        "summary": "Boston Scientific said a cyberattack disrupted some of its IT systems and caused operational disruptions globally.",
+        "why_it_matters": "Cyber activity disrupted a medical technology company across global operations."
+      },
+      {
+        "title": "CISA orders feds to patch Citrix NetScaler RCE flaw by Saturday",
+        "published_at": "2026-08-27T09:16:50+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploiting-citrix-netscaler-rce-flaw-in-attacks/",
+        "category": "vulnerability",
+        "summary": "CISA ordered U.S. government agencies to patch Citrix NetScaler appliances against an actively exploited remote code execution vulnerability by Saturday.",
+        "why_it_matters": "The active exploitation and federal deadline make remediation urgent."
+      },
+      {
+        "title": "Hackers target Microsoft SharePoint RCE chain with PoC exploit",
+        "published_at": "2026-08-26T14:47:51+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-sharepoint-rce-chain-with-poc-exploit/",
+        "category": "vulnerability",
+        "summary": "Attackers are targeting two Microsoft SharePoint vulnerabilities that can enable arbitrary code execution on unpatched servers, according to Defused.",
+        "why_it_matters": "Unpatched SharePoint servers are exposed to active targeting using a proof-of-concept exploit."
+      },
+      {
+        "title": "Critical Gitea RCE Actively Exploited as Reported Attack Drops Miner-Like Payload",
+        "published_at": "2026-08-26T06:27:07+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html",
+        "category": "vulnerability",
+        "summary": "CISA warned of active exploitation of Gitea vulnerability CVE-2026-60004, a critical remote code execution flaw rated 9.8. A reported attack dropped a miner-like payload.",
+        "why_it_matters": "Attackers with ordinary repository write access can execute arbitrary shell commands."
+      },
+      {
+        "title": "CISA Vulnerability Review",
+        "published_at": "2026-08-26T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/resources-tools/resources/cisa-vulnerability-review",
+        "category": "research",
+        "summary": "CISA reviewed fiscal-year 2024 and 2025 vulnerability data, identifying root causes of insecure software, common weaknesses, and practices to prevent recurring flaws. It emphasizes risk-based prioritization and Secure by Design principles.",
+        "why_it_matters": "The review offers a baseline for improving vulnerability management and software security."
+      },
+      {
+        "title": "FBI Disrupts China-Linked QTFY Infrastructure Used to Steal Data From U.S. Organizations",
+        "published_at": "2026-08-26T16:42:03+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/fbi-disrupts-china-linked-qtfy.html",
+        "category": "policy",
+        "summary": "The Department of Justice announced disruption of the QScan and QTRouter platforms operated by Chinese threat actors targeting critical infrastructure and sensitive U.S. networks. The activity was attributed to QTFY.",
+        "why_it_matters": "The disrupted platforms supported cyber activity against critical infrastructure and other U.S. organizations."
+      },
+      {
+        "title": "NovaCookies Campaigns Abuse Genuine Docusign Notifications to Steal Microsoft 365 Sessions",
+        "published_at": "2026-08-26T13:44:31+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/novacookies-campaigns-abuse-genuine.html",
+        "category": "malware",
+        "summary": "NovaCookies is a $320-per-month adversary-in-the-middle phishing toolkit that proxies Microsoft 365 sign-ins and captures authenticated sessions. It abuses genuine Docusign notifications to deliver the lures.",
+        "why_it_matters": "Stolen authenticated sessions can expose Microsoft 365 accounts even when credentials are entered correctly."
+      },
+      {
+        "title": "Spark RAT Targets Cambodia, Abuses Vulnerable OPSWAT Driver to Disable Security Tools",
+        "published_at": "2026-08-27T11:00:57+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/spark-rat-targets-cambodia-abuses.html",
+        "category": "malware",
+        "summary": "A campaign targeting Cambodian individuals and organizations delivers the open-source Spark remote access trojan. Its lures include government, public-health, and real-estate themes, and it abuses a vulnerable OPSWAT driver to disable security tools.",
+        "why_it_matters": "The campaign pairs broad lures with a technique designed to weaken endpoint defenses."
+      }
+    ],
+    "generated_at": "2026-08-27T12:00:04.619077+00:00",
+    "window_start": "2026-08-25T12:00:04.619077+00:00",
+    "window_end": "2026-08-27T12:00:04.619077+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing. First up, the ShinyHunters extortion group published sensitive data from nearly 13 million Carhartt accounts. That makes this one of the largest disclosures in the list. A federal incident is also confirmed: the Bureau of Alcohol, Tobacco, Firearms and Explosives says one system was compromised after Qilin ransomware claims. In the vulnerability space, CISA has ordered federal agencies to patch an actively exploited Citrix NetScaler remote-code-execution flaw by Saturday. Attackers are also targeting a Microsoft SharePoint exploit chain, while CISA warns that a critical Gitea flaw is being actively exploited and has been linked to a miner-like payload. Here’s why that matters: these are internet-facing enterprise technologies where patching and exposure checks are immediate priorities. On the espionage front, the FBI and Justice Department disrupted QScan and QTRouter platforms attributed to the China-linked QTFY group, which targeted critical infrastructure and sensitive U.S. networks. One thing to keep an eye on is NovaCookies, a subscription phishing toolkit that abuses real Docusign notifications to steal Microsoft 365 sessions. And finally, Spark RAT is targeting Cambodian organizations while abusing a vulnerable driver to disable security tools. Across the cycle, rapid remediation, session protection, and endpoint monitoring stand out as the key defensive priorities."
+  }
+}
