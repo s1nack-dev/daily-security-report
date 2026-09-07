@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "title": "Cybersecurity briefing",
+    "overview": {
+      "executive_summary": "This news cycle is dominated by active exploitation of remote-management, networking, and e-commerce platforms, with attackers targeting systems that can provide broad administrative access. MikroTik routers, N-able N-central, Magento, and TeamCity-linked environments present urgent patching or credential-rotation concerns. The campaign activity also shows continued innovation in phishing delivery, malware persistence, and evasion, including blockchain-hosted ClickFix payloads and invisible Unicode characters. Organizations should prioritize exposed infrastructure, emergency fixes, credential hygiene, and endpoint monitoring.",
+      "sections": [
+        {
+          "heading": "Attackers hijack MikroTik routers through exposed SSH",
+          "what_happened": "Attackers are exploiting MikroTik routers whose Secure Shell, or SSH, service is reachable from the internet. The attacks can provide full administrative control without authentication, and successful attacks have been observed since at least September 2.",
+          "why_it_matters": "Internet-exposed routers can be taken over and potentially abused to access or disrupt networks.",
+          "recommended_attention": "Audit MikroTik devices for internet-exposed SSH access and monitor for unauthorized administrative activity."
+        },
+        {
+          "heading": "N-able issues another emergency N-central hotfix",
+          "what_happened": "N-able released a fourth hotfix in five weeks for an unauthenticated remote-code-execution flaw in its N-central remote monitoring and management platform. All on-premises builds below 2026.3.1.14, including systems updated with the previous hotfix, require Hotfix 4; N-able’s incident notice says the flaw has been exploited in the wild, while release notes describe exploitation as unconfirmed.",
+          "why_it_matters": "N-central is a management platform, so compromise could affect connected customer environments and administrative operations.",
+          "recommended_attention": "Apply Hotfix 4 immediately and verify the installed build across every on-premises N-central server."
+        },
+        {
+          "heading": "ConnectWise warns of an unpatched ScreenConnect flaw",
+          "what_happened": "ConnectWise disclosed a new vulnerability in ScreenConnect Remote Access and provided temporary mitigation measures while preparing a patch later in the week.",
+          "why_it_matters": "Remote-access software is highly sensitive because attackers may use it to reach managed systems and users.",
+          "recommended_attention": "Implement ConnectWise’s temporary mitigations and prioritize the vendor patch when released."
+        },
+        {
+          "heading": "Magento and Adobe Commerce zero-day backdoors online stores",
+          "what_happened": "Attackers are exploiting an unpatched vulnerability in Magento Open Source and Adobe Commerce that allows malicious code execution on an online store’s server without logging in. Sansec named the flaw StyleSmuggler and said attacks began on September 4.",
+          "why_it_matters": "Compromised e-commerce servers can expose customer data, payment workflows, and storefront integrity.",
+          "recommended_attention": "Monitor affected stores for unauthorized code and await or apply vendor guidance as soon as available."
+        },
+        {
+          "heading": "JetBrains Cadence breach exposes AWS credentials",
+          "what_happened": "Threat actors exploited a recently disclosed critical TeamCity vulnerability to breach JetBrains’ environment and extract AWS credentials. JetBrains urged Cadence users to revoke and rotate credentials and secrets that may have been used for Cadence executions.",
+          "why_it_matters": "Exposed cloud credentials can enable unauthorized access to connected services and execution environments.",
+          "recommended_attention": "Immediately revoke and rotate potentially exposed credentials and review related cloud activity."
+        },
+        {
+          "heading": "Critical VMware flaw enables host-code execution",
+          "what_happened": "Broadcom released updates for two VMware Workstation and Fusion vulnerabilities, including CVE-2026-59346, a critical integer-overflow flaw with a CVSS score of 9.3. A local attacker with elevated privileges could exploit it to execute arbitrary code under certain conditions.",
+          "why_it_matters": "Code execution on the host can undermine isolation between virtual machines and the underlying system.",
+          "recommended_attention": "Apply Broadcom’s security updates to affected Workstation and Fusion installations."
+        },
+        {
+          "heading": "ClickFix payloads delivered through thousands of hacked sites",
+          "what_happened": "A cybercriminal operation is using more than 5,400 compromised small-business websites to deliver ClickFix payloads stored in smart contracts on the BNB Smart Chain. The infrastructure uses hacked sites and blockchain storage to distribute malicious content.",
+          "why_it_matters": "The scale and distributed delivery model can increase exposure and make malicious infrastructure harder to remove.",
+          "recommended_attention": "Monitor web traffic and endpoint activity for ClickFix behavior, especially after visits to compromised small-business sites."
+        },
+        {
+          "heading": "Phishing campaigns hide lures with invisible Unicode characters",
+          "what_happened": "Threat actors are using ASCII smuggling, including invisible Unicode characters, to conceal phishing lures and evade email security filters.",
+          "why_it_matters": "Traditional filtering and visual inspection may miss deceptive content that is hidden through character encoding.",
+          "recommended_attention": "Review email-security detection for Unicode and encoding abuse and reinforce phishing-reporting procedures."
+        },
+        {
+          "heading": "JSCeal malware steals sessions and intercepts traffic",
+          "what_happened": "Researchers documented JSCeal, a compiled V8 JavaScript malware capable of credential harvesting, surveillance, and traffic interception. The malware uses extensive obfuscation, including RC4-protected strings, control-flow flattening, proxy functions, and operation wrappers.",
+          "why_it_matters": "Stolen session cookies can allow attackers to bypass Google authentication and maintain access without passwords.",
+          "recommended_attention": "Look for suspicious browser-session activity, credential theft indicators, and heavily obfuscated JavaScript execution."
+        },
+        {
+          "heading": "REVSTEALER modules disable defenses for cryptomining",
+          "what_happened": "Elastic Security Labs identified four programs associated with the REVSTEALER information stealer that remain on infected Windows systems after the stealer deletes itself. One module disables Windows Update and Microsoft Defender before launching a cryptocurrency miner.",
+          "why_it_matters": "The malware combines credential theft, defense evasion, persistence, and resource abuse on compromised endpoints.",
+          "recommended_attention": "Hunt for disabled security controls, unexpected miner activity, and the identified REVSTEALER-linked modules."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Attackers Hijack MikroTik Routers Through Internet-Exposed SSH Without Authentication",
+        "published_at": "2026-09-06T09:32:38+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html",
+        "category": "vulnerability",
+        "summary": "Attackers are exploiting MikroTik routers with internet-reachable SSH services to gain full administrative control without authentication. Successful attacks date to at least September 2.",
+        "why_it_matters": "Compromised routers could provide attackers with control over network infrastructure and a platform for further abuse."
+      },
+      {
+        "title": "N-able Issues Fourth N-central Hotfix in Five Weeks for Unauthenticated RCE Flaw",
+        "published_at": "2026-09-07T08:31:12+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html",
+        "category": "vulnerability",
+        "summary": "N-able released Hotfix 4 for an unauthenticated remote-code-execution flaw affecting N-central builds below 2026.3.1.14. The company’s incident notice says the flaw has been exploited in the wild, while release notes say exploitation is unconfirmed.",
+        "why_it_matters": "A vulnerable remote-management platform could expose connected customer environments to broad administrative compromise."
+      },
+      {
+        "title": "ConnectWise warns of new ScreenConnect flaw without patch",
+        "published_at": "2026-09-07T10:06:38+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/connectwise-warns-of-new-screenconnect-flaw-without-patch/",
+        "category": "vulnerability",
+        "summary": "ConnectWise warned of a new ScreenConnect Remote Access vulnerability and shared temporary mitigation measures. A patch is planned for later this week.",
+        "why_it_matters": "Unpatched remote-access software can create a direct path into managed systems."
+      },
+      {
+        "title": "Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores",
+        "published_at": "2026-09-05T20:14:47+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html",
+        "category": "vulnerability",
+        "summary": "Attackers are exploiting an unpatched Magento Open Source and Adobe Commerce vulnerability to execute malicious code on online-store servers without logging in. Sansec said attacks began September 4 and named the flaw StyleSmuggler.",
+        "why_it_matters": "Online-store compromise can affect storefront integrity, customer information, and commerce operations."
+      },
+      {
+        "title": "Attackers Breached JetBrains Cadence via Unpatched TeamCity, Extracting AWS Credentials",
+        "published_at": "2026-09-05T16:52:33+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html",
+        "category": "breach",
+        "summary": "Threat actors exploited a recently disclosed critical TeamCity vulnerability to breach JetBrains’ environment and extract AWS credentials. JetBrains urged Cadence users to revoke and rotate credentials and secrets used for executions.",
+        "why_it_matters": "Exposed AWS credentials could enable unauthorized access to cloud resources and connected execution environments."
+      },
+      {
+        "title": "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code",
+        "published_at": "2026-09-05T16:05:08+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
+        "category": "vulnerability",
+        "summary": "Broadcom released updates for two VMware Workstation and Fusion flaws, including CVE-2026-59346, a critical integer-overflow vulnerability with a CVSS score of 9.3. A local attacker with elevated privileges could execute arbitrary host code under certain conditions.",
+        "why_it_matters": "Host-code execution can weaken virtual-machine isolation and compromise the underlying system."
+      },
+      {
+        "title": "Over 5,400 hacked sites serve ClickFix payloads stored on the blockchain",
+        "published_at": "2026-09-05T14:29:13+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/over-5-400-hacked-sites-serve-clickfix-payloads-stored-on-the-blockchain/",
+        "category": "malware",
+        "summary": "A cybercriminal operation is using more than 5,400 compromised small-business websites to deliver ClickFix payloads stored in smart contracts on the BNB Smart Chain. The campaign combines hacked websites with blockchain-hosted delivery infrastructure.",
+        "why_it_matters": "The large, distributed campaign can expose many visitors while complicating takedown and detection efforts."
+      },
+      {
+        "title": "Attackers conceal phishing lures using invisible Unicode characters",
+        "published_at": "2026-09-06T14:23:46+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/attackers-conceal-phishing-lures-using-invisible-unicode-characters/",
+        "category": "research",
+        "summary": "Threat actors are using ASCII smuggling and invisible Unicode characters in phishing campaigns to conceal malicious lures and evade email security filters.",
+        "why_it_matters": "Encoding tricks can bypass filtering and make phishing content harder for recipients to recognize."
+      },
+      {
+        "title": "JSCeal Malware Can Bypass Google Authentication Using Stolen Session Cookies",
+        "published_at": "2026-09-07T07:53:04+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/jsceal-malware-can-bypass-google.html",
+        "category": "malware",
+        "summary": "Researchers unpacked JSCeal, a compiled V8 JavaScript malware with credential harvesting, surveillance, and traffic-interception capabilities. It uses multiple obfuscation techniques and can bypass Google authentication with stolen session cookies.",
+        "why_it_matters": "Session-cookie theft can let attackers access accounts without needing the victim’s password."
+      },
+      {
+        "title": "Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Crypto Miner",
+        "published_at": "2026-09-06T08:34:20+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html",
+        "category": "malware",
+        "summary": "Elastic Security Labs identified four REVSTEALER-associated programs that persist after the information stealer deletes itself. One disables Windows Update and Microsoft Defender before running a cryptocurrency miner.",
+        "why_it_matters": "The modules combine defense evasion, persistence, resource abuse, and the potential for continued compromise."
+      }
+    ],
+    "generated_at": "2026-09-07T12:00:06.826171+00:00",
+    "window_start": "2026-09-05T12:00:06.826171+00:00",
+    "window_end": "2026-09-07T12:00:06.826171+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing. First up, attackers are hijacking MikroTik routers through internet-exposed Secure Shell, or SSH, services, reportedly gaining full administrative control without authentication. That makes exposed network equipment the immediate priority. N-able has also issued a fourth hotfix in five weeks for an unauthenticated remote-code-execution flaw in its N-central remote-management platform. Administrators should verify Hotfix 4 is installed everywhere. Another urgent item is a new, still-unpatched ScreenConnect vulnerability, with temporary mitigations available while ConnectWise prepares a fix. In e-commerce, attackers are exploiting an unpatched Magento and Adobe Commerce zero-day called StyleSmuggler to backdoor online stores. And JetBrains says attackers breached its Cadence environment through TeamCity and extracted AWS credentials, so affected users should revoke and rotate secrets. One thing to keep an eye on: more than 5,400 hacked websites are serving ClickFix payloads stored on the blockchain, while phishing campaigns are hiding lures with invisible Unicode characters. Malware activity is also escalating. JSCeal can steal session cookies and bypass Google authentication, and REVSTEALER-linked modules disable Windows Update and Microsoft Defender before running a cryptocurrency miner. The common thread is clear: prioritize exposed management systems, emergency patches, credential rotation, and endpoint monitoring."
+  }
+}
