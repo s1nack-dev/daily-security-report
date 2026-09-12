@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "title": "Cybersecurity briefing",
+    "overview": {
+      "executive_summary": "The news cycle is dominated by active exploitation of enterprise software vulnerabilities, including JFrog Artifactory, GitLab, Cisco Secure Firewall Management Center, and PaperCut. Attackers are also using trusted services and artificial intelligence to scale exploitation, steal cloud data, and target users with convincing phishing lures. Several incidents affected sensitive databases, software infrastructure, and large user populations. Organizations should prioritize known exploited flaws, investigate exposed systems, and reinforce identity and phishing defenses.",
+      "sections": [
+        {
+          "heading": "JFrog Artifactory flaws exploited to plant backdoors",
+          "what_happened": "Threat actors chained authentication and authorization flaws in self-hosted JFrog Artifactory servers to gain administrative control and deploy Rust backdoor malware. CISA added the related JFrog vulnerabilities to its Known Exploited Vulnerabilities Catalog based on evidence of active exploitation.",
+          "why_it_matters": "Compromised artifact repositories can expose software build pipelines and enable persistent access to systems that depend on them.",
+          "recommended_attention": "Patch exposed Artifactory servers immediately and investigate for unauthorized administrative activity or backdoors."
+        },
+        {
+          "heading": "GitLab maximum-severity path traversal flaw under active probing",
+          "what_happened": "GitLab urged users to patch CVE-2026-85706, a maximum-severity path traversal vulnerability that can allow unauthenticated users to read arbitrary files from a server. CISA added the vulnerability to its Known Exploited Vulnerabilities Catalog, and in-the-wild probes were reported after disclosure.",
+          "why_it_matters": "Unauthenticated file access can expose credentials, configuration data, and other sensitive information from GitLab servers.",
+          "recommended_attention": "Apply the available GitLab fixes urgently and review logs for probing or unauthorized file access."
+        },
+        {
+          "heading": "Claude abused to automate exploitation and data theft",
+          "what_happened": "Anthropic said multiple financially motivated and state-sponsored threat groups abused Claude for malicious activity, including automated exploitation and data theft. The reported activity involved groups linked to Russia and China and targeted 1.8 million Android applications for secret extraction.",
+          "why_it_matters": "AI-assisted automation can increase the scale and speed of attacks against software and application ecosystems.",
+          "recommended_attention": "Monitor AI-enabled development and security workflows, and review exposed application secrets and repository access."
+        },
+        {
+          "heading": "Cisco FMC flaws used in ransomware and state-sponsored attacks",
+          "what_happened": "Three threat clusters linked to ransomware and state-sponsored attacks exploited two recently patched Secure Firewall Management Center vulnerabilities. The activity included credential theft and deployment of Qilin ransomware, while one flaw was described as a CVSS 10.0 authentication bypass.",
+          "why_it_matters": "Compromise of firewall management systems can provide attackers with privileged control over security infrastructure and connected environments.",
+          "recommended_attention": "Confirm patches are installed, restrict management interfaces, and investigate for credential theft or ransomware activity."
+        },
+        {
+          "heading": "AI-powered PaperCut campaign hacked 395 organizations",
+          "what_happened": "A likely Russian-speaking threat actor used hundreds of AI agents to develop and launch a global exploitation campaign against vulnerable PaperCut NG and MF servers. The campaign reportedly compromised 395 organizations, while PaperCut released maintenance releases replacing earlier emergency patches for two actively exploited flaws.",
+          "why_it_matters": "The campaign demonstrates how AI can operationalize vulnerability exploitation across many organizations at once.",
+          "recommended_attention": "Update PaperCut systems to the current maintenance releases and check for signs of exploitation."
+        },
+        {
+          "heading": "Passkey-themed phishing targeted Microsoft 365 accounts",
+          "what_happened": "Threat actors linked to ShinyHunters, Helix, and other extortion gangs used passkey and single sign-on-themed social engineering to compromise corporate Microsoft accounts and steal data from Microsoft 365 services.",
+          "why_it_matters": "Trusted authentication themes can persuade users to surrender access to high-value cloud accounts and corporate data.",
+          "recommended_attention": "Strengthen phishing-resistant authentication, scrutinize passkey prompts, and review Microsoft 365 sign-in and data-access activity."
+        },
+        {
+          "heading": "Florida DMV database breached through stolen police credentials",
+          "what_happened": "The Florida Department of Highway Safety and Motor Vehicles confirmed that its DAVID driver database was breached after attackers used credentials belonging to an employee of a police department.",
+          "why_it_matters": "A compromised trusted account enabled access to a sensitive government database containing driver information.",
+          "recommended_attention": "Revoke and rotate affected credentials, investigate account activity, and review access controls for law-enforcement users."
+        },
+        {
+          "heading": "China-linked group used Sogou flaw to deploy GRAYRABBIT",
+          "what_happened": "A China-linked hacking group exploited a flaw in Sogou Input Method, a widely used Windows tool for typing Chinese characters, to install the GRAYRABBIT backdoor. The attack began with a crafted link and ended with capabilities available to the logged-in user.",
+          "why_it_matters": "Software used for everyday input can become an effective initial-access route for persistent backdoor deployment.",
+          "recommended_attention": "Patch or remove vulnerable Sogou Input Method installations and monitor for crafted-link activity and GRAYRABBIT indicators."
+        },
+        {
+          "heading": "Trezor users targeted after Brevo breach",
+          "what_happened": "Trezor said phishing attacks following a Brevo breach targeted 347,000 customer email addresses. The company said 2,500 users clicked an embedded malicious link.",
+          "why_it_matters": "Compromised mailing-list data can support highly targeted phishing against cryptocurrency users and other high-value accounts.",
+          "recommended_attention": "Warn affected users, treat related messages as malicious, and verify wallet or account requests through trusted channels."
+        },
+        {
+          "heading": "Google Play Early Access abused to distribute deceptive apps",
+          "what_happened": "Bad actors misused Google Play's Early Access program to promote deceptive Android applications claiming to offer money, rewards, casino winnings, and premium content.",
+          "why_it_matters": "Abuse of a trusted distribution program can expose users to scams while making malicious applications appear more credible.",
+          "recommended_attention": "Review Early Access applications carefully and strengthen screening for financial claims and deceptive behavior."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Artifactory flaws chained in attacks deploying backdoor malware",
+        "published_at": "2026-09-11T16:29:44+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/artifactory-flaws-chained-in-attacks-deploying-backdoor-malware/",
+        "category": "vulnerability",
+        "summary": "Threat actors are exploiting critical and high-severity JFrog Artifactory vulnerabilities to bypass authentication, gain administrative privileges, and deploy a Rust backdoor on vulnerable self-hosted servers. CISA separately added the related vulnerabilities to its Known Exploited Vulnerabilities Catalog based on active exploitation.",
+        "why_it_matters": "Compromised artifact repositories can expose software build pipelines and enable persistent access."
+      },
+      {
+        "title": "GitLab urges users to patch max severity path traversal flaw",
+        "published_at": "2026-09-11T11:15:22+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/gitlab-urges-users-to-patch-max-severity-path-traversal-flaw/",
+        "category": "vulnerability",
+        "summary": "GitLab urged users to patch maximum-severity CVE-2026-85706, a path traversal vulnerability. CISA added the flaw to its Known Exploited Vulnerabilities Catalog, and in-the-wild probes were reported after disclosure.",
+        "why_it_matters": "Unauthenticated file access could expose sensitive GitLab server data."
+      },
+      {
+        "title": "Claude Used to Automate Exploitation and Data Theft Across Multiple Victims",
+        "published_at": "2026-09-11T14:29:47+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/claude-used-to-automate-exploitation.html",
+        "category": "research",
+        "summary": "Anthropic warned that cybercriminals and state-sponsored hackers used Claude for cyber attacks, including automated exploitation and data theft. The activity reportedly spanned December 2025 through August 2026 and included groups linked to Russia and China.",
+        "why_it_matters": "AI-assisted operations can increase the speed and scale of attacks."
+      },
+      {
+        "title": "Cisco FMC Flaws Exploited to Steal Credentials and Deploy Qilin Ransomware",
+        "published_at": "2026-09-11T06:19:59+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/cisco-fmc-flaws-exploited-to-steal.html",
+        "category": "ransomware",
+        "summary": "Cisco reported that three threat clusters linked to ransomware and state-sponsored attacks exploited two recently patched Secure Firewall Management Center vulnerabilities. The attacks included credential theft and Qilin ransomware deployment.",
+        "why_it_matters": "Firewall management compromise can provide privileged control over security infrastructure."
+      },
+      {
+        "title": "AI-powered attack exploited PaperCut flaws to hack 395 organizations",
+        "published_at": "2026-09-10T15:55:56+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/ai-powered-attack-exploited-papercut-flaws-to-hack-395-organizations/",
+        "category": "vulnerability",
+        "summary": "A likely Russian-speaking threat actor used hundreds of AI agents to develop and launch a global campaign against vulnerable PaperCut NG and MF servers. The campaign targeted 395 organizations.",
+        "why_it_matters": "AI can operationalize vulnerability exploitation across many organizations at once."
+      },
+      {
+        "title": "Passkey-themed phishing attacks lead to Microsoft 365 data theft",
+        "published_at": "2026-09-11T17:26:50+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/",
+        "category": "breach",
+        "summary": "Threat actors linked to ShinyHunters, Helix, and other extortion gangs used passkey and single sign-on-themed social engineering to compromise corporate Microsoft accounts and steal Microsoft 365 data.",
+        "why_it_matters": "Convincing authentication lures can unlock high-value cloud accounts and corporate data."
+      },
+      {
+        "title": "Florida confirms DMV database breached via stolen police account",
+        "published_at": "2026-09-11T19:00:29+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/",
+        "category": "breach",
+        "summary": "Florida's Department of Highway Safety and Motor Vehicles confirmed that its DAVID driver database was breached using credentials belonging to a police department employee.",
+        "why_it_matters": "A stolen trusted account enabled access to a sensitive government database."
+      },
+      {
+        "title": "China-Linked UNC3569 Exploited Sogou Input Method Flaw to Deploy GRAYRABBIT Backdoor",
+        "published_at": "2026-09-11T07:14:09+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/china-linked-unc3569-exploited-sogou.html",
+        "category": "malware",
+        "summary": "A China-linked hacking group exploited a Sogou Input Method flaw to install the GRAYRABBIT backdoor on victims' Windows computers. The attack began with a crafted link and provided capabilities available to the logged-in user.",
+        "why_it_matters": "Widely used desktop software can provide an effective route to persistent backdoor access."
+      },
+      {
+        "title": "Trezor: 347,000 users targeted in phishing attacks after Brevo breach",
+        "published_at": "2026-09-11T07:55:15+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/trezor-347-000-users-targeted-in-phishing-attacks-after-brevo-breach/",
+        "category": "breach",
+        "summary": "Trezor said phishing attacks after a Brevo breach targeted 347,000 email addresses and affected 2,500 users who clicked a malicious link.",
+        "why_it_matters": "Exposed mailing-list data can enable targeted phishing against cryptocurrency users."
+      },
+      {
+        "title": "Google Play Early Access Abused to Push Thousands of Deceptive Android Apps",
+        "published_at": "2026-09-10T14:36:47+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/google-play-early-access-abused-to-push.html",
+        "category": "other",
+        "summary": "Bad actors misused Google Play's Early Access program to push deceptive Android applications claiming to offer money, rewards, casino winnings, and premium content.",
+        "why_it_matters": "Abuse of a trusted app-distribution program can make scams appear credible."
+      }
+    ],
+    "generated_at": "2026-09-12T12:00:07.496968+00:00",
+    "window_start": "2026-09-10T12:00:07.496968+00:00",
+    "window_end": "2026-09-12T12:00:07.496968+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing. First up, attackers are chaining JFrog Artifactory flaws to gain administrator control and plant Rust backdoors on self-hosted servers. CISA has added the related vulnerabilities to its Known Exploited Vulnerabilities catalog, so exposed systems deserve immediate attention. GitLab is also urging urgent patching for a maximum-severity path traversal flaw that allows unauthenticated file reads, with probes reported after disclosure. Another major theme is artificial intelligence. Anthropic says criminal and state-sponsored groups used Claude to automate exploitation and data theft, while a separate campaign used hundreds of AI agents to attack vulnerable PaperCut servers across 395 organizations. Here’s why that matters: automation is making large-scale exploitation faster and more repeatable. Cisco also disclosed attacks against Secure Firewall Management Center flaws, including credential theft and Qilin ransomware deployment. On the identity front, extortion groups are using passkey and single sign-on themes to steal Microsoft 365 data, while Florida confirmed a DMV database breach involving a stolen police account. One thing to keep an eye on is trusted software and services becoming attack paths: a Sogou input-method flaw enabled a backdoor, and Trezor users faced phishing after a Brevo breach. Finally, deceptive Android apps are abusing Google Play Early Access to promote money, rewards, and premium-content scams. Patch actively exploited systems, review privileged access, and treat unexpected authentication prompts with caution."
+  }
+}
