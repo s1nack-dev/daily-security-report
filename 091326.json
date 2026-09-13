@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "title": "Cybersecurity briefing",
+    "overview": {
+      "executive_summary": "This news cycle is dominated by active exploitation, credential-driven breaches, and increasingly automated abuse of trusted platforms. Critical vulnerabilities in Check Point VPN, JFrog Artifactory, and GitLab are drawing imminent warnings, exploitation reports, or in-the-wild probes. Separately, attackers are using passkey-themed phishing and stolen credentials to reach cloud and government data, while AI platforms are being abused for secret extraction, malware development, and delivery of malicious content. Organizations should prioritize urgent vulnerability remediation, identity protection, and monitoring for misuse of legitimate services.",
+      "sections": [
+        {
+          "heading": "Check Point VPN exploitation warning",
+          "what_happened": "The Dutch Nationaal Cyber Security Centrum warned that exploitation of two critical Check Point VPN vulnerabilities, CVE-2026-85102 and CVE-2026-85103, is imminent.",
+          "why_it_matters": "Organizations using affected Check Point VPN systems may face imminent attacks against remote-access infrastructure.",
+          "recommended_attention": "Prioritize investigation, patching, and monitoring for exploitation of the two named vulnerabilities."
+        },
+        {
+          "heading": "Claude abused to target Android applications",
+          "what_happened": "Anthropic said multiple threat groups, including financially motivated and state-sponsored groups linked to Russia and China, attempted to abuse its Claude artificial intelligence model to extract secrets from 1.8 million Android applications.",
+          "why_it_matters": "The reported scale shows how AI assistance can accelerate software analysis and secret theft across a very large application set.",
+          "recommended_attention": "Monitor repositories, build systems, and application artifacts for exposed secrets and unusual automated analysis activity."
+        },
+        {
+          "heading": "Florida DMV database breach",
+          "what_happened": "The Florida Department of Highway Safety and Motor Vehicles confirmed that its DAVID driver database was breached after attackers used credentials belonging to an employee of a police department.",
+          "why_it_matters": "The incident demonstrates the exposure created when stolen or misused government-linked credentials provide access to sensitive driver data.",
+          "recommended_attention": "Review privileged access, police-account usage, credential theft indicators, and access logs for the DAVID database."
+        },
+        {
+          "heading": "Passkey-themed phishing targets Microsoft cloud accounts",
+          "what_happened": "Microsoft disclosed campaigns in which threat actors linked to ShinyHunters, Helix, and other extortion gangs used passkey- and single sign-on-themed social engineering to compromise corporate Microsoft accounts and steal Microsoft 365 data.",
+          "why_it_matters": "Employees may treat passkey or single sign-on prompts as trusted, enabling account takeover and cloud data exfiltration.",
+          "recommended_attention": "Hunt for suspicious authentication prompts, third-party email delivery abuse, and anomalous Microsoft 365 access."
+        },
+        {
+          "heading": "Artifactory flaws used to deploy backdoors",
+          "what_happened": "Threat actors exploited critical and high-severity vulnerabilities in self-hosted JFrog Artifactory to bypass authentication, obtain administrative privileges, and deploy a Rust backdoor.",
+          "why_it_matters": "Compromised artifact repositories can provide attackers with administrative control and a route to persistent malware deployment.",
+          "recommended_attention": "Patch exposed Artifactory systems and inspect administrative activity, authentication events, and repository contents for backdoors."
+        },
+        {
+          "heading": "CISA adds five actively exploited flaws to KEV",
+          "what_happened": "The Cybersecurity and Infrastructure Security Agency added five vulnerabilities affecting JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS to its Known Exploited Vulnerabilities catalog after reports of active exploitation.",
+          "why_it_matters": "The catalog additions identify vulnerabilities with observed exploitation across widely used infrastructure and remote-management products.",
+          "recommended_attention": "Check asset inventories against the five additions and prioritize remediation according to exposure and business criticality."
+        },
+        {
+          "heading": "AI platforms turned into an attack surface",
+          "what_happened": "Huntress reported campaigns abusing trusted AI platforms to host malicious content, poison search results, and trick users into installing malware through weaponized Claude Artifacts, shared AI conversations, sponsored search results, and ClickFix-style lures.",
+          "why_it_matters": "Users may trust AI-generated or AI-hosted content, giving attackers new paths to deliver malware and manipulate search behavior.",
+          "recommended_attention": "Include AI platforms and shared AI content in web, endpoint, and user-awareness monitoring."
+        },
+        {
+          "heading": "RubyGems attack linked to OpenAI agents",
+          "what_happened": "Researchers attributed a major malicious attack against RubyGems in May 2026 to a swarm of OpenAI agents; the campaign targeted the package manager and gained remote code execution on RubyDoc servers.",
+          "why_it_matters": "The incident highlights the risk of automated activity targeting software package infrastructure and downstream developer ecosystems.",
+          "recommended_attention": "Review package-management and documentation-server activity, and strengthen controls around automated agents and build infrastructure."
+        },
+        {
+          "heading": "GitLab maximum-severity file-read flaw probed",
+          "what_happened": "GitLab released patches for multiple flaws, including CVE-2026-85706, a CVSS 10.0 path-traversal vulnerability in the repository commits API that could allow unauthenticated arbitrary file reads; in-the-wild probes appeared within hours of disclosure.",
+          "why_it_matters": "Unauthenticated file access can expose sensitive GitLab server data, while rapid probing reduces the time available for remediation.",
+          "recommended_attention": "Apply GitLab patches urgently and review logs for requests targeting the vulnerable repository commits API."
+        },
+        {
+          "heading": "Anthropic reports industrial-scale model distillation attacks",
+          "what_happened": "Anthropic said it identified and disrupted illicit distillation attacks against Claude conducted by seven China-based AI labs, including Alibaba, Moonshot, DeepSeek, Z.ai, and MiniMax.",
+          "why_it_matters": "The report indicates sustained, industrial-scale attempts to extract capabilities from a powerful AI model.",
+          "recommended_attention": "Monitor model access patterns, high-volume querying, and account behavior associated with attempted capability extraction."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Dutch NCSC: Critical Check Point VPN flaws exploitation is imminent",
+        "published_at": "2026-09-12T14:14:32+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/",
+        "category": "vulnerability",
+        "summary": "The Dutch Nationaal Cyber Security Centrum warned that exploitation of two critical Check Point VPN flaws, CVE-2026-85102 and CVE-2026-85103, is imminent.",
+        "why_it_matters": "Affected Check Point VPN deployments may face imminent attacks against remote-access infrastructure."
+      },
+      {
+        "title": "Hackers abused Claude to extract secrets from 1.8M Android apps",
+        "published_at": "2026-09-11T20:19:09+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/",
+        "category": "research",
+        "summary": "Anthropic said financially motivated and state-sponsored groups linked to Russia and China attempted to abuse Claude to extract secrets from 1.8 million Android applications.",
+        "why_it_matters": "The reported scale demonstrates how AI assistance can accelerate software analysis and secret theft."
+      },
+      {
+        "title": "Florida confirms DMV database breached via stolen police account",
+        "published_at": "2026-09-11T19:00:29+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/",
+        "category": "breach",
+        "summary": "Florida’s Department of Highway Safety and Motor Vehicles confirmed a breach of its DAVID driver database using credentials belonging to a police department employee.",
+        "why_it_matters": "Stolen government-linked credentials enabled access to sensitive driver database information."
+      },
+      {
+        "title": "Attackers Use Passkey Phishing to Hijack Microsoft Cloud Accounts and Exfiltrate Data",
+        "published_at": "2026-09-13T10:11:48+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/attackers-use-passkey-phishing-to.html",
+        "category": "breach",
+        "summary": "Microsoft disclosed campaigns using passkey-themed social engineering and third-party email delivery infrastructure to compromise cloud environments and steal Microsoft 365 data. One campaign sent more than a million scam emails between August 3 and 5, 2026, while masquerading as chief executive officers.",
+        "why_it_matters": "Convincing identity-themed phishing can turn trusted authentication workflows into a route to cloud data theft."
+      },
+      {
+        "title": "Artifactory flaws chained in attacks deploying backdoor malware",
+        "published_at": "2026-09-11T16:29:44+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/artifactory-flaws-chained-in-attacks-deploying-backdoor-malware/",
+        "category": "malware",
+        "summary": "Attackers exploited critical and high-severity JFrog Artifactory flaws to bypass authentication, gain administrative privileges, and deploy a Rust backdoor on vulnerable self-hosted servers.",
+        "why_it_matters": "Compromised artifact repositories can provide administrative control and a route to persistent malware deployment."
+      },
+      {
+        "title": "CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to KEV",
+        "published_at": "2026-09-12T15:54:45+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html",
+        "category": "vulnerability",
+        "summary": "CISA added five flaws affecting JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS to its Known Exploited Vulnerabilities catalog after reports of active exploitation.",
+        "why_it_matters": "The additions identify actively exploited weaknesses in infrastructure and remote-management products."
+      },
+      {
+        "title": "How Threat Actors Are Turning Trusted AI Platforms Into an Attack Surface",
+        "published_at": "2026-09-11T14:01:11+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/how-threat-actors-are-turning-trusted-ai-platforms-into-an-attack-surface/",
+        "category": "malware",
+        "summary": "Huntress described campaigns abusing AI platforms to host malicious content, poison search results, and trick users into installing malware through weaponized Claude Artifacts, shared conversations, sponsored search results, and ClickFix-style lures.",
+        "why_it_matters": "Trust in AI-hosted content creates additional paths for malware delivery and search manipulation."
+      },
+      {
+        "title": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE on RubyDoc Servers",
+        "published_at": "2026-09-12T09:07:56+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html",
+        "category": "research",
+        "summary": "Researchers attributed a major May 2026 attack targeting RubyGems to a swarm of OpenAI agents; the campaign gained remote code execution on RubyDoc servers.",
+        "why_it_matters": "Automated agents targeting package infrastructure could affect developer ecosystems and software supply chains."
+      },
+      {
+        "title": "GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure",
+        "published_at": "2026-09-11T16:30:18+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html",
+        "category": "vulnerability",
+        "summary": "GitLab patched CVE-2026-85706, a CVSS 10.0 path-traversal flaw in the repository commits API that could enable unauthenticated arbitrary file reads; in-the-wild probes appeared within hours of disclosure.",
+        "why_it_matters": "Rapid probing of a maximum-severity unauthenticated flaw sharply reduces the remediation window."
+      },
+      {
+        "title": "Anthropic Says Seven China-Based AI Labs Ran Industrial-Scale Claude Distillation Attacks",
+        "published_at": "2026-09-11T16:15:29+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html",
+        "category": "research",
+        "summary": "Anthropic said it identified and disrupted illicit distillation attacks against Claude conducted by seven China-based AI labs, including Alibaba, Moonshot, DeepSeek, Z.ai, and MiniMax.",
+        "why_it_matters": "The report indicates sustained, industrial-scale attempts to extract capabilities from a powerful AI model."
+      }
+    ],
+    "generated_at": "2026-09-13T12:00:05.457579+00:00",
+    "window_start": "2026-09-11T12:00:05.457579+00:00",
+    "window_end": "2026-09-13T12:00:05.457579+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing. First up, the Dutch cybersecurity center says exploitation of two critical Check Point VPN flaws is imminent, so organizations using those systems should make patching and monitoring a top priority. GitLab also disclosed a maximum-severity file-read flaw that drew probes within hours, while CISA added five actively exploited flaws affecting Artifactory, ScreenConnect, and MikroTik RouterOS to its Known Exploited Vulnerabilities catalog. Here’s why that matters: attackers are moving quickly from disclosure to probing and exploitation. We’re also seeing identity and access risks. Microsoft reported passkey-themed phishing campaigns that compromised cloud accounts and stole Microsoft 365 data, and Florida confirmed that attackers breached its driver database using a stolen police employee account. One thing to keep an eye on is the growing abuse of AI platforms. Anthropic said groups used Claude to extract secrets from 1.8 million Android apps, while Huntress described AI-hosted malware lures and search poisoning. Finally, researchers linked a RubyGems attack that gained remote code execution on RubyDoc servers to a swarm of OpenAI agents, underscoring the risks of automated attacks on developer infrastructure."
+  }
+}
