@@ -1,0 +1,138 @@
+{
+  "summary": {
+    "title": "Cybersecurity briefing",
+    "overview": {
+      "executive_summary": "The most consequential developments center on actively exploited vulnerabilities, imminent exploitation warnings, and compromises affecting cloud accounts and widely used software. CISA-linked alerts highlight urgent exposure in GitLab, Check Point VPN, Artifactory, ScreenConnect, and MikroTik RouterOS. Separately, a Revolut breach exposed financial information and passports, while malware operators abused a Tencent application flaw and a malicious browser extension leaked OAuth tokens from nearly 31,000 users. Organizations should prioritize patching and exposure review while monitoring identity, endpoint, and third-party software risks.",
+      "sections": [
+        {
+          "heading": "CISA warns of active exploitation of a critical GitLab flaw",
+          "what_happened": "The U.S. Cybersecurity and Infrastructure Security Agency warned that hackers are exploiting a maximum-severity vulnerability in GitLab in attacks.",
+          "why_it_matters": "Exploitation of a maximum-severity flaw creates an immediate risk for organizations running affected GitLab systems.",
+          "recommended_attention": "Review GitLab exposure, apply available remediation, and monitor for signs of exploitation."
+        },
+        {
+          "heading": "Critical Check Point VPN exploitation is considered imminent",
+          "what_happened": "The Dutch Nationaal Cyber Security Centrum warned that exploitation of two critical Check Point VPN vulnerabilities, CVE-2026-85102 and CVE-2026-85103, is imminent.",
+          "why_it_matters": "Internet-facing VPN flaws can place exposed organizational access infrastructure at heightened risk.",
+          "recommended_attention": "Prioritize remediation of affected Check Point VPN systems and watch for exploitation activity."
+        },
+        {
+          "heading": "CISA adds five actively exploited flaws to its KEV catalog",
+          "what_happened": "CISA added five security flaws affecting JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS to its Known Exploited Vulnerabilities catalog after reports of active exploitation in the wild.",
+          "why_it_matters": "The affected products span software distribution, remote connectivity, and network infrastructure, expanding the range of potentially exposed organizations.",
+          "recommended_attention": "Inventory these products, identify the five listed flaws, and prioritize remediation based on exposure."
+        },
+        {
+          "heading": "Passkey-themed phishing targets Microsoft cloud accounts",
+          "what_happened": "Microsoft disclosed campaigns that abused third-party email delivery infrastructure to send financial fraud messages and used passkey-themed social engineering to breach cloud environments and exfiltrate data. One campaign sent more than one million scam emails between August 3 and 5, 2026, while masquerading as chief executive officers.",
+          "why_it_matters": "The campaigns combine large-scale email abuse with identity-focused social engineering against cloud environments.",
+          "recommended_attention": "Review cloud-account protections, phishing indicators, and unusual data-exfiltration activity."
+        },
+        {
+          "heading": "Revolut discloses breach exposing financial information and passports",
+          "what_happened": "Revolut disclosed a data breach after sharing data from an undisclosed number of customers with a threat actor impersonating a government agency. The exposed information included financial details and passport data.",
+          "why_it_matters": "The incident affects sensitive identity and financial information and may increase risks for impacted customers.",
+          "recommended_attention": "Monitor Revolut’s disclosures and assess potential exposure for affected accounts and customers."
+        },
+        {
+          "heading": "Tencent application flaw used to deploy GrayRabbit malware",
+          "what_happened": "Threat actors linked to a China-aligned espionage group are exploiting a critical vulnerability, CVE-2026-51990, in Tencent’s Sogou Input Method for Windows to deploy the GrayRabbit backdoor.",
+          "why_it_matters": "Exploitation of a Windows application flaw is being used to deliver a backdoor associated with an espionage-linked threat group.",
+          "recommended_attention": "Check for the affected application, investigate suspicious activity, and monitor for GrayRabbit indicators."
+        },
+        {
+          "heading": "Malicious Twitch extension leaks OAuth tokens",
+          "what_happened": "A malicious cross-store Twitch browser extension leaked OAuth tokens associated with nearly 31,000 users to proxy servers operated by a Russian commercial bot service. The extension was named Twitch Enhanced Viewer | JeetBot.",
+          "why_it_matters": "Leaked OAuth tokens can put affected user sessions and connected accounts at risk.",
+          "recommended_attention": "Identify users of the extension, revoke exposed tokens, and review related account activity."
+        },
+        {
+          "heading": "September Windows updates cause Remote Desktop Services failures",
+          "what_happened": "Microsoft confirmed reports that September 2026 security updates cause Remote Desktop Services failures on Windows Server systems.",
+          "why_it_matters": "The issue can disrupt remote access to Windows Server environments that rely on Remote Desktop Services.",
+          "recommended_attention": "Assess update impact on Windows Server systems and monitor Microsoft’s guidance before broad deployment or rollback decisions."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "CISA: Hackers now exploit max severity GitLab flaw in attacks",
+        "published_at": "2026-09-14T07:06:27+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploit-max-severity-gitlab-flaw-in-attacks/",
+        "category": "vulnerability",
+        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency warned that hackers are exploiting a maximum-severity GitLab vulnerability in attacks.",
+        "why_it_matters": "Active exploitation makes affected GitLab systems an urgent remediation priority."
+      },
+      {
+        "title": "Dutch NCSC: Critical Check Point VPN flaws exploitation is imminent",
+        "published_at": "2026-09-12T14:14:32+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/",
+        "category": "vulnerability",
+        "summary": "The Dutch Nationaal Cyber Security Centrum warned of imminent exploitation of two critical Check Point VPN flaws tracked as CVE-2026-85102 and CVE-2026-85103.",
+        "why_it_matters": "Exposed Check Point VPN systems may face heightened attack risk."
+      },
+      {
+        "title": "CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to KEV",
+        "published_at": "2026-09-12T15:54:45+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html",
+        "category": "vulnerability",
+        "summary": "CISA added five flaws affecting JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS to its Known Exploited Vulnerabilities catalog following reports of active exploitation in the wild.",
+        "why_it_matters": "The affected products cover software, remote connectivity, and network infrastructure."
+      },
+      {
+        "title": "Attackers Use Passkey Phishing to Hijack Microsoft Cloud Accounts and Exfiltrate Data",
+        "published_at": "2026-09-13T10:11:48+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/attackers-use-passkey-phishing-to.html",
+        "category": "other",
+        "summary": "Microsoft disclosed campaigns abusing third-party email delivery infrastructure for financial fraud messages and using passkey-themed social engineering to breach cloud environments and exfiltrate data. One campaign sent over one million scam emails between August 3 and 5, 2026, while masquerading as chief executive officers.",
+        "why_it_matters": "The activity combines large-scale email delivery abuse with cloud-account compromise and data exfiltration."
+      },
+      {
+        "title": "Revolut discloses data breach exposing financial info, passports",
+        "published_at": "2026-09-14T08:48:24+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/revolut-discloses-data-breach-exposing-financial-info-passports/",
+        "category": "breach",
+        "summary": "Revolut disclosed a data breach after sharing data from an undisclosed number of customers with a threat actor impersonating a government agency. The exposed information included financial information and passports.",
+        "why_it_matters": "Sensitive financial and identity information was exposed."
+      },
+      {
+        "title": "Hackers exploit Tencent app flaw to deploy GrayRabbit malware",
+        "published_at": "2026-09-13T14:26:32+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-tencent-app-flaw-to-deploy-grayrabbit-malware/",
+        "category": "malware",
+        "summary": "Threat actors linked to a China-aligned espionage group are exploiting critical vulnerability CVE-2026-51990 in Tencent’s Sogou Input Method for Windows to deploy the GrayRabbit backdoor.",
+        "why_it_matters": "A critical application flaw is being used to deliver a backdoor associated with an espionage-linked group."
+      },
+      {
+        "title": "Malicious Twitch Browser Extension Leaks OAuth Tokens From Nearly 31,000 Users",
+        "published_at": "2026-09-14T07:24:39+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/malicious-twitch-browser-extension.html",
+        "category": "breach",
+        "summary": "A malicious cross-store Twitch browser extension leaked OAuth tokens associated with nearly 31,000 users to proxy servers operated by a Russian commercial bot service. The extension was named Twitch Enhanced Viewer | JeetBot.",
+        "why_it_matters": "Exposed OAuth tokens could put affected user accounts and sessions at risk."
+      },
+      {
+        "title": "Microsoft: September updates cause RDS failures on Windows Server",
+        "published_at": "2026-09-14T09:50:25+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-september-updates-cause-rds-failures-on-windows-server/",
+        "category": "other",
+        "summary": "Microsoft confirmed reports that September 2026 security updates cause Remote Desktop Services failures on Windows Server systems.",
+        "why_it_matters": "The update issue can disrupt remote access to Windows Server environments."
+      }
+    ],
+    "generated_at": "2026-09-14T12:00:04.643868+00:00",
+    "window_start": "2026-09-12T12:00:04.643868+00:00",
+    "window_end": "2026-09-14T12:00:04.643868+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing. First up, CISA says hackers are actively exploiting a maximum-severity GitLab flaw, making exposure review and remediation urgent. A Dutch cybersecurity center is also warning that exploitation of two critical Check Point virtual private network flaws is imminent. CISA has added five more actively exploited flaws affecting JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS to its Known Exploited Vulnerabilities catalog. Here’s why that matters: the activity spans development systems, remote access, and network infrastructure. Microsoft has also described passkey-themed phishing campaigns that breached cloud environments and exfiltrated data, including one campaign that sent more than a million scam emails while impersonating chief executive officers. In breach news, Revolut says a threat actor impersonating a government agency obtained customer data including financial information and passports. A malicious Twitch browser extension leaked OAuth, or authorization, tokens tied to nearly 31,000 users. One thing to keep an eye on: attackers are exploiting a Tencent Sogou Input Method flaw to deploy the GrayRabbit backdoor. Finally, Microsoft confirmed September updates can cause Remote Desktop Services failures on Windows Server, so administrators should monitor deployment impact."
+  }
+}
