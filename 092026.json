@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "title": "Cybersecurity briefing",
+    "overview": {
+      "executive_summary": "The news cycle is dominated by active exploitation, high-impact vulnerabilities, and attacks involving artificial intelligence systems. Critical flaws in Orkes Conductor, Linux kernels, SolarWinds Access Rights Manager, Azure AI Foundry, and WordPress create urgent patching and monitoring priorities. Large-scale incidents include WaterPlum’s compromise of at least 30,000 devices and Gyazo’s theft of 23.6 million user records. Supply-chain and AI-enabled risks are also prominent, spanning malicious npm packages, fake GitHub repositories, browser-agent hijacking, and security-testing failures.",
+      "sections": [
+        {
+          "heading": "Critical Orkes Conductor flaw exploited in the wild",
+          "what_happened": "A critical vulnerability in Orkes Conductor, tracked as CVE-2026-58138, is being actively exploited. The flaw allows unauthenticated remote code execution and affects versions 3.21.21 before 3.30.2.",
+          "why_it_matters": "Unauthenticated remote code execution can expose affected workflow-platform deployments to direct compromise.",
+          "recommended_attention": "Identify affected Orkes Conductor versions and prioritize updates and exploitation monitoring."
+        },
+        {
+          "heading": "North Korean WaterPlum operation compromised 30,000 devices",
+          "what_happened": "A joint law enforcement advisory says the North Korean hacking group WaterPlum compromised at least 30,000 devices worldwide from December 2025 through July 2026 and transferred more than $10.7 million in stolen cryptocurrency to North Korea.",
+          "why_it_matters": "The scale of the compromise and cryptocurrency theft indicates broad victim exposure and significant financial impact.",
+          "recommended_attention": "Review relevant law-enforcement guidance, investigate suspected infections, and monitor cryptocurrency-related activity."
+        },
+        {
+          "heading": "CISA flags three Linux kernel vulnerabilities under active exploitation",
+          "what_happened": "The U.S. Cybersecurity and Infrastructure Security Agency added three Linux kernel flaws to its Known Exploited Vulnerabilities catalog, citing evidence of active exploitation. One listed issue, CVE-2025-39682, has a CVSS score of 9.8.",
+          "why_it_matters": "Organizations running affected Linux kernels face risks from vulnerabilities already associated with real-world exploitation.",
+          "recommended_attention": "Prioritize inventory, patching, and remediation of the affected Linux kernel vulnerabilities."
+        },
+        {
+          "heading": "Gyazo breach exposed 23.6 million user records",
+          "what_happened": "Gyazo confirmed a data breach after hackers exploited a server vulnerability that allowed them to steal 23.6 million user records.",
+          "why_it_matters": "The volume of compromised records creates substantial exposure for Gyazo users and increases the significance of the server flaw.",
+          "recommended_attention": "Monitor Gyazo’s incident updates and assess whether organizational accounts or shared data were affected."
+        },
+        {
+          "heading": "Claude Opus 5 research chain reached OpenAI staff accounts",
+          "what_happened": "Three Hacktron researchers used Anthropic’s Claude Opus 5 to chain two flaws and take over the ChatGPT and Codex accounts of several OpenAI employees, then reach an internal OpenAI code repository. The chain began with a bug in software running OpenAI’s public help forum and moved through a weakness in OpenAI’s login system.",
+          "why_it_matters": "The research demonstrates how chained flaws and advanced AI systems can contribute to account takeover and internal repository access.",
+          "recommended_attention": "Track disclosures about the flaws and review authentication and public-facing forum integrations for similar chaining risks."
+        },
+        {
+          "heading": "Google Gemini accessed real company systems during a security test",
+          "what_happened": "Google’s Gemini model accessed the internet and broke into other companies during a cybersecurity evaluation conducted in May 2026 by Irregular, after a mix-up involving the test domain.",
+          "why_it_matters": "The incident highlights the potential for internet-connected AI systems to reach real organizations when evaluation boundaries fail.",
+          "recommended_attention": "Review AI testing controls, domain isolation, authorization boundaries, and monitoring for unintended external access."
+        },
+        {
+          "heading": "TanStack npm attack linked to copying 170 private GitHub repositories",
+          "what_happened": "CrowdSec said an attacker copied about 170 private GitHub repositories on May 22 using an employee account that remained active after the employee left. CrowdSec said the employee’s laptop was compromised in the TanStack supply-chain attack, in which malicious npm packages stole credentials.",
+          "why_it_matters": "The incident combines software supply-chain compromise, credential theft, and insufficient access deprovisioning.",
+          "recommended_attention": "Audit former-employee access, investigate credentials exposed through npm dependencies, and review private repository access logs."
+        },
+        {
+          "heading": "SolarWinds ARM flaw enables unauthenticated remote code execution",
+          "what_happened": "SolarWinds released updates for a high-severity Access Rights Manager flaw tracked as CVE-2026-28326. The vulnerability is rated 8.8 and affects all Access Rights Manager 2026.2 and prior versions.",
+          "why_it_matters": "The flaw could enable unauthenticated remote code execution in affected Access Rights Manager deployments.",
+          "recommended_attention": "Determine whether affected versions are deployed and apply the released security updates."
+        },
+        {
+          "heading": "Azure AI Foundry privilege-escalation flaw receives maximum severity rating",
+          "what_happened": "Microsoft patched CVE-2026-85889, a vulnerability in Azure AI Foundry caused by missing authentication for a critical function. The flaw carries a CVSS score of 10.0 and could allow an unauthorized attacker to elevate privileges over a network.",
+          "why_it_matters": "A maximum-severity network-accessible privilege-escalation flaw raises significant concern for affected Azure AI Foundry environments.",
+          "recommended_attention": "Confirm Microsoft’s fix status and review Azure AI Foundry environments for unauthorized privilege changes."
+        },
+        {
+          "heading": "BragJack attacks hijack AI browser agents through malicious extensions",
+          "what_happened": "The BragJack proof-of-concept attack uses one malicious browser extension to hijack AI assistants in Chrome, Edge, Opera Neon, Perplexity Comet, and Claude in Chrome. The Prompt Forcing technique earned more than $20,000 in bounties and two CVEs.",
+          "why_it_matters": "Malicious extensions can affect multiple AI browser-agent environments and manipulate their behavior through prompt forcing.",
+          "recommended_attention": "Review browser-extension controls and restrict untrusted extensions in environments using AI browser agents."
+        },
+        {
+          "heading": "WordPress Click2Shell flaw can force theme installation",
+          "what_happened": "WordPress released patches for vulnerabilities in its core software, including a flaw that lets a crafted link opened by a logged-in administrator install a theme from the official WordPress.org directory without an Install click. Researchers call the attack chain Click2Shell.",
+          "why_it_matters": "The issue creates a path from an administrator opening a crafted link to unauthorized theme installation and possible code-execution chaining.",
+          "recommended_attention": "Apply WordPress patches and reduce exposure of administrator sessions to untrusted links."
+        },
+        {
+          "heading": "Rapuncel infostealer spread through fake LastPass repositories",
+          "what_happened": "An ongoing malware campaign uses SEO-optimized GitHub repositories impersonating well-known software firms to distribute Rapuncel, a previously undocumented information stealer.",
+          "why_it_matters": "Impersonated software repositories can mislead users into installing malware and expose information from targeted systems.",
+          "recommended_attention": "Verify software sources, block suspicious repository-based downloads, and monitor for Rapuncel indicators when available."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Critical Pre-Auth RCE in Orkes Conductor Workflow Platform Exploited in the Wild",
+        "published_at": "2026-09-19T08:18:54+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/critical-pre-auth-rce-in-orkes.html",
+        "category": "vulnerability",
+        "summary": "A critical vulnerability in Orkes Conductor, CVE-2026-58138, is being actively exploited in the wild. The unauthenticated remote code execution flaw affects Orkes Conductor 3.21.21 before 3.30.2.",
+        "why_it_matters": "Affected workflow-platform deployments may be directly compromised without authentication."
+      },
+      {
+        "title": "North Korean WaterPlum hackers infected 30,000 devices worldwide",
+        "published_at": "2026-09-19T14:05:15+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/north-korean-waterplum-hackers-infected-30-000-devices-worldwide/",
+        "category": "malware",
+        "summary": "A joint law enforcement advisory says WaterPlum compromised at least 30,000 devices worldwide from December 2025 through July 2026 and transferred more than $10.7 million in stolen cryptocurrency to North Korea.",
+        "why_it_matters": "The operation combines broad device compromise with substantial cryptocurrency theft."
+      },
+      {
+        "title": "CISA Flags Three Linux Kernel Vulnerabilities Exploited in the Wild",
+        "published_at": "2026-09-19T06:24:10+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html",
+        "category": "vulnerability",
+        "summary": "CISA added three Linux kernel vulnerabilities to its Known Exploited Vulnerabilities catalog, citing active exploitation. The listed flaws include CVE-2025-39682, which has a CVSS score of 9.8.",
+        "why_it_matters": "Organizations running affected kernels face risks from vulnerabilities already linked to exploitation."
+      },
+      {
+        "title": "Gyazo server flaw exploited to steal 23.6 million user records",
+        "published_at": "2026-09-18T16:00:38+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records/",
+        "category": "breach",
+        "summary": "Gyazo confirmed a data breach after hackers exploited a server vulnerability to steal 23.6 million user records.",
+        "why_it_matters": "The large record count creates significant exposure for Gyazo users."
+      },
+      {
+        "title": "Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws",
+        "published_at": "2026-09-19T18:36:53+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html",
+        "category": "research",
+        "summary": "Hacktron researchers used Claude Opus 5 to chain two flaws, take over several OpenAI employees’ ChatGPT and Codex accounts, and reach an internal OpenAI code repository. The chain began with a bug in public help-forum software and moved through a weakness in OpenAI’s login system.",
+        "why_it_matters": "The research illustrates how chained vulnerabilities and AI systems can contribute to account takeover and repository access."
+      },
+      {
+        "title": "Google Gemini Broke Into Real Company Systems After Security Test Domain Mix-Up",
+        "published_at": "2026-09-19T07:51:34+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/google-gemini-broke-into-real-company.html",
+        "category": "research",
+        "summary": "During a May 2026 cybersecurity evaluation by Irregular, Google’s Gemini accessed the internet and broke into other companies after a security-test domain mix-up.",
+        "why_it_matters": "The incident shows how faulty evaluation boundaries can expose real organizations to internet-connected AI activity."
+      },
+      {
+        "title": "CrowdSec Says TanStack npm Attack Led to Copy of 170 Private GitHub Repositories",
+        "published_at": "2026-09-19T07:14:54+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/crowdsec-says-tanstack-npm-attack-led.html",
+        "category": "breach",
+        "summary": "CrowdSec said an attacker copied about 170 private GitHub repositories using an employee account that remained open after departure. The company linked the incident to a compromised laptop from the TanStack npm supply-chain attack, which stole credentials.",
+        "why_it_matters": "The incident connects supply-chain malware, credential theft, and weak access deprovisioning."
+      },
+      {
+        "title": "SolarWinds Patches ARM Hard-Coded Key Flaw Enabling Unauthenticated RCE",
+        "published_at": "2026-09-19T09:31:17+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html",
+        "category": "vulnerability",
+        "summary": "SolarWinds released updates for CVE-2026-28326 in Access Rights Manager, a CVSS 8.8 flaw that could enable unauthenticated remote code execution. It affects Access Rights Manager 2026.2 and prior versions.",
+        "why_it_matters": "Unpatched Access Rights Manager deployments could be exposed to unauthenticated code execution."
+      },
+      {
+        "title": "Microsoft Patches CVSS 10.0 Azure AI Foundry Flaw Enabling Unauthorized Privilege Escalation",
+        "published_at": "2026-09-18T12:47:04+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html",
+        "category": "vulnerability",
+        "summary": "Microsoft patched CVE-2026-85889, a maximum-severity Azure AI Foundry flaw caused by missing authentication for a critical function. It could allow an unauthorized attacker to elevate privileges over a network.",
+        "why_it_matters": "Network-accessible privilege escalation at CVSS 10.0 presents a severe risk to affected environments."
+      },
+      {
+        "title": "BragJack attacks hijack AI browser agents through malicious extensions",
+        "published_at": "2026-09-19T14:56:31+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/bragjack-attacks-hijack-ai-browser-agents-through-malicious-extensions/",
+        "category": "research",
+        "summary": "The BragJack proof-of-concept uses one malicious extension to hijack AI assistants in Chrome, Edge, Opera Neon, Perplexity Comet, and Claude in Chrome. Its Prompt Forcing technique earned more than $20,000 in bounties and two CVEs.",
+        "why_it_matters": "Malicious extensions can manipulate AI browser agents across several supported environments."
+      },
+      {
+        "title": "New WordPress Click2Shell Flaw Forces Theme Installs, Can Chain to Code Execution",
+        "published_at": "2026-09-18T16:56:19+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/new-wordpress-click2shell-flaw-forces.html",
+        "category": "vulnerability",
+        "summary": "WordPress patched a flaw that lets a crafted link opened by a logged-in administrator install a theme from WordPress.org without an Install click. Researchers call the attack chain Click2Shell.",
+        "why_it_matters": "A malicious link can trigger unauthorized theme installation and may support further code-execution chaining."
+      },
+      {
+        "title": "Fake LastPass Authenticator GitHub repos push new Rapuncel infostealer",
+        "published_at": "2026-09-18T15:19:06+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/fake-lastpass-authenticator-github-repos-push-new-rapuncel-infostealer/",
+        "category": "malware",
+        "summary": "An ongoing campaign uses SEO-optimized GitHub repositories impersonating well-known software firms to distribute Rapuncel, a previously undocumented information stealer.",
+        "why_it_matters": "Fake software repositories can trick users into installing malware and expose information from targeted systems."
+      }
+    ],
+    "generated_at": "2026-09-20T12:00:06.911634+00:00",
+    "window_start": "2026-09-18T12:00:06.911634+00:00",
+    "window_end": "2026-09-20T12:00:06.911634+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing. First up, a critical Orkes Conductor flaw is being exploited in the wild. The unauthenticated remote code execution issue affects versions before 3.30.2, making patching and exposure checks a priority. Another major concern is WaterPlum, a North Korean hacking group linked by a joint law enforcement advisory to compromises of at least 30,000 devices and more than 10.7 million dollars in stolen cryptocurrency. CISA also added three Linux kernel vulnerabilities to its Known Exploited Vulnerabilities catalog, so Linux patching deserves immediate attention. Here’s why that matters: these are not just theoretical weaknesses. Gyazo confirmed that attackers stole 23.6 million user records after exploiting a server flaw. The cycle also highlights new artificial intelligence risks. Researchers used Claude Opus 5 in a chain that reached OpenAI staff accounts and an internal repository, while a Google Gemini security test reached real company systems after a domain mix-up. One thing to keep an eye on is the supply chain. CrowdSec reported that a TanStack npm attack helped attackers copy about 170 private GitHub repositories. Add high-severity SolarWinds and Azure AI Foundry flaws, WordPress Click2Shell, BragJack browser-agent hijacking, and the Rapuncel infostealer, and the immediate priorities are clear: patch exploited systems, tighten access, and carefully control AI and software sources."
+  }
+}
