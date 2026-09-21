@@ -1,0 +1,153 @@
+{
+  "summary": {
+    "title": "Cybersecurity briefing",
+    "overview": {
+      "executive_summary": "This news cycle highlights growing risk across software supply chains, artificial intelligence systems, and state-linked cybercrime. Organizations face both direct operational disruption, such as broken Windows backups, and active compromise through malicious packages, deceptive software lures, and browser-agent extensions. North Korean operations stand out for their scale and financial impact, while new research shows that AI systems and their surrounding infrastructure can create novel paths to sensitive accounts and developer environments. Security teams should prioritize patch validation, runtime behavior monitoring, and review of AI-agent permissions and extension controls.",
+      "sections": [
+        {
+          "heading": "Microsoft September updates break File History backups",
+          "what_happened": "Microsoft warned that the built-in File History backup feature in Windows may stop working on some systems after installing the September 2026 security updates.",
+          "why_it_matters": "Affected systems may lose a familiar backup capability, creating recovery and data-protection risks if the issue is not identified.",
+          "recommended_attention": "Check Windows systems after the September updates and verify that File History backups continue to operate."
+        },
+        {
+          "heading": "Malicious npm packages hide activity at runtime",
+          "what_happened": "An ongoing npm malware campaign involving the indexed-btree package bypasses supply-chain defenses by hiding malicious code in the package’s normal runtime behavior rather than in installation scripts.",
+          "why_it_matters": "Organizations that focus only on install-script controls may miss malicious activity that executes after installation.",
+          "recommended_attention": "Monitor package runtime behavior and review use of indexed-btree and related dependencies."
+        },
+        {
+          "heading": "Researchers escape the OpenAI Codex sandbox",
+          "what_happened": "Researchers escaped OpenAI’s Codex sandbox in two ways, including one that ran commands on a developer’s machine from its most locked-down mode. OpenAI has patched both issues.",
+          "why_it_matters": "A sandbox escape could turn untrusted or manipulated coding activity into command execution on a developer’s host.",
+          "recommended_attention": "Confirm that patched Codex versions are in use and review the security boundaries around developer machines."
+        },
+        {
+          "heading": "BragJack attacks hijack AI browser agents",
+          "what_happened": "The BragJack proof-of-concept attack uses one malicious browser extension to hijack AI assistants in Chrome, Edge, Opera Neon, Perplexity Comet, and Claude in Chrome through Prompt Forcing. The technique earned more than $20,000 in bounties and resulted in two CVEs.",
+          "why_it_matters": "Malicious extensions may influence browser-based AI assistants across multiple products and potentially redirect their actions.",
+          "recommended_attention": "Review browser-extension controls and monitor the permissions and behavior of extensions used alongside AI assistants."
+        },
+        {
+          "heading": "WaterPlum infected 30,000 devices worldwide",
+          "what_happened": "A joint law enforcement advisory warned that the North Korean hacking group WaterPlum compromised at least 30,000 devices worldwide from December 2025 through July 2026 and transferred more than $10.7 million in stolen cryptocurrency to North Korea.",
+          "why_it_matters": "The campaign combines broad device compromise with significant financial theft and has an international victim footprint.",
+          "recommended_attention": "Prioritize indicators and advisory guidance related to WaterPlum, especially across globally distributed devices."
+        },
+        {
+          "heading": "ShinyHunters breaches the Clop leak site",
+          "what_happened": "The ShinyHunters extortion gang breached the Clop, also known as Cl0p, ransomware operation’s data leak site, defaced the Tor site, and allegedly stole server data and private keys for its onion service.",
+          "why_it_matters": "The incident demonstrates conflict between extortion groups and may expose operational data or disrupt ransomware infrastructure.",
+          "recommended_attention": "Monitor for follow-on disclosures, infrastructure changes, and claims involving Clop or ShinyHunters."
+        },
+        {
+          "heading": "ChainScript RAT delivered through ClickFix-style lures",
+          "what_happened": "Threat actors are using ClickFix-like lures to deliver a previously undocumented remote access trojan called ChainScript. The malware has appeared under multiple build names while presenting itself as Spotify, Zoom Workplace, and Microsoft Teams software.",
+          "why_it_matters": "Deceptive software branding and lure-based delivery can lead users to install malware that provides remote access to affected systems.",
+          "recommended_attention": "Watch for fake software installers, suspicious ClickFix-style instructions, and the listed ChainScript build names."
+        },
+        {
+          "heading": "Jade Sleet linked to an Indian IT provider breach",
+          "what_happened": "The North Korean threat actor Jade Sleet was linked to the compromise of a smaller India-based organization in the information technology services industry. The activity involved FLATROOF and ROOFDECK backdoors and highlighted continued targeting of developers to breach target networks.",
+          "why_it_matters": "IT providers and developer environments can provide a path into other organizations and expand the impact of a single compromise.",
+          "recommended_attention": "Review third-party access, developer environments, and detections for FLATROOF and ROOFDECK."
+        },
+        {
+          "heading": "Claude Opus 5 helped researchers take over OpenAI staff accounts",
+          "what_happened": "Three researchers used Anthropic’s Claude Opus 5 to chain two flaws and take over the ChatGPT and Codex accounts of several OpenAI employees, then reach an internal OpenAI code repository. The chain began with a flaw in software running OpenAI’s public help forum and moved through a weakness in OpenAI’s login system.",
+          "why_it_matters": "The research illustrates how chained weaknesses and AI assistance can turn an externally exposed flaw into account takeover and internal repository access.",
+          "recommended_attention": "Review public-facing systems, authentication paths, and access controls protecting employee accounts and code repositories."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Microsoft: September updates break File History backup feature",
+        "published_at": "2026-09-21T11:45:54+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-september-updates-break-file-history-backup-feature/",
+        "category": "other",
+        "summary": "Microsoft warned that the built-in File History backup feature in Windows may stop working on some systems after installing the September 2026 security updates.",
+        "why_it_matters": "Systems may lose a familiar backup capability after updating, creating recovery and data-protection risks."
+      },
+      {
+        "title": "Malicious npm packages evade install-script defenses at runtime",
+        "published_at": "2026-09-20T14:11:21+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/",
+        "category": "malware",
+        "summary": "An ongoing npm malware campaign involving the indexed-btree package hides malicious code in normal runtime behavior rather than installation scripts, allowing it to bypass some supply-chain defenses.",
+        "why_it_matters": "Install-script-focused controls may miss malicious activity that executes after a package is installed."
+      },
+      {
+        "title": "Researchers escape OpenAI Codex sandbox to run commands on host",
+        "published_at": "2026-09-20T12:00:00+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/",
+        "category": "research",
+        "summary": "Researchers escaped OpenAI’s Codex sandbox in two ways, including one that ran commands on a developer’s machine from its most locked-down mode. OpenAI has patched both.",
+        "why_it_matters": "A sandbox escape could enable command execution on a developer’s host from untrusted coding activity."
+      },
+      {
+        "title": "BragJack attacks hijack AI browser agents through malicious extensions",
+        "published_at": "2026-09-19T14:56:31+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/bragjack-attacks-hijack-ai-browser-agents-through-malicious-extensions/",
+        "category": "research",
+        "summary": "The BragJack proof-of-concept attack hijacks AI assistants in several browsers and services through one malicious extension using Prompt Forcing. The technique earned over $20,000 in bounties and two CVEs.",
+        "why_it_matters": "Malicious extensions can influence browser-based AI assistants across multiple products."
+      },
+      {
+        "title": "North Korean WaterPlum hackers infected 30,000 devices worldwide",
+        "published_at": "2026-09-19T14:05:15+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/north-korean-waterplum-hackers-infected-30-000-devices-worldwide/",
+        "category": "breach",
+        "summary": "A joint law enforcement advisory said WaterPlum compromised at least 30,000 devices worldwide from December 2025 through July 2026 and transferred more than $10.7 million in stolen cryptocurrency to North Korea.",
+        "why_it_matters": "The campaign combines large-scale device compromise with significant financial theft."
+      },
+      {
+        "title": "ShinyHunters hacks Clop leak site, threatens to extort ransomware gang",
+        "published_at": "2026-09-19T13:48:32+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacks-clop-leak-site-threatens-to-extort-ransomware-gang/",
+        "category": "ransomware",
+        "summary": "ShinyHunters breached and defaced the Clop ransomware operation’s data leak site and allegedly stole server data and private keys for its onion service.",
+        "why_it_matters": "The breach may expose ransomware-group data and disrupt its extortion infrastructure."
+      },
+      {
+        "title": "ClickFix Lures Deploy ChainScript RAT Using Polygon to Rotate C2 Infrastructure",
+        "published_at": "2026-09-21T08:39:38+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html",
+        "category": "malware",
+        "summary": "Threat actors are using ClickFix-like lures to deliver the previously undocumented ChainScript remote access trojan. It has appeared under multiple build names while posing as Spotify, Zoom Workplace, and Microsoft Teams software.",
+        "why_it_matters": "Fake software and lure-based delivery can give attackers remote access to user systems."
+      },
+      {
+        "title": "Jade Sleet Linked to Indian IT Provider Breach With FLATROOF and ROOFDECK Backdoors",
+        "published_at": "2026-09-21T06:06:44+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html",
+        "category": "breach",
+        "summary": "Jade Sleet was linked to the compromise of an India-based IT services organization involving the FLATROOF and ROOFDECK backdoors. The activity highlighted continued targeting of developers to breach target networks.",
+        "why_it_matters": "Compromised IT providers and developer environments can create pathways into other organizations."
+      },
+      {
+        "title": "Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws",
+        "published_at": "2026-09-19T18:36:53+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html",
+        "category": "research",
+        "summary": "Three researchers used Claude Opus 5 to chain two flaws, take over several OpenAI employees’ ChatGPT and Codex accounts, and reach an internal OpenAI code repository. The chain began with a flaw in software running OpenAI’s public help forum and moved through a weakness in OpenAI’s login system.",
+        "why_it_matters": "Chained weaknesses can connect public-facing flaws to account takeover and internal repository access."
+      }
+    ],
+    "generated_at": "2026-09-21T12:00:04.554072+00:00",
+    "window_start": "2026-09-19T12:00:04.554072+00:00",
+    "window_end": "2026-09-21T12:00:04.554072+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing. First up, Microsoft says its September 2026 security updates may break File History backups on some Windows systems, so verify that backups still run after patching. In the software supply chain, a malicious npm campaign is hiding code in normal runtime behavior instead of installation scripts, which means install-only defenses may not be enough. AI security is also prominent: researchers escaped the OpenAI Codex sandbox, and OpenAI says both issues are patched. Separately, the BragJack proof of concept shows how a malicious browser extension can hijack several AI assistants through Prompt Forcing. Here’s why that matters: AI agents inherit risk from their extensions, permissions, and host environments. North Korean activity remains a major theme. WaterPlum reportedly infected at least 30,000 devices and moved more than 10.7 million dollars in cryptocurrency, while Jade Sleet compromised an Indian IT provider using FLATROOF and ROOFDECK backdoors. One thing to keep an eye on is ChainScript, a new remote access trojan delivered through ClickFix-style lures and fake Spotify, Zoom Workplace, and Microsoft Teams software. Finally, researchers used Claude Opus 5 to chain flaws into OpenAI employee account takeovers and internal repository access. The common thread is convergence: supply-chain, identity, developer, and AI-agent risks are increasingly connected."
+  }
+}
