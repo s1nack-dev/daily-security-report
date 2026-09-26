@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "title": "Cybersecurity briefing",
+    "overview": {
+      "executive_summary": "The news cycle is dominated by active exploitation, urgent defensive actions, and major compromises affecting enterprise infrastructure, web applications, and digital-asset platforms. CISA-linked vulnerabilities span SharePoint, MikroTik RouterOS, WSO2, and Adobe Commerce, while Roundcube is also being exploited in the wild. Attackers continue to abuse trusted services and development ecosystems, including GitHub Actions, Docker hosts, Ukrainian websites, and public iCloud calendars. The Bitget theft and Kiteworks warning underscore the potential for immediate operational and financial impact.",
+      "sections": [
+        {
+          "heading": "SharePoint and MikroTik flaws added to CISA’s exploited-vulnerability catalog",
+          "what_happened": "CISA added CVE-2026-65660, a Microsoft SharePoint code injection vulnerability, and CVE-2026-67279, a MikroTik RouterOS improper enforcement of behavioral workflow vulnerability, to its Known Exploited Vulnerabilities Catalog based on evidence of active exploitation.",
+          "why_it_matters": "Organizations using exposed SharePoint or MikroTik systems face heightened risk from malicious actors exploiting vulnerabilities that CISA identifies as active attack vectors.",
+          "recommended_attention": "Prioritize remediation and check potentially exposed systems for signs of compromise."
+        },
+        {
+          "heading": "WSO2 and Adobe Commerce flaws exploited in attacks",
+          "what_happened": "CISA added critical vulnerabilities affecting WSO2 and Adobe Commerce or Magento to its Known Exploited Vulnerabilities Catalog after evidence of exploitation. The cited WSO2 issue is CVE-2026-5430, a path traversal vulnerability with a listed CVSS score of 9.8.",
+          "why_it_matters": "Enterprise API-control-plane and commerce systems may be exposed to attacks involving critical flaws already being used against targets.",
+          "recommended_attention": "Identify affected deployments, apply available fixes, and monitor for exploitation indicators."
+        },
+        {
+          "heading": "Kiteworks urges customers to shut down systems over possible attack",
+          "what_happened": "Kiteworks urged customers to shut down their systems for nine hours over the weekend after receiving threat intelligence from federal intelligence authorities indicating that a threat actor may attempt to target some Kiteworks systems.",
+          "why_it_matters": "A precautionary shutdown indicates a potentially imminent threat with possible availability and data-security consequences for customers using the file-sharing platform.",
+          "recommended_attention": "Follow Kiteworks’ emergency guidance and prepare for the recommended maintenance window."
+        },
+        {
+          "heading": "Elementor flaw can enable rogue administrator accounts",
+          "what_happened": "A high-severity cross-site request forgery vulnerability in the Elementor Website Builder WordPress plugin could allow an unauthenticated attacker to create administrator accounts and take control of a site. The flaw has a CVSS score of 8.8 and had not been assigned a CVE identifier in the candidate.",
+          "why_it_matters": "WordPress sites using affected Elementor versions could be taken over after an administrator interacts with a crafted link.",
+          "recommended_attention": "Review Elementor versions, apply the vendor fix when available, and audit administrator accounts."
+        },
+        {
+          "heading": "Bitget reports $351.6 million cryptocurrency theft",
+          "what_happened": "Bitget said suspected North Korean threat actors stole $351.6 million from its hot and warm wallets after unauthorized transfers were identified on September 24, 2026. Bitget said its cold wallets and the overwhelming majority of platform assets remained secure.",
+          "why_it_matters": "The incident demonstrates the severe financial impact of backend or wallet compromise at cryptocurrency exchanges.",
+          "recommended_attention": "Monitor Bitget’s incident updates and review controls protecting hot and warm wallets."
+        },
+        {
+          "heading": "Roundcube pre-authentication SQL injection actively exploited",
+          "what_happened": "The Canadian Centre for Cyber Security warned that CVE-2026-48842, a now-patched pre-authentication SQL injection vulnerability in Roundcube Webmail’s virtuser_query plugin, is being actively exploited. It affects specified Roundcube 1.6.x and 1.7.x versions before the cited fixes.",
+          "why_it_matters": "Unauthenticated exploitation of internet-facing webmail servers can expose mail systems and potentially enable follow-on compromise.",
+          "recommended_attention": "Confirm Roundcube versions, apply the patches, and investigate vulnerable internet-facing instances."
+        },
+        {
+          "heading": "Compromised GitHub Actions resumed malware execution",
+          "what_happened": "Two actions-cool GitHub Actions repositories were disabled again after becoming accessible and resuming execution of Mini Shai-Hulud malware. The affected actions were issues-helper and maintain-one-comment, which had been compromised during the May 2026 campaign.",
+          "why_it_matters": "Reactivated third-party actions can reintroduce supply-chain risk into automated software-development workflows.",
+          "recommended_attention": "Review workflows for use of the affected actions and validate dependencies before re-enabling automation."
+        },
+        {
+          "heading": "Carbonato malware hijacks exposed Docker hosts",
+          "what_happened": "A new botnet malware called Carbonato is targeting insecure hosts running Docker daemons, installing the Hermes Agent AI framework, and taking control of the systems.",
+          "why_it_matters": "Exposed Docker services can provide attackers with a path to persistent control and misuse of cloud or compute resources.",
+          "recommended_attention": "Remove unauthenticated Docker exposure, inspect hosts for unauthorized agents, and monitor container activity."
+        },
+        {
+          "heading": "OnePlus flaws allow installed apps to gain root access",
+          "what_happened": "A malicious app installed on a OnePlus 15 running the latest OxygenOS could chain two flaws in OnePlus software to obtain root access without requesting special permissions. OnePlus reportedly said the flaws affect more of its devices and OPPO devices, though the candidate provides no complete affected-device list.",
+          "why_it_matters": "Root access gives a malicious application the highest level of control over an Android phone and could undermine device security protections.",
+          "recommended_attention": "Track vendor advisories and restrict installation of untrusted applications until affected devices are patched."
+        },
+        {
+          "heading": "Ukrainian websites distribute Psychedelic stealer through fake Cloudflare checks",
+          "what_happened": "An active ClickFix campaign compromised legitimate Ukrainian business websites and injected fake Cloudflare verification pages. The lures trick visitors into copying and pasting a Windows Installer command that delivers the previously undocumented Psychedelic information stealer.",
+          "why_it_matters": "Compromised legitimate websites and familiar verification branding can make malware delivery appear trustworthy to victims.",
+          "recommended_attention": "Warn users not to paste commands from verification pages and monitor endpoints for Psychedelic-related activity."
+        },
+        {
+          "heading": "Corp MDM spyware targets logistics companies",
+          "what_happened": "A campaign targeting the logistics sector distributes Android spyware called Corp MDM through fake Google Play pages branded as CEVA and TKW Logistics. The APK is disguised as a system service and uses the package name com.corp.mdm.",
+          "why_it_matters": "The spyware can target business employees through sector-specific impersonation and may compromise mobile communications and operational data.",
+          "recommended_attention": "Block the identified package and fake distribution pages, and verify mobile applications installed on logistics devices."
+        },
+        {
+          "heading": "ShinyHunters compromises Clop ransomware leak site",
+          "what_happened": "The Clop ransomware gang moved its data leak site after confirming that its previous server had been compromised and defaced through an unpatched Grav CMS flaw. The vulnerability was identified as an unauthenticated path traversal issue.",
+          "why_it_matters": "The incident disrupts a ransomware group’s public infrastructure and illustrates the risk of leaving content-management systems unpatched.",
+          "recommended_attention": "Monitor for changes to ransomware leak infrastructure and prioritize patching of internet-facing Grav CMS deployments."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild",
+        "published_at": "2026-09-26T08:49:53+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html",
+        "category": "vulnerability",
+        "summary": "CISA added CVE-2026-65660 affecting Microsoft SharePoint and CVE-2026-67279 affecting MikroTik RouterOS to its Known Exploited Vulnerabilities Catalog, citing evidence of active exploitation.",
+        "why_it_matters": "Exposed SharePoint and MikroTik systems may be targeted by attackers exploiting vulnerabilities already observed in attacks."
+      },
+      {
+        "title": "WSO2 and Adobe Commerce Flaws Exploited in Attacks, Added to CISA KEV",
+        "published_at": "2026-09-25T04:46:34+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html",
+        "category": "vulnerability",
+        "summary": "CISA added critical WSO2 and Adobe Commerce or Magento vulnerabilities to its KEV catalog based on evidence of active exploitation. The WSO2 issue identified is CVE-2026-5430, a path traversal vulnerability with a listed CVSS score of 9.8.",
+        "why_it_matters": "Critical flaws in enterprise API and commerce platforms can expose business systems to active attacks."
+      },
+      {
+        "title": "Kiteworks Urges Customers to Shut Down Systems for 9 Hours Over Possible Cyber Attack",
+        "published_at": "2026-09-26T07:48:33+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/kiteworks-urges-customers-to-shut-down.html",
+        "category": "other",
+        "summary": "Kiteworks urged customers to shut down systems for nine hours over the weekend after receiving threat intelligence from federal intelligence authorities about a possible imminent cyber attack targeting some Kiteworks systems.",
+        "why_it_matters": "The warning signals a potentially immediate threat to a widely used file-sharing service and its customers."
+      },
+      {
+        "title": "Elementor CSRF Flaw Lets Attackers Take Over Sites After Admin Clicks Crafted Link",
+        "published_at": "2026-09-26T09:55:22+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/elementor-csrf-flaw-lets-attackers-take.html",
+        "category": "vulnerability",
+        "summary": "A high-severity CSRF vulnerability in the Elementor WordPress plugin could let an unauthenticated attacker create rogue administrator accounts and take over a site. The flaw has a CVSS score of 8.8 and had not received a CVE identifier in the candidate.",
+        "why_it_matters": "Affected WordPress sites could be compromised through administrator interaction with a crafted link."
+      },
+      {
+        "title": "Bitget Says Suspected North Korean Hackers Stole $351.6M After Backend Compromise",
+        "published_at": "2026-09-25T10:35:55+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/bitget-says-suspected-north-korean.html",
+        "category": "breach",
+        "summary": "Bitget said suspected North Korean threat actors stole $351.6 million from hot and warm wallets after unauthorized transfers were detected on September 24, 2026. The exchange said cold wallets and most platform assets remained secure.",
+        "why_it_matters": "The theft shows the potentially massive financial consequences of cryptocurrency exchange wallet compromise."
+      },
+      {
+        "title": "Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild",
+        "published_at": "2026-09-25T10:14:02+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html",
+        "category": "vulnerability",
+        "summary": "The Canadian Centre for Cyber Security warned that attackers are exploiting CVE-2026-48842, a patched pre-authentication SQL injection flaw in Roundcube Webmail’s virtuser_query plugin. The issue affects specified Roundcube versions before 1.6.16 and 1.7.1.",
+        "why_it_matters": "Internet-facing webmail servers vulnerable to unauthenticated SQL injection may be exposed to compromise."
+      },
+      {
+        "title": "Compromised GitHub Actions Came Back Online and Resumed Executing Mini Shai-Hulud Malware",
+        "published_at": "2026-09-25T14:44:41+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/compromised-github-actions-came-back.html",
+        "category": "malware",
+        "summary": "The actions-cool/issues-helper and actions-cool/maintain-one-comment GitHub Actions were disabled again after repositories became accessible and resumed executing Mini Shai-Hulud malware. The actions had been compromised during the May 2026 campaign.",
+        "why_it_matters": "Reactivated compromised actions can spread malware through software-development automation and supply chains."
+      },
+      {
+        "title": "New Carbonato malware uses AI agents to hijack exposed Docker hosts",
+        "published_at": "2026-09-24T20:10:48+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/new-carbonato-malware-uses-ai-agents-to-hijack-exposed-docker-hosts/",
+        "category": "malware",
+        "summary": "Carbonato is targeting insecure Docker hosts, installing the Hermes Agent AI framework, and taking control of the systems.",
+        "why_it_matters": "Exposed Docker daemons can be rapidly converted into attacker-controlled infrastructure."
+      },
+      {
+        "title": "Unpatched OnePlus Flaws Let Installed Android Apps Gain Root Without Permissions",
+        "published_at": "2026-09-24T18:10:18+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html",
+        "category": "vulnerability",
+        "summary": "A malicious app installed on a OnePlus 15 running the latest OxygenOS could chain two OnePlus software flaws to obtain root access without special permissions. OnePlus reportedly said more OnePlus and OPPO devices are affected, without providing a complete list in the candidate.",
+        "why_it_matters": "Root access gives an installed malicious app complete control over an affected Android device."
+      },
+      {
+        "title": "Hacked Ukrainian Sites Serve Fake Cloudflare ClickFix Lures for Psychedelic Stealer",
+        "published_at": "2026-09-24T14:29:06+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/hacked-ukrainian-sites-serve-fake.html",
+        "category": "malware",
+        "summary": "An active ClickFix campaign compromised legitimate Ukrainian business websites and injected fake Cloudflare verification pages. Visitors are tricked into copying and pasting a Windows Installer command that delivers the Psychedelic information stealer.",
+        "why_it_matters": "Compromised trusted websites and fake verification prompts can make malware execution seem legitimate."
+      },
+      {
+        "title": "Corp MDM Spyware Targets Logistics Firms, Steals New SMS and Redirects Calls",
+        "published_at": "2026-09-24T12:05:27+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/corp-mdm-spyware-targets-logistics.html",
+        "category": "malware",
+        "summary": "The logistics sector is being targeted with Android spyware called Corp MDM, distributed through fake Google Play pages branded as CEVA and TKW Logistics. The APK is disguised as a system service and uses the package name com.corp.mdm.",
+        "why_it_matters": "Sector-specific impersonation can place spyware on employee devices and expose business communications."
+      },
+      {
+        "title": "ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw",
+        "published_at": "2026-09-25T20:57:55+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacked-clop-leak-site-using-grav-cms-path-traversal-flaw/",
+        "category": "ransomware",
+        "summary": "The Clop ransomware gang moved its leak site after its previous server was compromised and defaced through an unpatched Grav CMS flaw. The issue was identified as an unauthenticated path traversal vulnerability.",
+        "why_it_matters": "The compromise disrupts ransomware infrastructure and highlights the exposure created by unpatched internet-facing CMS software."
+      }
+    ],
+    "generated_at": "2026-09-26T12:00:03.527010+00:00",
+    "window_start": "2026-09-24T12:00:03.527010+00:00",
+    "window_end": "2026-09-26T12:00:03.527010+00:00"
+  },
+  "tts": {
+    "text": "Here’s today’s cybersecurity briefing. First up, CISA says attackers are actively exploiting flaws in Microsoft SharePoint and MikroTik RouterOS, along with critical vulnerabilities in WSO2 and Adobe Commerce. Organizations using those platforms should prioritize patching and check for signs of compromise. Kiteworks is also urging customers to shut down systems for nine hours after receiving threat intelligence about a possible imminent attack, so this is one to watch closely. Another major issue affects the Elementor WordPress plugin, where a cross-site request forgery flaw can let attackers create administrator accounts and take over sites. In the financial sector, Bitget says suspected North Korean hackers stole three hundred fifty-one point six million dollars from hot and warm wallets. Meanwhile, a pre-authentication, meaning no login required, SQL injection flaw in Roundcube Webmail is being actively exploited. On the supply-chain front, compromised GitHub Actions resumed running Mini Shai-Hulud malware. One thing to keep an eye on: Carbonato is hijacking exposed Docker hosts, while Android spyware is targeting logistics firms and fake Cloudflare pages are delivering the Psychedelic stealer. Finally, the Clop ransomware leak site was itself compromised through an unpatched Grav CMS flaw."
+  }
+}
