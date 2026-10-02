@@ -2,94 +2,88 @@
   "summary": {
     "title": "Cybersecurity briefing",
     "overview": {
-      "executive_summary": "The news cycle is dominated by active exploitation of high-severity vulnerabilities, including FortiMail and Cisco SD-WAN Manager flaws that give attackers powerful access without normal authentication. Major incidents also include the theft of Pentagon personnel data, a $387.5 million cryptocurrency loss, and a security incident affecting MetaMask infrastructure. Ransomware enforcement and large-scale credential exposure show that both criminal operations and basic security hygiene remain significant risks. AI is a growing theme, appearing in attacker activity, automated intrusion attempts, and defensive research.",
+      "executive_summary": "This news cycle is dominated by active exploitation of critical edge and infrastructure systems, including FortiMail and Cisco Catalyst SD-WAN Manager. Major incidents also include the theft of Pentagon personnel records, a $387.5 million cryptocurrency loss, and an AI-assisted breach involving Zammad zero-days. Attackers continue to exploit trusted platforms, exposed credentials, remote-management tools, and widely deployed operational technology. Organizations should prioritize known exploited vulnerabilities, investigate possible compromise, and review access controls around sensitive systems.",
       "sections": [
         {
-          "heading": "FortiMail flaw added to active-exploitation catalog",
-          "what_happened": "CISA added CVE-2026-104286, a Fortinet FortiMail path-traversal vulnerability, to its Known Exploited Vulnerabilities catalog based on evidence of active exploitation. Fortinet warned that attackers were using the zero-day to execute unauthorized code or commands, while the vulnerability allows unauthenticated arbitrary file writes on vulnerable devices.",
-          "why_it_matters": "Internet-facing email security appliances can provide attackers with a high-value foothold and may expose sensitive systems or data.",
-          "recommended_attention": "Prioritize FortiMail remediation, review exposed devices for compromise, and monitor for unauthorized file or command activity."
+          "heading": "CISA Adds Fortinet FortiMail Flaw to Exploited Vulnerability Catalog",
+          "what_happened": "CISA added CVE-2026-104286, a Fortinet FortiMail path traversal vulnerability, to its Known Exploited Vulnerabilities Catalog based on evidence of active exploitation. BleepingComputer reports that Fortinet warned the flaw is being exploited in zero-day attacks to execute unauthorized code or commands on vulnerable devices.",
+          "why_it_matters": "FortiMail systems may be exposed to active attacks, creating risks of unauthorized access or system compromise.",
+          "recommended_attention": "Prioritize remediation of affected FortiMail systems and investigate whether exposed devices show signs of compromise."
         },
         {
-          "heading": "Cisco SD-WAN Manager authentication bypass exploited",
-          "what_happened": "Attackers are exploiting CVE-2026-76504, a critical zero-day in Cisco Catalyst SD-WAN Manager. The flaw allows a remote attacker without login access to use the Manager API as the administrator, and CISA added it to the KEV catalog after reports of active exploitation.",
-          "why_it_matters": "Compromise of centralized SD-WAN management could provide broad control over enterprise network infrastructure.",
-          "recommended_attention": "Apply Cisco’s fixed releases immediately and investigate SD-WAN Manager authentication and administrative activity."
+          "heading": "Attackers Exploit Cisco Catalyst SD-WAN Manager Authentication Bypass",
+          "what_happened": "Cisco warned that attackers are exploiting CVE-2026-76504, a critical authentication-bypass flaw in Cisco Catalyst SD-WAN Manager. The vulnerability can allow a remote attacker without login access to use the Manager API as the administrator, and CISA added it to the Known Exploited Vulnerabilities Catalog.",
+          "why_it_matters": "Compromise of SD-WAN management infrastructure could give attackers administrative control over network-management functions.",
+          "recommended_attention": "Apply fixed releases and review SD-WAN Manager access, authentication activity, and administrative actions."
         },
         {
-          "heading": "Pentagon personnel records stolen",
-          "what_happened": "The Pentagon’s Defense Manpower Data Center notified millions of military service members that hackers stole their data after breaching the Pentagon’s human resources management system in October 2025. The reported impact covers more than three million people.",
-          "why_it_matters": "Personnel records at this scale can create serious privacy, fraud, targeting, and national-security risks.",
-          "recommended_attention": "Affected organizations should assess exposed data, support impacted personnel, and review access controls around human-resources systems."
+          "heading": "Hackers Stole Pentagon Personnel Records of Over 3 Million People",
+          "what_happened": "The Pentagon's Defense Manpower Data Center is notifying millions of military service members that hackers stole their data after breaching the Pentagon's human resources management system in October 2025. The reported affected population exceeds 3 million people.",
+          "why_it_matters": "The incident involves a large volume of personnel information connected to military service members.",
+          "recommended_attention": "Affected organizations and individuals should monitor notification details and assess exposure of personnel records and related systems."
         },
         {
-          "heading": "Bitget confirms cryptocurrency theft",
-          "what_happened": "Bitget confirmed that attackers stole $387.5 million in cryptocurrency after exploiting a zero-day vulnerability in third-party security products. The exchange said an investigation identified malicious activity involving those products and recovered a customized attacker tool.",
-          "why_it_matters": "The incident demonstrates how weaknesses in trusted third-party security components can enable exceptionally large financial losses.",
-          "recommended_attention": "Monitor third-party security products, validate supply-chain exposure, and review controls protecting cryptocurrency assets."
+          "heading": "Bitget Confirms Third-Party Zero-Day Behind $387.5 Million Cryptocurrency Theft",
+          "what_happened": "Bitget confirmed that attackers who stole $387.5 million the previous week exploited a zero-day flaw in third-party security products. The investigation also recovered a customized tool used by the attacker.",
+          "why_it_matters": "The incident demonstrates how weaknesses in third-party security products can enable extremely costly cryptocurrency theft.",
+          "recommended_attention": "Review third-party security dependencies, investigate the affected environment, and monitor for related attacker tooling."
         },
         {
-          "heading": "KillSec ransomware operation disrupted",
-          "what_happened": "An international law-enforcement operation called Operation KillSwitch seized the KillSec ransomware group’s data-leak site and servers and led to three arrests. Investigators identified a 16-year-old as the group’s alleged administrator; the group was accused of stealing organizational data and threatening publication unless victims paid.",
-          "why_it_matters": "The disruption may reduce KillSec’s immediate operational capacity while illustrating the continued reach and impact of ransomware extortion.",
-          "recommended_attention": "Organizations should remain alert for related affiliates, leaked data, or follow-on extortion activity."
+          "heading": "Police Dismantle KillSec Ransomware Gang Allegedly Led by 16-Year-Old",
+          "what_happened": "An international law-enforcement operation called Operation KillSwitch seized KillSec's data-leak site and servers, led to three arrests, and identified a 16-year-old as the group's alleged administrator. The Hacker News reports that police in Spain arrested the suspected operator and took control of the leak site.",
+          "why_it_matters": "The operation disrupts a ransomware group accused of stealing organizational data and threatening publication unless victims paid.",
+          "recommended_attention": "Organizations should continue monitoring for KillSec-related extortion activity and preserve relevant evidence if targeted."
         },
         {
-          "heading": "Zammad zero-days linked to network breach",
-          "what_happened": "The Dutch Institute for Vulnerability Disclosure said its network breach was enabled by a chain of two zero-day vulnerabilities in the open-source Zammad ticketing system. The incident was described as AI-driven and involved exploitation of the ticketing platform.",
-          "why_it_matters": "Compromise of support systems can expose internal communications, credentials, and pathways into broader networks.",
-          "recommended_attention": "Inventory Zammad deployments, review available fixes and advisories, and investigate suspicious activity around ticketing infrastructure."
+          "heading": "DIVD Says Zammad Zero-Days Enabled AI-Driven Network Breach",
+          "what_happened": "The Dutch Institute for Vulnerability Disclosure said its network breach was possible through a chain of two zero-day vulnerabilities in the open-source Zammad ticketing system. The report describes the breach as AI-driven.",
+          "why_it_matters": "A zero-day chain in a ticketing platform can expose internal support data and provide attackers with access to organizational networks.",
+          "recommended_attention": "Review Zammad deployments, investigate unusual activity, and follow vendor or disclosure guidance associated with the flaws."
         },
         {
-          "heading": "Microsoft X account hijacked for crypto promotion",
-          "what_happened": "Unknown attackers hijacked Microsoft’s official X account, which has more than 13 million followers, in an apparent pump-and-dump scheme promoting a cryptocurrency token.",
-          "why_it_matters": "A compromised high-reach account can rapidly amplify fraud and undermine trust in official communications.",
-          "recommended_attention": "Verify high-profile social accounts’ access controls, enforce strong multifactor authentication, and prepare rapid account-recovery procedures."
+          "heading": "Over 543,000 Valid Credentials Exposed in Public GitHub Repositories",
+          "what_happened": "More than 543,000 credentials exposed in public GitHub repositories were still valid in July despite platform security measures intended to prevent accidental leaks of sensitive data.",
+          "why_it_matters": "Valid exposed credentials can enable unauthorized access across developer, cloud, and enterprise environments.",
+          "recommended_attention": "Search public repositories for active secrets, revoke exposed credentials, and strengthen secret-scanning and rotation processes."
         },
         {
-          "heading": "More than 543,000 valid credentials exposed",
-          "what_happened": "More than 543,000 credentials found in public GitHub repositories were still valid in July despite platform security measures intended to prevent accidental exposure of sensitive data.",
-          "why_it_matters": "Live credentials provide attackers with direct access to cloud services, source code, and enterprise systems.",
-          "recommended_attention": "Search repositories for secrets, revoke exposed credentials, rotate tokens, and strengthen secret-scanning response processes."
+          "heading": "Citrix NetScaler Post-Exploitation Payload Creates Superuser",
+          "what_happened": "Threat actors were observed exploiting a critical pre-authentication command-injection vulnerability in Citrix NetScaler ADC and NetScaler Gateway to drop web shells and attempt to steal configuration data. Researchers observed malicious NetScaler payloads across multiple customer environments.",
+          "why_it_matters": "NetScaler appliances are exposed access infrastructure, so compromise can support persistence, configuration theft, and further intrusion.",
+          "recommended_attention": "Inspect NetScaler systems for web shells, unexpected superuser activity, and configuration-data access."
         },
         {
-          "heading": "MetaMask reports infrastructure incident",
-          "what_happened": "MetaMask disclosed an ongoing security incident affecting part of its infrastructure. The company said it was remediating the issue with external partners and security advisers and reported no immediate threat to MetaMask wallets, while affected Ethereum validators were prompted to exit.",
-          "why_it_matters": "Infrastructure compromise can affect service integrity and connected blockchain operations even when user wallets are not immediately threatened.",
-          "recommended_attention": "Follow MetaMask updates, validate validator and infrastructure dependencies, and watch for fraudulent follow-up communications."
+          "heading": "Armatura One Vulnerabilities Could Compromise Physical Access-Control Systems",
+          "what_happened": "CISA reported that vulnerabilities in Armatura LLC Armatura One could allow unauthorized database access, arbitrary code execution with the highest host privileges, or control of the physical access-control system. Affected versions include Armatura One below 4.7.2 and Armatura One USA below 4.6.1, with a listed CVSS score of 9.8.",
+          "why_it_matters": "The affected product is deployed worldwide across communications, critical manufacturing, energy, and transportation sectors, and compromise could affect both information systems and physical access.",
+          "recommended_attention": "Identify affected deployments, apply the listed updates, and review access-control and host logs for unauthorized activity."
         },
         {
-          "heading": "Apple CoreGraphics proof of concept published",
-          "what_happened": "Researchers published the first public proof of concept for CVE-2026-86950, an Apple CoreGraphics flaw that Apple said may have been used against specifically targeted individuals. A malicious PDF with a crafted embedded font crashes unpatched iPhones and Macs, though the published code does not demonstrate execution.",
-          "why_it_matters": "Public exploit code increases pressure to patch devices that process untrusted PDFs, particularly those used by targeted individuals.",
-          "recommended_attention": "Apply relevant Apple updates and treat unexpected PDF files as a heightened delivery risk."
-        },
-        {
-          "heading": "Armatura One flaws threaten access-control systems",
-          "what_happened": "CISA warned that vulnerabilities in Armatura LLC Armatura One could allow unauthorized database access, arbitrary code execution with the highest host privileges, or control of physical access-control systems. Affected versions include Armatura One versions below 4.7.2 and Armatura One USA versions below 4.6.1.",
-          "why_it_matters": "Compromise could affect both information systems and physical entry controls across communications, manufacturing, energy, and transportation environments.",
-          "recommended_attention": "Upgrade affected deployments, restrict network exposure, and verify physical-access logs for anomalous administrative activity."
+          "heading": "Monta Charging-Station Platform Vulnerabilities Enable Unauthorized Control",
+          "what_happened": "CISA reported vulnerabilities in Monta monta.app that could allow attackers to gain unauthorized administrative control over vulnerable charging stations or disrupt charging services through denial-of-service attacks. The issues include missing authentication for critical functions and insufficiently protected credentials, with a listed CVSS score of 9.4.",
+          "why_it_matters": "The platform supports charging infrastructure in energy and transportation contexts, where unauthorized control or service disruption could affect operations.",
+          "recommended_attention": "Identify affected charging-station deployments, restrict management interfaces, and prioritize vendor remediation."
         }
       ]
     },
     "stories": [
       {
-        "title": "Fortinet warns of critical FortiMail flaw exploited in zero-day attacks",
-        "published_at": "2026-10-01T22:42:49+00:00",
-        "source": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "published_at": "2026-10-01T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/10/01/cisa-adds-one-known-exploited-vulnerability-catalog",
         "category": "vulnerability",
-        "summary": "Fortinet warned that CVE-2026-104286, a critical FortiMail vulnerability, is being actively exploited in zero-day attacks to execute unauthorized code or commands. CISA separately added the flaw to its Known Exploited Vulnerabilities catalog.",
-        "why_it_matters": "Unauthenticated compromise of exposed email security appliances could provide attackers with a valuable foothold."
+        "summary": "CISA added CVE-2026-104286, a Fortinet FortiMail path traversal vulnerability, to its Known Exploited Vulnerabilities Catalog based on evidence of active exploitation. Fortinet separately warned that the flaw is being exploited in zero-day attacks to execute unauthorized code or commands on vulnerable devices.",
+        "why_it_matters": "Active exploitation makes affected FortiMail systems an immediate remediation and investigation priority."
       },
       {
-        "title": "Cisco warns of new SD-WAN zero-day exploited in attacks",
-        "published_at": "2026-09-30T14:46:40+00:00",
-        "source": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-sd-wan-authentication-bypass-zero-day-exploited-in-attacks/",
+        "title": "Cisco Warns of Attackers Exploiting Critical Authentication Bypass in SD-WAN Manager",
+        "published_at": "2026-09-30T15:24:54+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html",
         "category": "vulnerability",
-        "summary": "Cisco released updates for CVE-2026-76504, a critical Catalyst SD-WAN Manager authentication-bypass zero-day that attackers are actively exploiting. The flaw can allow attackers to escalate to administrator privileges.",
-        "why_it_matters": "Compromising centralized network management could affect broad portions of an enterprise environment."
+        "summary": "Attackers are exploiting CVE-2026-76504, a critical Cisco Catalyst SD-WAN Manager authentication-bypass flaw. Cisco said an unauthenticated remote attacker could use the Manager API as the administrator; fixed releases are available and there is no workaround.",
+        "why_it_matters": "Unauthorized administrative access to SD-WAN management could expose network-control functions."
       },
       {
         "title": "Hackers stole Pentagon personnel records of over 3 million people",
@@ -97,8 +91,8 @@
         "source": "BleepingComputer",
         "url": "https://www.bleepingcomputer.com/news/security/hackers-breach-pentagon-human-resources-management-system-steal-data-of-nearly-3-million-people/",
         "category": "breach",
-        "summary": "The Pentagon’s Defense Manpower Data Center notified millions of military service members that hackers stole their data after breaching its human-resources management system in October 2025. The reported impact covers more than three million people.",
-        "why_it_matters": "The scale and sensitivity of military personnel data create substantial privacy, fraud, targeting, and national-security risks."
+        "summary": "The Pentagon's Defense Manpower Data Center is notifying millions of military service members that hackers stole their data after breaching its human resources management system in October 2025. The reported affected population exceeds 3 million people.",
+        "why_it_matters": "The breach involves a large volume of personnel records associated with military service members."
       },
       {
         "title": "Bitget Confirms Third-Party Zero-Day Behind $387.5 Million Cryptocurrency Theft",
@@ -106,35 +100,26 @@
         "source": "The Hacker News",
         "url": "https://thehackernews.com/2026/10/bitget-confirms-third-party-zero-day.html",
         "category": "breach",
-        "summary": "Bitget confirmed that attackers stole $387.5 million in cryptocurrency by exploiting a zero-day flaw in third-party security products. The exchange said investigators identified malicious activity and recovered a customized attacker tool.",
-        "why_it_matters": "A third-party security weakness enabled an exceptionally large financial loss."
+        "summary": "Bitget confirmed that attackers who stole $387.5 million the previous week exploited a zero-day flaw in third-party security products. Investigators also recovered a customized tool used by the attacker.",
+        "why_it_matters": "The theft highlights the financial impact of vulnerabilities in third-party security products."
       },
       {
-        "title": "Police dismantle KillSec ransomware gang allegedly led by 16-year-old",
-        "published_at": "2026-10-01T14:25:14+00:00",
-        "source": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/police-dismantle-killsec-ransomware-gang-allegedly-led-by-16-year-old/",
+        "title": "Police Arrest 16-Year-Old Suspected of Running KillSec, Seize Ransomware Leak Site and Servers",
+        "published_at": "2026-10-01T16:55:57+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/police-arrest-16-year-old-suspected-of.html",
         "category": "ransomware",
-        "summary": "Operation KillSwitch seized KillSec’s data-leak site and servers and led to three arrests. Police identified a 16-year-old as the group’s alleged administrator.",
-        "why_it_matters": "The action disrupts a ransomware operation accused of stealing data and using publication threats to pressure victims."
+        "summary": "Police in Spain arrested a 16-year-old suspected of running the KillSec ransomware group, one of three arrests on September 30. Authorities also seized the group's leak site and servers.",
+        "why_it_matters": "The operation disrupts a group accused of stealing organizational data and using publication threats for extortion."
       },
       {
         "title": "DIVD says Zammad zero-days enabled AI-driven network breach",
         "published_at": "2026-09-30T19:49:15+00:00",
         "source": "BleepingComputer",
         "url": "https://www.bleepingcomputer.com/news/security/divd-says-zammad-zero-days-enabled-ai-driven-network-breach/",
-        "category": "breach",
-        "summary": "DIVD said its network breach was possible because attackers exploited a chain of two zero-day vulnerabilities in the open-source Zammad ticketing system. The breach was described as AI-driven.",
-        "why_it_matters": "Ticketing systems can expose internal information and provide attackers with pathways into other network resources."
-      },
-      {
-        "title": "Microsoft’s X account hacked in crypto pump-and-dump scheme",
-        "published_at": "2026-10-02T09:29:56+00:00",
-        "source": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/microsofts-x-account-hacked-in-crypto-token-pump-and-dump-scheme/",
-        "category": "breach",
-        "summary": "Unknown attackers hijacked Microsoft’s official X account, which has more than 13 million followers, to promote a cryptocurrency token in an apparent pump-and-dump scheme.",
-        "why_it_matters": "Compromise of a trusted, high-reach account can rapidly amplify fraud and damage confidence in official communications."
+        "category": "research",
+        "summary": "The Dutch Institute for Vulnerability Disclosure said its network breach was enabled by a chain of two zero-day vulnerabilities in the open-source Zammad ticketing system. The breach was described as AI-driven.",
+        "why_it_matters": "Ticketing-system zero-days can expose internal support data and provide a path into organizational networks."
       },
       {
         "title": "Over 543,000 valid credentials exposed in public GitHub repositories",
@@ -142,26 +127,17 @@
         "source": "BleepingComputer",
         "url": "https://www.bleepingcomputer.com/news/security/over-543-000-valid-credentials-exposed-in-public-github-repositories/",
         "category": "breach",
-        "summary": "More than 543,000 credentials exposed in public GitHub repositories were still valid in July despite platform measures intended to prevent accidental leaks.",
-        "why_it_matters": "Valid exposed credentials can provide direct access to cloud services, source code, and enterprise systems."
+        "summary": "More than 543,000 credentials exposed in public GitHub repositories were still valid in July despite platform measures intended to prevent accidental leaks of sensitive data.",
+        "why_it_matters": "Still-valid secrets can provide unauthorized access to developer, cloud, and enterprise systems."
       },
       {
-        "title": "MetaMask discloses security incident affecting its infrastructure",
-        "published_at": "2026-10-01T07:33:57+00:00",
-        "source": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/metamask-discloses-security-incident-affecting-its-infrastructure/",
-        "category": "breach",
-        "summary": "MetaMask disclosed an ongoing security incident affecting some of its infrastructure. The company said it was remediating the issue and reported no immediate threat to MetaMask wallets.",
-        "why_it_matters": "Infrastructure compromise can affect service integrity and connected blockchain operations even without an immediate wallet threat."
-      },
-      {
-        "title": "Apple CoreGraphics PoC Emerges as WhatsApp PDF Checks Hint at Possible Delivery Path",
-        "published_at": "2026-10-01T05:54:41+00:00",
+        "title": "Citrix NetScaler Post-Exploitation Payload Creates Superuser, Maps Web Shell to CSS-Like URLs",
+        "published_at": "2026-10-01T04:35:34+00:00",
         "source": "The Hacker News",
-        "url": "https://thehackernews.com/2026/10/apple-coregraphics-poc-emerges-as.html",
-        "category": "vulnerability",
-        "summary": "Researchers published the first public proof of concept for CVE-2026-86950, an Apple CoreGraphics flaw that may have been used against targeted individuals. A crafted PDF causes crashes on unpatched iPhones and Macs, while the published code does not demonstrate code execution.",
-        "why_it_matters": "Public proof of concept increases the urgency of patching devices that process untrusted PDF files."
+        "url": "https://thehackernews.com/2026/10/citrix-netscaler-post-exploitation.html",
+        "category": "malware",
+        "summary": "Threat actors were observed exploiting a critical pre-authentication command-injection vulnerability in Citrix NetScaler ADC and NetScaler Gateway to drop web shells and attempt to steal configuration data. Researchers observed malicious activity across multiple customer environments.",
+        "why_it_matters": "Compromised NetScaler appliances can support persistence and access to sensitive configuration data."
       },
       {
         "title": "Armatura LLC Armatura One",
@@ -169,15 +145,24 @@
         "source": "CISA",
         "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01",
         "category": "vulnerability",
-        "summary": "CISA warned that vulnerabilities in Armatura One could enable unauthorized database access, arbitrary code execution with the highest host privileges, or control of physical access-control systems. Affected versions include Armatura One below 4.7.2 and Armatura One USA below 4.6.1.",
-        "why_it_matters": "Compromise could affect both enterprise information systems and physical entry controls in critical infrastructure environments."
+        "summary": "CISA reported that Armatura One vulnerabilities could allow unauthorized database access, arbitrary code execution with the highest host privileges, or control of the physical access-control system. Affected versions include Armatura One below 4.7.2 and Armatura One USA below 4.6.1; the listed CVSS score is 9.8.",
+        "why_it_matters": "Compromise could affect both information systems and physical access across worldwide critical-infrastructure deployments."
+      },
+      {
+        "title": "Monta monta.app",
+        "published_at": "2026-10-01T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02",
+        "category": "vulnerability",
+        "summary": "CISA reported that vulnerabilities in Monta monta.app could enable unauthorized administrative control of charging stations or denial-of-service attacks. The issues include missing authentication for critical functions and insufficiently protected credentials, with a listed CVSS score of 9.4.",
+        "why_it_matters": "Unauthorized control or disruption could affect charging infrastructure in energy and transportation environments."
       }
     ],
-    "generated_at": "2026-10-02T12:00:03.255848+00:00",
-    "window_start": "2026-09-30T12:00:03.255848+00:00",
-    "window_end": "2026-10-02T12:00:03.255848+00:00"
+    "generated_at": "2026-10-02T14:56:12.262504+00:00",
+    "window_start": "2026-09-30T14:56:12.262504+00:00",
+    "window_end": "2026-10-02T14:56:12.262504+00:00"
   },
   "tts": {
-    "text": "Here’s today’s cybersecurity briefing. First up, two actively exploited vulnerabilities deserve immediate attention. FortiMail has a critical zero-day that allows unauthenticated arbitrary file writes and has been added to CISA’s Known Exploited Vulnerabilities catalog. Cisco’s Catalyst SD-WAN Manager also has an exploited authentication bypass that can give remote attackers administrator-level access. Here’s why that matters: both products sit in highly trusted infrastructure positions. The Pentagon is notifying more than three million people that personnel data was stolen, while Bitget confirmed a massive three-hundred-eighty-seven-point-five-million-dollar cryptocurrency theft tied to a third-party security-product zero-day. On the criminal side, law enforcement seized KillSec’s leak site and servers and arrested three people, including a sixteen-year-old alleged administrator. One thing to keep an eye on is credential exposure: more than 543,000 valid credentials were found in public GitHub repositories. We’re also watching a MetaMask infrastructure incident, a public proof of concept targeting Apple’s CoreGraphics, and Armatura One flaws that could affect physical access-control systems. The common thread is clear: patch internet-facing systems quickly, rotate exposed secrets, and scrutinize trusted management and security infrastructure."
+    "text": "Here’s today’s cybersecurity briefing. First up, Fortinet FortiMail is under active attack: CISA added a critical path-traversal flaw to its Known Exploited Vulnerabilities catalog, so affected organizations should patch and investigate immediately. Cisco is also warning about active exploitation of an authentication bypass in Catalyst SD-WAN Manager, which could give an unauthenticated attacker administrator-level API access. On the incident side, hackers stole Pentagon personnel records belonging to more than three million people, while Bitget confirmed that a third-party zero-day was behind a 387.5-million-dollar cryptocurrency theft. Law enforcement disrupted the KillSec ransomware group, seizing its leak site and servers and arresting three people. One thing to keep an eye on is the reported Zammad breach, where two zero-days were allegedly used in an AI-driven attack. And there’s a basic but serious exposure problem: more than 543,000 credentials found in public GitHub repositories were still valid. Finally, critical infrastructure remains in focus, with Armatura One flaws potentially affecting physical access-control systems and Monta vulnerabilities threatening electric-vehicle charging operations. The immediate priorities are known exploited flaws, exposed credentials, and unusual activity on management systems."
   }
 }
