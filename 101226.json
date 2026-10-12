@@ -1,0 +1,153 @@
+{
+  "summary": {
+    "title": "Cybersecurity News Briefing — October 12, 2026",
+    "overview": {
+      "executive_summary": "Today’s verified candidates highlight actively exploited vulnerabilities, artificial intelligence-assisted cyberattacks, major data exposure, and important security-support deadlines. Organizations should prioritize urgent patching, review exposed systems and third-party access, and track emerging use of AI-enabled attack tools.",
+      "sections": [
+        {
+          "heading": "Windows 11 23H2 support deadline",
+          "what_happened": "Microsoft reminded customers that Enterprise, Education, and IoT Enterprise editions of Windows 11 23H2 will stop receiving security updates next month.",
+          "why_it_matters": "Unsupported systems will no longer receive security updates.",
+          "recommended_attention": "Identify affected systems and plan updates before support ends."
+        },
+        {
+          "heading": "Nippon Columbia malware incident",
+          "what_happened": "Daiichi Kosho disclosed that a malware infection at contractor Nippon Columbia exposed more than 8.7 million customer and employee records.",
+          "why_it_matters": "The incident affects a large volume of customer and employee information and highlights third-party risk.",
+          "recommended_attention": "Review contractor access, incident impact, and exposure of organizational records."
+        },
+        {
+          "heading": "Arrest linked to alleged ShinyHunters activity",
+          "what_happened": "Canadian cybersecurity executive Edward Dubrovsky was arrested in Pennsylvania in connection with alleged extortion activity linked by multiple reports to an FBI crackdown on ShinyHunters.",
+          "why_it_matters": "The case reflects continuing legal action connected to alleged cyber extortion activity.",
+          "recommended_attention": "Monitor verified developments and assess exposure to related extortion tactics."
+        },
+        {
+          "heading": "AI agents used against South Korean banks",
+          "what_happened": "A Chinese hacker used the ARTEX AI penetration testing suite and Claude agents in cyberattacks that affected South Korea’s financial sector.",
+          "why_it_matters": "The activity shows offensive security tools and AI agents being used together in attacks against financial institutions.",
+          "recommended_attention": "Review controls around AI-enabled activity and strengthen monitoring of banking environments."
+        },
+        {
+          "heading": "SonicWall SMA 1000 exploitation",
+          "what_happened": "Threat actors exploited a critical SonicWall Secure Mobile Access 1000 flaw within days of public disclosure. The flaw is CVE-2026-102255, with a CVSS score of 10.0, and involves pre-authenticated server-side request forgery.",
+          "why_it_matters": "The vulnerability is critical, remotely exploitable, and already being targeted in 135 exploitation attempts after patching information became available.",
+          "recommended_attention": "Prioritize patching and inspect SonicWall SMA 1000 devices for exploitation."
+        },
+        {
+          "heading": "Bricksforge WordPress vulnerability",
+          "what_happened": "Attackers are actively exploiting CVE-2026-85097, a CVSS 10.0 flaw in the Bricksforge WordPress plugin that allows unauthenticated attackers to upload and execute arbitrary PHP code, enabling remote code execution.",
+          "why_it_matters": "Unauthenticated remote code execution can give attackers control of vulnerable WordPress websites.",
+          "recommended_attention": "Patch or disable affected installations and check for unauthorized code or changes."
+        },
+        {
+          "heading": "CyberXero campaign targeting Ukraine",
+          "what_happened": "Researchers described an artificial intelligence-augmented campaign targeting WordPress sites, e-commerce platforms, and critical infrastructure entities in Ukraine. The campaign used Cobalt Strike with an orchestration layer powered by Anthropic’s Claude Code and stole more than 628,000 Ukrainian records.",
+          "why_it_matters": "The campaign combines commodity offensive tools with AI orchestration and has affected multiple types of important organizations.",
+          "recommended_attention": "Review initial-access defenses, Cobalt Strike detections, and AI-assisted attack indicators."
+        },
+        {
+          "heading": "P7 DarkSword iOS exploit kit",
+          "what_happened": "Researchers disclosed P7 DarkSword, a previously unseen DarkSword iOS exploit-kit variant with a smaller on-device footprint, keychain and cryptocurrency-wallet theft, and two-way command-and-control communication.",
+          "why_it_matters": "The variant expands the types of sensitive data and control available to attackers while reducing its device footprint.",
+          "recommended_attention": "Review mobile threat defenses and protect keychain and cryptocurrency-wallet data."
+        },
+        {
+          "heading": "AITEM attack-surface management launch",
+          "what_happened": "Criminal IP introduced AITEM, an artificial intelligence-powered approach intended to connect exposure discovery with investigation, risk prioritization, and response.",
+          "why_it_matters": "The offering addresses the gap between finding exposed assets and acting on associated threats.",
+          "recommended_attention": "Evaluate whether exposure management processes connect discovery with prioritization and response."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Microsoft: Windows 11 23H2 reaches end of support in 30 days",
+        "published_at": "2026-10-12T11:58:33+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-11-23h2-reaches-end-of-support-in-30-days/",
+        "category": "Security updates",
+        "summary": "Microsoft has reminded customers that Windows 11 23H2 Enterprise, Education, and IoT Enterprise editions will stop receiving security updates next month.",
+        "why_it_matters": "Organizations have a limited window to update affected systems before security coverage ends."
+      },
+      {
+        "title": "Nippon Columbia malware incident exposes 8.6 million karaoke fan records",
+        "published_at": "2026-10-11T14:23:46+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/nippon-columbia-malware-incident-exposes-86-million-karaoke-fan-records/",
+        "category": "Data breach",
+        "summary": "Daiichi Kosho disclosed that a malware infection at contractor Nippon Columbia exposed more than 8.7 million customer and employee records.",
+        "why_it_matters": "The scale of the exposure and the contractor connection make third-party security and data-protection reviews important."
+      },
+      {
+        "title": "Cyber exec arrested in case allegedly tied to ShinyHunters hackers",
+        "published_at": "2026-10-10T15:07:54+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/cyber-exec-arrested-in-case-allegedly-tied-to-shinyhunters-hackers/",
+        "category": "Cybercrime",
+        "summary": "Canadian cybersecurity executive Edward Dubrovsky was arrested in Pennsylvania in connection with alleged extortion activity that multiple reports linked to an FBI crackdown on ShinyHunters.",
+        "why_it_matters": "The arrest is a consequential development in alleged cyber-extortion activity and related law-enforcement action."
+      },
+      {
+        "title": "ARTEX AI, Claude agents used in cyberattacks on South Korean banks",
+        "published_at": "2026-10-10T14:16:17+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/",
+        "category": "AI-enabled attacks",
+        "summary": "A Chinese hacker used the ARTEX AI penetration testing suite and Claude agents in cyberattacks that shook South Korea’s financial sector.",
+        "why_it_matters": "The activity demonstrates how AI agents and penetration-testing tools can be combined against financial targets."
+      },
+      {
+        "title": "Criminal IP Introduces AITEM as the Next Evolution of Attack Surface Management",
+        "published_at": "2026-10-10T12:30:39+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/criminal-ip-introduces-aitem-as-the-next-evolution-of-attack-surface-management/",
+        "category": "Security products",
+        "summary": "Criminal IP introduced AITEM, an AI-powered approach that connects exposure discovery with investigation, risk prioritization, and response.",
+        "why_it_matters": "Connecting asset discovery to investigation and response may help organizations act more quickly on exposed systems."
+      },
+      {
+        "title": "Critical SonicWall SMA 1000 Flaw Targeted in 135 Exploitation Attempts After Patch",
+        "published_at": "2026-10-12T10:36:56+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/critical-sonicwall-sma-1000-flaw.html",
+        "category": "Vulnerability exploitation",
+        "summary": "Threat actors have exploited CVE-2026-102255, a CVSS 10.0 pre-authenticated server-side request forgery flaw in SonicWall Secure Mobile Access 1000 appliances, within days of public disclosure. Researchers observed 135 exploitation attempts.",
+        "why_it_matters": "Active exploitation of a maximum-severity flaw in remote-access appliances creates an urgent exposure for affected organizations."
+      },
+      {
+        "title": "Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw Enabling Unauthenticated RCE",
+        "published_at": "2026-10-12T09:02:14+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/attackers-exploit-cvss-1000-bricksforge.html",
+        "category": "Web security",
+        "summary": "Attackers are exploiting CVE-2026-85097, a CVSS 10.0 Bricksforge WordPress plugin flaw that permits unauthenticated attackers to upload and execute arbitrary PHP code, resulting in remote code execution.",
+        "why_it_matters": "Unauthenticated code execution can enable attackers to take control of vulnerable WordPress websites."
+      },
+      {
+        "title": "CyberXero Uses Claude Code in Campaign That Stole Over 628,000 Ukrainian Records",
+        "published_at": "2026-10-12T07:26:12+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/cyberxero-uses-claude-code-in-campaign.html",
+        "category": "AI-enabled attacks",
+        "summary": "Researchers disclosed an artificial intelligence-augmented campaign targeting WordPress sites, e-commerce platforms, and critical infrastructure entities in Ukraine. The campaign combined Cobalt Strike with an orchestration layer powered by Anthropic’s Claude Code and stole more than 628,000 Ukrainian records.",
+        "why_it_matters": "The campaign shows AI orchestration being integrated with established offensive tools across several high-impact target types."
+      },
+      {
+        "title": "P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands",
+        "published_at": "2026-10-11T04:24:34+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html",
+        "category": "Mobile security",
+        "summary": "Researchers disclosed P7 DarkSword, a previously unseen DarkSword iOS exploit-kit variant that reduces its on-device footprint, adds keychain and cryptocurrency-wallet theft, and supports two-way command-and-control communication.",
+        "why_it_matters": "The variant combines stealthier device activity with theft of highly sensitive credentials and financial data."
+      }
+    ],
+    "generated_at": "2026-10-12T12:00:04.932129+00:00",
+    "window_start": "2026-10-10T12:00:04.932129+00:00",
+    "window_end": "2026-10-12T12:00:04.932129+00:00"
+  },
+  "tts": {
+    "text": "Here’s today’s cybersecurity briefing. Microsoft says Windows 11 version 23H2 Enterprise, Education, and Internet of Things Enterprise editions will stop receiving security updates next month, so affected systems need an upgrade plan. A malware infection at contractor Nippon Columbia exposed more than 8.7 million customer and employee records, underscoring the importance of third-party security reviews. Two major attack trends stand out: artificial intelligence-assisted operations. South Korean banks were targeted using the ARTEX AI penetration-testing suite and Claude agents, while a campaign called CyberXero combined Cobalt Strike with Claude Code and stole more than 628,000 Ukrainian records. Defenders also face urgent active exploitation. A critical SonicWall Secure Mobile Access flaw, with a Common Vulnerabilities and Exposures identifier and a CVSS score of 10.0, saw 135 exploitation attempts. A maximum-severity Bricksforge WordPress flaw is also being exploited to achieve remote code execution. Finally, researchers reported a new DarkSword iOS variant that steals keychain and cryptocurrency-wallet data and adds two-way command-and-control. Prioritize patching, review third-party exposure, and strengthen monitoring for AI-assisted attacks."
+  }
+}
