@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "title": "Cybersecurity News Briefing — October 27, 2026",
+    "overview": {
+      "executive_summary": "The most consequential developments include active exploitation of PHP2Shell vulnerabilities, targeted exploitation of an Apple zero-day, major data breaches, malware infrastructure disruption, and attacks affecting cloud identities, software supply chains, AI coding agents, surveillance systems, and WebAssembly sandboxes.",
+      "sections": [
+        {
+          "heading": "CISA adds PHP2Shell flaws to its exploited-vulnerability catalog",
+          "what_happened": "The Cybersecurity and Infrastructure Security Agency added CVE-2026-109618 and CVE-2026-109619 to its Known Exploited Vulnerabilities catalog and updated its PHP alert.",
+          "why_it_matters": "The vulnerabilities are being exploited and pose significant risks to federal systems.",
+          "recommended_attention": "Prioritize rapid remediation and check publicly exposed assets for possible compromise."
+        },
+        {
+          "heading": "Apple backports patches for an exploited CoreGraphics zero-day",
+          "what_happened": "Apple backported security patches to older iPhones and iPads for a CoreGraphics zero-day used in extremely sophisticated targeted attacks.",
+          "why_it_matters": "Older Apple devices remain exposed to a vulnerability already used in attacks.",
+          "recommended_attention": "Apply the backported security updates to affected older devices."
+        },
+        {
+          "heading": "ENGIE reports customer data breach",
+          "what_happened": "Energy provider ENGIE said attackers stole customer data after breaching a marketing platform used by business partners.",
+          "why_it_matters": "The incident shows how third-party platforms can expose customer information at a major energy company.",
+          "recommended_attention": "Assess affected customer data and review partner-platform access."
+        },
+        {
+          "heading": "University of Copenhagen breach affects 525,000 people",
+          "what_happened": "Hackers accessed a university test environment containing personal data belonging to 525,000 people.",
+          "why_it_matters": "The scale of the exposed personal data makes this a significant breach.",
+          "recommended_attention": "Determine the affected data and secure test environments containing personal information."
+        },
+        {
+          "heading": "ARTEX AI operation stole 8.2 million records",
+          "what_happened": "South Korean police identified seven suspects linked to breaches of more than 90 organizations, with the ARTEX AI pentesting framework used in most attacks.",
+          "why_it_matters": "The operation combined broad organizational targeting with automated offensive tooling and large-scale data theft.",
+          "recommended_attention": "Review exposure to the identified operation and monitor for misuse of pentesting tools."
+        },
+        {
+          "heading": "Australia disrupts Amadey malware backend",
+          "what_happened": "Australia's Signals Directorate gained access to the Amadey criminal operation's backend and disconnected its controller from 180,000 infected computers.",
+          "why_it_matters": "The action disrupted criminal access to a large global set of infected systems.",
+          "recommended_attention": "Check systems for Amadey infection and maintain monitoring for renewed activity."
+        },
+        {
+          "heading": "Dahua cameras in Ukraine targeted through access weaknesses",
+          "what_happened": "Ukraine's Computer Emergency Response Team warned that attackers gained remote access to Dahua cameras and DVRs, viewed video, changed configurations, and created third-party accounts.",
+          "why_it_matters": "Compromised surveillance devices can expose video feeds and enable persistent unauthorized access.",
+          "recommended_attention": "Review remote access, device accounts, configurations, and firmware for affected systems."
+        },
+        {
+          "heading": "Critical Brotli flaw triggers emergency patches",
+          "what_happened": "A critical vulnerability in the Brotli C decoder library used by Node.js could corrupt memory and expose sensitive data, prompting emergency patches.",
+          "why_it_matters": "The flaw affects widely used software components and can create serious consequences when processing affected data.",
+          "recommended_attention": "Apply available emergency updates across Node.js and other affected deployments."
+        },
+        {
+          "heading": "Microsoft 365 token replay campaign compromises 97 accounts",
+          "what_happened": "Researchers observed adversary-in-the-middle activity that captured and replayed Microsoft 365 sign-in tokens, compromising 97 accounts at 79 organizations.",
+          "why_it_matters": "Stolen sessions can bypass the protection normally provided by passwords after authentication.",
+          "recommended_attention": "Investigate suspicious sessions and strengthen controls around token theft and replay."
+        },
+        {
+          "heading": "Gheist campaign steals private repository secrets",
+          "what_happened": "Attackers used stolen GitHub tokens to plant workflows that printed repository secrets into GitHub Actions logs before deleting the runs.",
+          "why_it_matters": "The campaign reached private repositories and GitHub Enterprise environments, exposing software supply-chain secrets.",
+          "recommended_attention": "Audit GitHub tokens, workflows, Actions logs, and repository secrets."
+        },
+        {
+          "heading": "Malicious Downloads file targets AI coding agents",
+          "what_happened": "A malicious AGENTS.md instruction file in a developer's Downloads folder tried to make an AI coding agent install a known-malicious npm package; the attempt was stopped before code ran.",
+          "why_it_matters": "Instruction files can influence agent behavior and introduce supply-chain risk through developer workflows.",
+          "recommended_attention": "Treat untrusted instruction files and package-install requests as high-risk inputs."
+        },
+        {
+          "heading": "Wasmtime flaws could enable WebAssembly sandbox escape",
+          "what_happened": "Two critical Wasmtime flaws could let malicious WebAssembly modules escape their sandbox; fixed versions were released.",
+          "why_it_matters": "A successful escape could undermine isolation in software embedding the WebAssembly runtime.",
+          "recommended_attention": "Update vulnerable Wasmtime deployments and review where untrusted modules are executed."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "published_at": "2026-10-26T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "category": "Vulnerability exploitation",
+        "summary": "CISA added CVE-2026-109618 and CVE-2026-109619 to its Known Exploited Vulnerabilities catalog and updated its PHP alert.",
+        "why_it_matters": "The PHP vulnerabilities are being exploited and pose significant risks to federal systems."
+      },
+      {
+        "title": "Apple backports CoreGraphics zero-day patches to older iPhones",
+        "published_at": "2026-10-27T10:36:12+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/",
+        "category": "Mobile security",
+        "summary": "Apple backported security patches to older iPhones and iPads for a CoreGraphics zero-day exploited in extremely sophisticated targeted attacks.",
+        "why_it_matters": "Older devices remain exposed to a vulnerability already used in attacks."
+      },
+      {
+        "title": "Energy giant ENGIE discloses data breach affecting customers",
+        "published_at": "2026-10-27T09:25:50+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/",
+        "category": "Data breach",
+        "summary": "ENGIE confirmed that attackers stole customer data after breaching a marketing platform used by business partners.",
+        "why_it_matters": "The breach highlights the customer-data risk created by third-party platforms."
+      },
+      {
+        "title": "University of Copenhagen data breach exposes data of 525,000 people",
+        "published_at": "2026-10-26T22:20:36+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/university-of-copenhagen-data-breach-exposes-data-of-525000-people/",
+        "category": "Data breach",
+        "summary": "Hackers accessed a University of Copenhagen test environment containing personal data belonging to 525,000 people.",
+        "why_it_matters": "The incident involves a large volume of personal data stored in a test environment."
+      },
+      {
+        "title": "Former pentester used ARTEX AI to steal 8.2 million data records",
+        "published_at": "2026-10-26T21:08:28+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/",
+        "category": "Cybercrime",
+        "summary": "South Korean police identified seven suspects linked to breaches of more than 90 organizations and the theft of 8.2 million records.",
+        "why_it_matters": "The operation demonstrates broad organizational targeting and large-scale data theft using an AI pentesting framework."
+      },
+      {
+        "title": "Australia Gets Into Amadey Malware Backend, Cuts Off Access to 180,000 Infected Computers",
+        "published_at": "2026-10-27T09:33:06+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/australia-gets-into-amadey-malware.html",
+        "category": "Malware disruption",
+        "summary": "Australia's Signals Directorate accessed the Amadey criminal backend and disconnected its controller from 180,000 infected computers.",
+        "why_it_matters": "The operation disrupted criminal control of a large global group of infected systems."
+      },
+      {
+        "title": "Attackers Hijack Dahua IP Cameras in Ukraine Using P2P Access and Auth Weaknesses",
+        "published_at": "2026-10-27T06:34:47+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html",
+        "category": "IoT security",
+        "summary": "Ukraine's Computer Emergency Response Team reported unauthorized access to Dahua cameras and DVRs, including video access, configuration changes, and new third-party accounts.",
+        "why_it_matters": "Compromised surveillance devices can expose video feeds and enable unauthorized persistence."
+      },
+      {
+        "title": "Critical 'HTTP2Shell' Brotli vulnerability triggers emergency patches",
+        "published_at": "2026-10-26T16:27:57+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/",
+        "category": "Vulnerability",
+        "summary": "A critical flaw in the Brotli C decoder library built into Node.js could corrupt memory and expose sensitive data, prompting emergency patches.",
+        "why_it_matters": "The flaw affects software components used in application environments and may have serious downstream impact."
+      },
+      {
+        "title": "Microsoft 365 Token-Replay Attacks Compromise 97 Accounts at 79 Organizations",
+        "published_at": "2026-10-26T08:35:51+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html",
+        "category": "Identity security",
+        "summary": "Researchers observed an adversary-in-the-middle campaign that captured and replayed Microsoft 365 sign-in tokens, compromising 97 accounts at 79 organizations.",
+        "why_it_matters": "Session-token theft can let attackers access accounts after successful authentication."
+      },
+      {
+        "title": "Gheist Uses Stolen GitHub Tokens to Steal Private Repository Secrets via Actions Logs",
+        "published_at": "2026-10-26T07:49:46+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/gheist-uses-stolen-github-tokens-to.html",
+        "category": "Software supply chain",
+        "summary": "Attackers used stolen GitHub tokens to plant workflows that printed repository secrets into GitHub Actions logs and then deleted the runs.",
+        "why_it_matters": "The campaign affected private repositories and GitHub Enterprise environments, creating a direct secret-exposure risk."
+      },
+      {
+        "title": "Malicious File in Downloads Folder Tries to Trick AI Coding Agent Into Installing Malware",
+        "published_at": "2026-10-26T06:03:48+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/malicious-file-in-downloads-folder.html",
+        "category": "AI security",
+        "summary": "A malicious AGENTS.md file in a developer's Downloads folder tried to instruct an AI coding agent to install a known-malicious npm package; the attempt was stopped before code ran.",
+        "why_it_matters": "Untrusted instruction files can influence agent actions and introduce malware into development workflows."
+      },
+      {
+        "title": "Two Critical Wasmtime Flaws Could Let Malicious WebAssembly Modules Escape Sandboxes",
+        "published_at": "2026-10-26T11:52:41+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/two-critical-wasmtime-flaws-could-let.html",
+        "category": "Application security",
+        "summary": "Two critical Wasmtime flaws could allow malicious WebAssembly modules to escape their intended sandbox, and fixed versions were released.",
+        "why_it_matters": "A sandbox escape could undermine isolation in software that runs untrusted WebAssembly modules."
+      }
+    ],
+    "generated_at": "2026-10-27T12:00:03.438952+00:00",
+    "window_start": "2026-10-25T12:00:03.438952+00:00",
+    "window_end": "2026-10-27T12:00:03.438952+00:00"
+  },
+  "tts": {
+    "text": "Here is your cybersecurity briefing for October 27th. First, the Cybersecurity and Infrastructure Security Agency, or CISA, added two PHP vulnerabilities to its Known Exploited Vulnerabilities catalog, confirming active exploitation and making rapid remediation the top priority. Apple also backported patches for a CoreGraphics zero-day used in targeted attacks against older iPhones and iPads. On the breach front, ENGIE reported customer-data theft through a partner marketing platform, while the University of Copenhagen said a test environment exposed data belonging to 525,000 people. South Korean police tied seven suspects to breaches of more than 90 organizations and the theft of 8.2 million records using the ARTEX AI framework. Australia disrupted the Amadey malware backend, cutting criminal access to 180,000 infected computers. Other urgent themes include hijacked Dahua cameras in Ukraine, emergency patches for a critical Brotli flaw, Microsoft 365 token-replay attacks, stolen GitHub secrets, malicious instructions targeting AI coding agents, and Wasmtime sandbox-escape vulnerabilities. Teams should prioritize patching, token review, secret rotation, and environment isolation."
+  }
+}
