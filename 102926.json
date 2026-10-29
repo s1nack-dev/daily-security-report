@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "title": "Cybersecurity News Briefing — October 29, 2026",
+    "overview": {
+      "executive_summary": "The most consequential developments include actively exploited flaws in Cisco firewalls, VMware ESX, Oracle E-Business Suite, and internet-exposed management interfaces; sophisticated activity linked to Volt Typhoon; major breaches affecting Sony customers and UNM Health; and law-enforcement action against Virtualine.",
+      "sections": [
+        {
+          "heading": "Cisco firewall zero-day exploited",
+          "what_happened": "Cisco patched a high-severity flaw in Adaptive Security Appliance and Threat Defense software that attackers exploited to remotely crash vulnerable firewall devices.",
+          "why_it_matters": "Internet-facing firewalls can be disrupted without authentication.",
+          "recommended_attention": "Apply Cisco security updates and review exposed ASA and FTD devices."
+        },
+        {
+          "heading": "VMware ESX flaw added to KEV",
+          "what_happened": "The Cybersecurity and Infrastructure Security Agency added a VMware ESX vulnerability to its Known Exploited Vulnerabilities catalog after it was weaponized by a China-linked threat actor.",
+          "why_it_matters": "The flaw can reduce audit-trail visibility during attacks targeting high-value systems.",
+          "recommended_attention": "Prioritize remediation and investigate systems for possible compromise."
+        },
+        {
+          "heading": "PHP2Shell attacks breach exposed systems",
+          "what_happened": "Researchers reported attacks using PHP2Shell vulnerabilities, including activity that rooted 25 servers and breached a U.S. government-affiliated network.",
+          "why_it_matters": "Publicly exposed management interfaces are being actively targeted, with attackers combining exploits for deeper access.",
+          "recommended_attention": "Patch affected systems and remove unnecessary internet exposure."
+        },
+        {
+          "heading": "Oracle E-Business Suite under attack",
+          "what_happened": "Threat actors began probing for a recently patched critical Oracle E-Business Suite vulnerability.",
+          "why_it_matters": "Scanning shortly after disclosure increases the risk to organizations that have not completed patching.",
+          "recommended_attention": "Confirm patches are installed and monitor exposed Oracle systems."
+        },
+        {
+          "heading": "Volt Typhoon used Silent Train",
+          "what_happened": "Volt Typhoon used a covert network of rotating compromised SOHO, Internet of Things, and enterprise devices during four zero-day exploitation campaigns.",
+          "why_it_matters": "The infrastructure can conceal the origin of attacks and support strategic access.",
+          "recommended_attention": "Review unusual traffic paths and compromised intermediary devices."
+        },
+        {
+          "heading": "Sony subsidiary breach exposes 2.5 million records",
+          "what_happened": "Sony Network Communications confirmed a breach affecting approximately 2.5 million records belonging to current and former customers.",
+          "why_it_matters": "The incident involves a large volume of personal information.",
+          "recommended_attention": "Assess exposure, notify affected parties as required, and investigate the intrusion."
+        },
+        {
+          "heading": "UNM Health ransomware disrupts care",
+          "what_happened": "A ransomware attack against the University of New Mexico Health Sciences Center caused system outages and disrupted patient care, surgeries, and academic activities.",
+          "why_it_matters": "The attack affected healthcare operations and patient services.",
+          "recommended_attention": "Maintain continuity procedures and investigate the attack scope."
+        },
+        {
+          "heading": "Virtualine domain seized",
+          "what_happened": "U.S. law enforcement seized the primary domain associated with Virtualine, a bulletproof hosting service linked to criminal activity.",
+          "why_it_matters": "The action disrupts infrastructure advertised for facilitating cybercrime and other illegal activities.",
+          "recommended_attention": "Check whether investigations or takedown actions affect related infrastructure."
+        },
+        {
+          "heading": "Cisco SD-WAN flaw used to deploy KeyDrift",
+          "what_happened": "Attackers exploited a Cisco Catalyst SD-WAN flaw to plant malware designed to copy encryption keys used between sites.",
+          "why_it_matters": "Stolen keys could expose encrypted traffic between locations.",
+          "recommended_attention": "Verify February patches and rotate potentially exposed encryption keys."
+        },
+        {
+          "heading": "Adobe Commerce PolyShell attacks",
+          "what_happened": "CISA added Adobe Commerce and Magento vulnerabilities, along with a Brotli decoder vulnerability, to its Known Exploited Vulnerabilities catalog amid attacks against stores.",
+          "why_it_matters": "Active exploitation threatens online commerce platforms and customer-facing systems.",
+          "recommended_attention": "Patch affected Commerce and Magento installations and review for compromise."
+        },
+        {
+          "heading": "GitHub launches npm Firewall",
+          "what_happened": "GitHub introduced a preview feature that inspects npm metadata requests and package downloads to block suspicious packages during installation.",
+          "why_it_matters": "The control can prevent malicious dependencies from being installed.",
+          "recommended_attention": "Evaluate the preview for development and build environments."
+        },
+        {
+          "heading": "Microsoft urges Entra ID passkey migration",
+          "what_happened": "Microsoft urged Entra ID administrators to move users to phishing-resistant authentication before SMS and voice authentication are retired in February 2027.",
+          "why_it_matters": "Organizations that delay migration may face sign-in disruptions and continued exposure to weaker authentication methods.",
+          "recommended_attention": "Plan passkey adoption and review authentication dependencies."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
+        "published_at": "2026-10-29T11:10:13+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
+        "category": "Vulnerability",
+        "summary": "Cisco released updates for a denial-of-service zero-day in Adaptive Security Appliance and Threat Defense software that attackers are exploiting to remotely crash vulnerable firewall devices.",
+        "why_it_matters": "A remotely exploitable flaw in internet-facing firewall infrastructure can disrupt access and security controls."
+      },
+      {
+        "title": "China-Linked Hackers Exploited VMware ESX Zero-Day to Reduce Audit Trail Visibility",
+        "published_at": "2026-10-29T06:22:33+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html",
+        "category": "Threat Activity",
+        "summary": "CISA added a VMware ESX flaw to its Known Exploited Vulnerabilities catalog after it was weaponized by a China-nexus threat actor known as Warp Panda in attacks targeting the U.S. legal sector.",
+        "why_it_matters": "The activity shows exploitation of a virtualization flaw to reduce visibility during attacks on high-value systems."
+      },
+      {
+        "title": "PHP2Shell Attack Roots 25 Servers, Breaches U.S. Government-Affiliated Network",
+        "published_at": "2026-10-28T16:02:45+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html",
+        "category": "Exploitation",
+        "summary": "Researchers disclosed an apparent artificial-intelligence-assisted attack that used PHP2Shell vulnerabilities and a kernel privilege-escalation exploit to root 25 servers and breach a U.S. government-affiliated network.",
+        "why_it_matters": "The activity demonstrates rapid exploitation of exposed systems and chaining of vulnerabilities for deeper access."
+      },
+      {
+        "title": "Hackers Target Critical Oracle E-Business Suite RCE Flaw Days After Security Patch",
+        "published_at": "2026-10-28T12:48:03+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html",
+        "category": "Vulnerability",
+        "summary": "Threat actors began probing for a newly patched critical Oracle E-Business Suite vulnerability tracked as CVE-2026-101767.",
+        "why_it_matters": "Scanning soon after a patch raises pressure on organizations with exposed or unpatched Oracle systems."
+      },
+      {
+        "title": "Volt Typhoon Used Covert Silent Train Network in Four Zero-Day Exploitation Campaigns",
+        "published_at": "2026-10-28T18:08:33+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
+        "category": "State-Sponsored Activity",
+        "summary": "Volt Typhoon used Silent Train, a covert access network made from rotating chains of compromised SOHO, Internet of Things, and enterprise infrastructure, for zero-day exploitation and strategic access.",
+        "why_it_matters": "Rotating compromised devices can conceal the source of attacks against strategic targets."
+      },
+      {
+        "title": "Sony ISP subsidiary data breach exposes 2.5 million customer records",
+        "published_at": "2026-10-28T16:45:47+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
+        "category": "Data Breach",
+        "summary": "Sony Network Communications confirmed a breach that compromised approximately 2.5 million records containing information about current and former customers.",
+        "why_it_matters": "The incident involves a substantial volume of personal information."
+      },
+      {
+        "title": "UNM Health ransomware attack disrupts patient care, surgeries",
+        "published_at": "2026-10-27T22:07:34+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-and-surgeries/",
+        "category": "Ransomware",
+        "summary": "The University of New Mexico Health Sciences Center disclosed a cyberattack that caused system outages and disrupted patient care, surgeries, and academic activities.",
+        "why_it_matters": "The attack directly affected healthcare operations and patient services."
+      },
+      {
+        "title": "FBI Seizes Virtualine Domain Over Alleged Criminal Hosting and Bitcoin Money Laundering",
+        "published_at": "2026-10-28T07:37:50+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/fbi-seizes-virtualine-domain-over.html",
+        "category": "Law Enforcement",
+        "summary": "The U.S. Department of Justice announced the seizure of a domain associated with Virtualine, a bulletproof hosting provider used to facilitate criminal activity.",
+        "why_it_matters": "The seizure disrupts infrastructure advertised for enabling cybercrime and other illegal activity."
+      },
+      {
+        "title": "Hackers Exploited Cisco SD-WAN Flaw to Plant Malware Built to Steal Encryption Keys",
+        "published_at": "2026-10-29T08:24:22+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html",
+        "category": "Threat Activity",
+        "summary": "Attackers exploited a Cisco Catalyst SD-WAN flaw to install KeyDrift malware, which copies keys used to encrypt traffic between sites.",
+        "why_it_matters": "Compromised encryption keys could undermine protections for traffic between network locations."
+      },
+      {
+        "title": "Adobe Commerce PolyShell Attacks Breach Hundreds of Stores as Brotli Exploit Traffic Emerges",
+        "published_at": "2026-10-28T05:42:26+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html",
+        "category": "E-Commerce Security",
+        "summary": "CISA added two Adobe Commerce and Magento vulnerabilities and a Brotli decoder vulnerability to its Known Exploited Vulnerabilities catalog amid active exploitation affecting stores.",
+        "why_it_matters": "Online commerce platforms are being targeted through vulnerabilities with potential customer-facing impact."
+      },
+      {
+        "title": "GitHub Launches npm Firewall to Block Malicious Packages Before Installation",
+        "published_at": "2026-10-29T10:26:33+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/github-launches-npm-firewall-to-block.html",
+        "category": "Supply Chain Security",
+        "summary": "GitHub introduced an npm package firewall preview that inspects metadata requests and package downloads for malicious activity during installation.",
+        "why_it_matters": "Install-time inspection can block suspicious dependencies before they enter development environments."
+      },
+      {
+        "title": "Microsoft urges Entra ID admins to migrate users to passkeys",
+        "published_at": "2026-10-28T14:48:32+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-reminds-entra-id-admins-to-migrate-users-to-passkeys/",
+        "category": "Identity Security",
+        "summary": "Microsoft asked Entra ID administrators to migrate users to phishing-resistant authentication before SMS and voice authentication are retired in February 2027.",
+        "why_it_matters": "Organizations that delay migration may face sign-in disruptions and continued reliance on weaker authentication methods."
+      }
+    ],
+    "generated_at": "2026-10-29T12:00:03.497934+00:00",
+    "window_start": "2026-10-27T12:00:03.497934+00:00",
+    "window_end": "2026-10-29T12:00:03.497934+00:00"
+  },
+  "tts": {
+    "text": "Here is your cybersecurity briefing for October 29, 2026. Cisco patched a zero-day affecting its firewall software after attackers used it to crash vulnerable devices. A VMware ESX flaw was added to the Cybersecurity and Infrastructure Security Agency’s Known Exploited Vulnerabilities catalog after use by a China-linked threat actor. PHP2Shell attacks reportedly rooted 25 servers and breached a U.S. government-affiliated network. Attackers are also probing a recently patched Oracle E-Business Suite flaw. Volt Typhoon used a covert network of compromised devices to support zero-day campaigns. Sony Network Communications confirmed a breach affecting about 2.5 million customer records, while ransomware disrupted patient care and surgeries at the University of New Mexico Health Sciences Center. Law enforcement seized the Virtualine domain, a bulletproof hosting service linked to criminal activity. Cisco SD-WAN attacks targeted encryption keys, and Adobe Commerce stores faced active exploitation. Finally, GitHub launched an npm package firewall, and Microsoft urged Entra ID administrators to move users to passkeys before SMS and voice authentication retire in February 2027."
+  }
+}
