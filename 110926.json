@@ -1,0 +1,153 @@
+{
+  "summary": {
+    "title": "Cybersecurity News Briefing — November 9, 2026",
+    "overview": {
+      "executive_summary": "Today’s most consequential verified stories involve a $133 million bank heist, millions of exposed customer records, attacks on connected vehicles and industrial refrigeration systems, and active exploitation affecting security products and cryptocurrency infrastructure.",
+      "sections": [
+        {
+          "heading": "French bank targeted through service provider",
+          "what_happened": "Crédit Mutuel Arkéa was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million, leading the bank to suspend certain systems.",
+          "why_it_matters": "The incident shows how compromise of a service provider can enable large-scale financial fraud against a bank.",
+          "recommended_attention": "Financial institutions and service providers should review transaction controls, third-party access, and incident-response readiness."
+        },
+        {
+          "heading": "Iris Ohyama cloud breach",
+          "what_happened": "Iris Ohyama said unauthorized access to a third-party cloud service may have exposed personal information belonging to about 7.7 million people.",
+          "why_it_matters": "The scale of the potential exposure highlights the risks created by third-party cloud services holding customer data.",
+          "recommended_attention": "Organizations should review cloud access controls, vendor security, and customer-data exposure."
+        },
+        {
+          "heading": "Connected-car systems exposed by default credentials",
+          "what_happened": "Researchers found that login systems behind two car brands’ mobile apps could be taken over using a default admin:admin password, potentially enabling access to customer accounts and, for connected cars, unlocking doors and starting engines.",
+          "why_it_matters": "The flaw connects a server-side authentication failure to physical vehicle functions and customer accounts.",
+          "recommended_attention": "Automakers should remove default credentials, secure identity platforms, and assess connected-vehicle controls."
+        },
+        {
+          "heading": "LNbits operators urged to shut down servers",
+          "what_happened": "LNbits urged all operators to shut down their Bitcoin Lightning wallet servers amid attacks and several security fixes. One operator reported an exploit used to withdraw 2,285,545 satoshis, about 0.023 bitcoin.",
+          "why_it_matters": "The warning indicates active attacks against wallet infrastructure and a direct risk of cryptocurrency theft.",
+          "recommended_attention": "LNbits operators should follow the project’s shutdown warning and await security fixes before resuming service."
+        },
+        {
+          "heading": "Web3Auth flaw leads to crypto-wallet theft",
+          "what_happened": "An attacker exploited a Web3Auth security flaw to steal funds from some Keplr wallets created with Google or Apple accounts. Web3Auth then used the attacker’s route to empty other at-risk wallets for safety.",
+          "why_it_matters": "A flaw in an authentication provider affected cryptocurrency wallets and prompted protective action across other wallets.",
+          "recommended_attention": "Affected wallet users and providers should assess exposure tied to Google or Apple sign-in and follow provider guidance."
+        },
+        {
+          "heading": "Industrial refrigeration systems targeted",
+          "what_happened": "U.S. government agencies warned that threat actors are targeting industrial refrigeration and cold-chain monitoring systems globally, potentially exploiting unpatched or internet-accessible controllers to alter settings.",
+          "why_it_matters": "Successful attacks could cause service disruptions, fire hazards, and inventory losses in cold-chain operations.",
+          "recommended_attention": "Operators should identify exposed controllers, apply available fixes, and restrict unnecessary internet access."
+        },
+        {
+          "heading": "SonicWall SonicOS MFA bypass added to KEV catalog",
+          "what_happened": "The Cybersecurity and Infrastructure Security Agency, or CISA, added a high-severity SonicWall SonicOS vulnerability to its Known Exploited Vulnerabilities catalog following reports it may have been exploited in real-world attacks.",
+          "why_it_matters": "The vulnerability affects authentication protections and has been associated with possible active exploitation.",
+          "recommended_attention": "SonicWall administrators should prioritize remediation and monitor for signs of compromise."
+        },
+        {
+          "heading": "AI agents used to access Taipei emergency records",
+          "what_happened": "Researchers said a single attacker using artificial intelligence agents obtained emergency dispatch records covering seven Taipei districts and found a fire department platform exposing patient data, including ECG readings and ambulance video footage, without a login.",
+          "why_it_matters": "The incident combines automated discovery with exposed emergency and patient information.",
+          "recommended_attention": "Public-sector operators should review internet-exposed systems, authentication controls, and monitoring for automated activity."
+        },
+        {
+          "heading": "Ukraine dismantles cryptocurrency scam network",
+          "what_happened": "Ukrainian law enforcement arrested four suspects in a case involving more than €4.3 million stolen through cryptocurrency investment scam call centers.",
+          "why_it_matters": "The arrests disrupt an organized scam operation responsible for substantial financial losses.",
+          "recommended_attention": "Consumers and financial organizations should remain alert to cryptocurrency investment scams and related call-center activity."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Hackers pull off $133 million French bank heist via service provider",
+        "published_at": "2026-11-07T15:25:35+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
+        "category": "Financial cybercrime",
+        "summary": "Crédit Mutuel Arkéa was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million, forcing it to suspend certain systems.",
+        "why_it_matters": "The attack demonstrates how service-provider access can enable major fraud against financial institutions."
+      },
+      {
+        "title": "Iris Ohyama data cloud breach exposes info of 7.7 million customers",
+        "published_at": "2026-11-08T15:43:08+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/",
+        "category": "Data breach",
+        "summary": "Iris Ohyama disclosed that personal information belonging to about 7.7 million people may have been exposed after unauthorized access to a third-party cloud service.",
+        "why_it_matters": "The potential exposure affects millions of people and underscores the security risks of outsourced cloud data storage."
+      },
+      {
+        "title": "Default 'admin:admin' Server Password Helps Researchers Hack Two Automakers, Unlock and Start Cars",
+        "published_at": "2026-11-09T11:27:53+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/default-adminadmin-server-password.html",
+        "category": "Automotive security",
+        "summary": "Researchers found that login systems behind two car brands’ mobile apps could be taken over with a default admin:admin password, potentially allowing access to customer accounts and connected-car functions such as unlocking doors and starting engines.",
+        "why_it_matters": "A basic server authentication failure could affect both digital accounts and physical vehicle controls."
+      },
+      {
+        "title": "LNbits Urges All Operators to Shut Down Their Bitcoin Lightning Wallet Servers Amid Attacks",
+        "published_at": "2026-11-09T10:01:21+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/lnbits-urges-all-operators-to-shut-down.html",
+        "category": "Cryptocurrency security",
+        "summary": "LNbits urged all operators to shut down their Bitcoin Lightning wallet servers amid attacks and several security fixes. One operator reported an exploit used to withdraw 2,285,545 satoshis, about 0.023 bitcoin.",
+        "why_it_matters": "The project’s shutdown request signals active risk to wallet servers and cryptocurrency funds."
+      },
+      {
+        "title": "Web3Auth Flaw Exploited to Steal Keplr Crypto, Provider Empties Other Wallets for Safety",
+        "published_at": "2026-11-09T10:56:25+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/web3auth-flaw-exploited-to-steal-keplr.html",
+        "category": "Cryptocurrency security",
+        "summary": "An attacker exploited a Web3Auth flaw to steal funds from some Keplr wallets created with Google or Apple accounts. Web3Auth then emptied other at-risk wallets using the attacker’s route for safety.",
+        "why_it_matters": "A flaw in an authentication provider affected cryptocurrency wallets and triggered protective action involving other wallets."
+      },
+      {
+        "title": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
+        "published_at": "2026-11-09T06:15:10+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html",
+        "category": "Industrial control systems",
+        "summary": "U.S. government agencies warned that threat actors are targeting industrial refrigeration and cold-chain monitoring systems globally, including unpatched or internet-accessible controllers.",
+        "why_it_matters": "The attacks could cause service disruptions, fire hazards, and inventory losses."
+      },
+      {
+        "title": "CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation",
+        "published_at": "2026-11-09T06:05:24+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html",
+        "category": "Vulnerability exploitation",
+        "summary": "CISA added a high-severity SonicWall SonicOS vulnerability to its Known Exploited Vulnerabilities catalog following reports it may have been exploited in real-world attacks.",
+        "why_it_matters": "The issue affects authentication protections and has been linked to possible active exploitation."
+      },
+      {
+        "title": "Taiwan-Based Hacker Used BOSSAI AI Agents to Steal Taipei Emergency Dispatch Records",
+        "published_at": "2026-11-09T09:01:50+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/taiwan-based-hacker-used-bossai-ai.html",
+        "category": "Public-sector data exposure",
+        "summary": "Researchers said a single attacker using AI agents obtained emergency dispatch records covering seven Taipei districts and found a fire department platform exposing patient data, including ECG readings and ambulance video footage, without a login.",
+        "why_it_matters": "The incident shows how AI agents can support discovery of exposed emergency and patient information."
+      },
+      {
+        "title": "Ukraine dismantles crypto scam network that stole €4.3 million",
+        "published_at": "2026-11-09T12:16:13+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/ukraine-dismantles-crypto-scam-network-that-stole-43-million/",
+        "category": "Financial cybercrime",
+        "summary": "Ukrainian law enforcement arrested four suspects in a case involving more than €4.3 million stolen through cryptocurrency investment scam call centers.",
+        "why_it_matters": "The arrests disrupt a scam network associated with substantial cryptocurrency theft."
+      }
+    ],
+    "generated_at": "2026-11-09T13:00:03.396621+00:00",
+    "window_start": "2026-11-07T13:00:03.396621+00:00",
+    "window_end": "2026-11-09T13:00:03.396621+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing. A French cooperative bank, Crédit Mutuel Arkéa, suffered an attack through a service provider that enabled up to 133 million dollars in fraudulent transactions. Iris Ohyama says a third-party cloud breach may have exposed information on 7.7 million people. Researchers also found that default admin credentials could let attackers take over two automakers’ apps and, in some cases, unlock and start connected cars. LNbits is telling operators to shut down Bitcoin Lightning wallet servers amid active attacks, while a Web3Auth flaw has already led to theft from some Keplr crypto wallets. U.S. agencies warn that attacks on industrial refrigeration controllers could cause fires and inventory losses. The Cybersecurity and Infrastructure Security Agency, or CISA, added a SonicWall SonicOS authentication flaw to its Known Exploited Vulnerabilities catalog. Finally, researchers say AI agents helped access Taipei emergency records and exposed patient data, while Ukrainian authorities arrested four suspects in a 4.3 million euro crypto scam case. That’s the briefing."
+  }
+}
