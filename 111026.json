@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "title": "Cybersecurity News Briefing — November 10, 2026",
+    "overview": {
+      "executive_summary": "Active exploitation, critical enterprise vulnerabilities, supply-chain compromises, and disruptive attacks dominate today’s verified candidates. Organizations should prioritize internet-facing systems, emergency patching, cloud trust relationships, and industrial control protections.",
+      "sections": [
+        {
+          "heading": "CISA adds four actively exploited vulnerabilities to its catalog",
+          "what_happened": "CISA added vulnerabilities affecting GPUStack, SignalWire FreeSwitch, OpenBSD OpenSSH, and IBM Aspera Faspex to its Known Exploited Vulnerabilities catalog, citing evidence of active exploitation.",
+          "why_it_matters": "The catalog identifies vulnerabilities being used by malicious cyber actors and highlights significant risks to federal agencies.",
+          "recommended_attention": "Prioritize rapid remediation, especially on publicly exposed assets."
+        },
+        {
+          "heading": "SAP patches four maximum-severity flaws",
+          "what_happened": "SAP patched 35 vulnerabilities, including four maximum-severity issues affecting NetWeaver, Web Dispatcher, and Gateway software. The four flaws were rated CVSS 10.0, with two enabling remote code execution.",
+          "why_it_matters": "The affected products support SAP systems, and the flaws can be exploited without logging in.",
+          "recommended_attention": "Review exposure and apply SAP’s November security updates urgently."
+        },
+        {
+          "heading": "Barracuda warns of exploitation targeting ESG appliances",
+          "what_happened": "Attackers began exploiting two recently patched Barracuda Email Security Gateway vulnerabilities that allow command execution with root privileges.",
+          "why_it_matters": "Root-level access can give attackers extensive control over an email security appliance.",
+          "recommended_attention": "Check affected ESG systems for exploitation and apply the available patches."
+        },
+        {
+          "heading": "Turla uses Cereal malware against government Exchange servers",
+          "what_happened": "The Russia-aligned group Turla has used a previously undocumented toolset called Cereal to break into Microsoft Exchange servers and collect emails from government organizations.",
+          "why_it_matters": "The campaign targets government communications and uses a new modular espionage toolset.",
+          "recommended_attention": "Review Exchange server security, access logs, and signs of unauthorized email collection."
+        },
+        {
+          "heading": "Google patches an actively exploited Chrome zero-day",
+          "what_happened": "Google released updates for nine Chrome vulnerabilities, including CVE-2026-125350, a high-severity use-after-free flaw in the XML component that was exploited in attacks.",
+          "why_it_matters": "Active exploitation means unpatched browsers may be targeted before users receive protection.",
+          "recommended_attention": "Deploy the Chrome security update promptly across managed devices."
+        },
+        {
+          "heading": "Fireworks AI discloses a breach through a cloud provider",
+          "what_happened": "Fireworks AI said attackers accessed its development machines after breaching a third-party cloud provider.",
+          "why_it_matters": "The incident demonstrates how compromise of a cloud provider can extend into a customer’s development environment.",
+          "recommended_attention": "Review third-party cloud access, credentials, development systems, and breach scope."
+        },
+        {
+          "heading": "N-able takes N-central environments offline after zero-day disclosures",
+          "what_happened": "N-able took hosted N-central environments offline and urged on-premises customers to shut down servers after disclosure of more than 30 vulnerabilities, including exploits that could enable system takeover.",
+          "why_it_matters": "The disclosed flaws affect a platform used to manage systems, increasing the potential impact of compromise.",
+          "recommended_attention": "Follow N-able’s shutdown guidance and assess exposed N-central deployments."
+        },
+        {
+          "heading": "France attributes supermarket refrigeration attacks to Iran",
+          "what_happened": "France linked October attacks on refrigeration controllers at about 700 retail sites to Iranian state-backed hackers. The attacks caused food losses and at least 15 fires.",
+          "why_it_matters": "The incident shows how cyberattacks on industrial systems can create physical safety hazards and widespread operational disruption.",
+          "recommended_attention": "Secure internet-accessible refrigeration controllers and review industrial control weaknesses."
+        },
+        {
+          "heading": "Qubole customer accounts breached through trusted AWS access",
+          "what_happened": "An attacker accessed AWS accounts belonging to multiple Qubole customers and stole stored secrets and data by using credentials for an AWS account that Qubole’s platform uses to reach customers.",
+          "why_it_matters": "A compromise of trusted provider access can expose multiple customer environments at once.",
+          "recommended_attention": "Audit provider permissions, stored secrets, access paths, and customer account activity."
+        },
+        {
+          "heading": "Malicious Ethersphere releases steal wallet credentials",
+          "what_happened": "Attackers used the project’s release automation to publish malicious versions of bee-js and Swarm Desktop. The releases were designed to steal wallet keys and stored passwords and install a backdoor.",
+          "why_it_matters": "Compromised release automation can turn legitimate software updates into a distribution channel for credential theft.",
+          "recommended_attention": "Verify package versions and release integrity before using affected tools."
+        },
+        {
+          "heading": "LNbits urges operators to shut down servers amid attacks",
+          "what_happened": "The LNbits project told operators of its Bitcoin Lightning wallet servers to shut down while security fixes were prepared. One operator reported that an exploit was used to withdraw 2,285,545 satoshis.",
+          "why_it_matters": "The attacks have resulted in cryptocurrency theft from exposed wallet servers.",
+          "recommended_attention": "Shut down affected servers and wait for verified security fixes before restoring service."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+        "published_at": "2026-11-09T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "category": "Vulnerability management",
+        "summary": "CISA added vulnerabilities affecting GPUStack, SignalWire FreeSwitch, OpenBSD OpenSSH, and IBM Aspera Faspex to its Known Exploited Vulnerabilities catalog, citing evidence of active exploitation.",
+        "why_it_matters": "The catalog identifies vulnerabilities being used by malicious cyber actors and highlights significant risks to federal agencies."
+      },
+      {
+        "title": "SAP Patches Four CVSS 10.0 Flaws, Including Two Enabling Remote Code Execution",
+        "published_at": "2026-11-10T10:02:40+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html",
+        "category": "Enterprise security",
+        "summary": "SAP patched 35 vulnerabilities, including four maximum-severity flaws affecting NetWeaver, Web Dispatcher, and Gateway software. All four were rated CVSS 10.0, and two enable remote code execution.",
+        "why_it_matters": "The flaws can be exploited without logging in and affect software supporting SAP systems."
+      },
+      {
+        "title": "Hackers now exploit critical Barracuda ESG flaws to gain root access",
+        "published_at": "2026-11-10T10:10:20+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-barracuda-email-security-gateway-flaws-to-get-root-access/",
+        "category": "Active exploitation",
+        "summary": "Barracuda warned that attackers have begun exploiting two recently patched Email Security Gateway vulnerabilities that allow command execution with root privileges.",
+        "why_it_matters": "Root-level access can give attackers extensive control over an email security appliance."
+      },
+      {
+        "title": "Russian Turla Hackers Use New Cereal Malware to Steal Emails From Government Exchange Servers",
+        "published_at": "2026-11-10T10:07:29+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/russian-turla-hackers-use-new-cereal.html",
+        "category": "Cyberespionage",
+        "summary": "Turla has used a previously undocumented toolset called Cereal to break into Microsoft Exchange servers and collect emails from government organizations.",
+        "why_it_matters": "The campaign targets government communications and uses a new modular espionage toolset."
+      },
+      {
+        "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
+        "published_at": "2026-11-10T06:52:54+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
+        "category": "Browser security",
+        "summary": "Google released updates for nine Chrome vulnerabilities, including CVE-2026-125350, a high-severity use-after-free flaw in the XML component that was exploited in attacks.",
+        "why_it_matters": "Active exploitation means unpatched browsers may be targeted before users receive protection."
+      },
+      {
+        "title": "Fireworks AI discloses new breach after cloud provider hack",
+        "published_at": "2026-11-10T07:49:58+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/",
+        "category": "Cloud security",
+        "summary": "Fireworks AI disclosed that attackers accessed its development machines after breaching a third-party cloud provider.",
+        "why_it_matters": "A cloud provider compromise can extend into a customer’s development environment."
+      },
+      {
+        "title": "N-able Takes N-central Cloud Offline After 30+ \"zero-days\" published",
+        "published_at": "2026-11-09T21:26:25+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
+        "category": "Platform security",
+        "summary": "N-able took hosted N-central environments offline and urged on-premises customers to shut down servers after disclosure of more than 30 alleged zero-day vulnerabilities, including exploits that could enable system takeover.",
+        "why_it_matters": "The disclosed flaws affect a platform used to manage systems, increasing the potential impact of compromise."
+      },
+      {
+        "title": "France blames Iranian hackers for supermarket attacks that sparked fires",
+        "published_at": "2026-11-09T18:32:42+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/",
+        "category": "Operational technology",
+        "summary": "France linked October attacks on refrigeration systems at more than 700 supermarkets and other retail locations to Iranian state-backed hackers. The attacks caused food losses and at least 15 fires.",
+        "why_it_matters": "Cyberattacks on industrial systems can create physical safety hazards and widespread operational disruption."
+      },
+      {
+        "title": "Hackers Exploit Qubole's Trusted AWS Access to Breach Customer Accounts and Steal Data",
+        "published_at": "2026-11-09T17:51:21+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
+        "category": "Cloud supply chain",
+        "summary": "An attacker accessed AWS accounts belonging to multiple Qubole customers and stole stored secrets and data using credentials for an AWS account that Qubole’s platform uses to reach customers.",
+        "why_it_matters": "Trusted provider access can expose multiple customer environments at once."
+      },
+      {
+        "title": "Hackers Compromise Ethersphere's bee-js and Swarm Desktop to Deliver Wallet-Stealing Malware",
+        "published_at": "2026-11-09T17:36:28+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-compromise-etherspheres-bee-js.html",
+        "category": "Software supply chain",
+        "summary": "Attackers used Ethersphere’s release automation to publish malicious versions of bee-js and Swarm Desktop designed to steal wallet keys and stored passwords and install a backdoor.",
+        "why_it_matters": "Compromised release automation can turn legitimate software updates into a distribution channel for credential theft."
+      },
+      {
+        "title": "LNbits Urges All Operators to Shut Down Their Bitcoin Lightning Wallet Servers Amid Attacks",
+        "published_at": "2026-11-09T10:01:21+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/lnbits-urges-all-operators-to-shut-down.html",
+        "category": "Cryptocurrency security",
+        "summary": "LNbits urged operators to shut down Bitcoin Lightning wallet servers while security fixes were prepared. One operator reported that an exploit was used to withdraw 2,285,545 satoshis.",
+        "why_it_matters": "The attacks have resulted in cryptocurrency theft from exposed wallet servers."
+      }
+    ],
+    "generated_at": "2026-11-10T13:00:03.162951+00:00",
+    "window_start": "2026-11-08T13:00:03.162951+00:00",
+    "window_end": "2026-11-10T13:00:03.162951+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing for November tenth. CISA, the Cybersecurity and Infrastructure Security Agency, added four actively exploited vulnerabilities to its Known Exploited Vulnerabilities catalog, affecting GPUStack, FreeSwitch, OpenSSH, and Aspera Faspex. SAP also patched four maximum-severity flaws, including two that enable remote code execution without login. Barracuda warned that attackers are exploiting Email Security Gateway flaws to gain root privileges. The Russia-aligned group Turla is using new Cereal malware to steal emails from government Microsoft Exchange servers. Google issued an emergency Chrome update for an actively exploited zero-day. N-able took hosted N-central environments offline after researchers disclosed more than thirty vulnerabilities. France attributed attacks on refrigeration controllers at about seven hundred retail sites to Iranian state-backed hackers; the incidents caused food losses and at least fifteen fires. Cloud and supply-chain risks are also prominent: attackers used trusted Qubole access to reach customer AWS accounts, while malicious Ethersphere releases targeted wallet keys. Finally, LNbits urged all operators to shut down wallet servers amid attacks and reported cryptocurrency theft."
+  }
+}
