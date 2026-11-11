@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "title": "Cybersecurity News Briefing — November 11, 2026",
+    "overview": {
+      "executive_summary": "Today’s most consequential developments include actively exploited vulnerabilities, major cloud and software supply-chain compromises, and breaches exposing customer data, credentials, artificial-intelligence usage, and digital wallets.",
+      "sections": [
+        {
+          "heading": "N-able zero-day disclosures",
+          "what_happened": "N-able released hotfixes for zero-day vulnerabilities in its N-central remote monitoring and management platform after publicly disclosed flaws forced hosted environments offline.",
+          "why_it_matters": "The affected platform manages customer environments, increasing the potential impact of exploitation.",
+          "recommended_attention": "Apply the hotfixes and follow N-able guidance for hosted and on-premises deployments."
+        },
+        {
+          "heading": "Microsoft November security updates",
+          "what_happened": "Microsoft patched 1,259 vulnerabilities across its software portfolio, including an exploited Outlook vulnerability that may expose NTLMv2 hashes.",
+          "why_it_matters": "The unusually large patch set and active exploitation create significant enterprise remediation pressure.",
+          "recommended_attention": "Prioritize the exploited Outlook issue and assess the broader November update set."
+        },
+        {
+          "heading": "Railway breach and unauthorized artificial-intelligence charges",
+          "what_happened": "Railway said stolen customer artificial-intelligence provider keys were used to generate an estimated $740,000 in unauthorized spending.",
+          "why_it_matters": "The incident shows how exposed platform secrets can produce direct financial loss and downstream account risk.",
+          "recommended_attention": "Rotate stored keys, review usage, and investigate affected workloads and credentials."
+        },
+        {
+          "heading": "Nitori customer-record exposure",
+          "what_happened": "Japanese retailer Nitori said an attacker accessed a network system and may have stolen 37.62 million customer records.",
+          "why_it_matters": "The scale of the potentially exposed records makes this a major data-protection incident.",
+          "recommended_attention": "Confirm the affected data, preserve evidence, and assess notification and credential-protection needs."
+        },
+        {
+          "heading": "Trusted AWS access abused through Qubole",
+          "what_happened": "An attacker used credentials for a Qubole platform AWS account to access multiple customers’ AWS environments and steal secrets and data.",
+          "why_it_matters": "Trusted third-party access can turn one compromised account into a cross-customer cloud incident.",
+          "recommended_attention": "Audit delegated access, rotate exposed secrets, and review cross-account activity."
+        },
+        {
+          "heading": "Xen Orchestra authentication bypass",
+          "what_happened": "Attackers exploited a critical Xen Orchestra authentication bypass to gain administrator access and potentially take over XCP-ng virtualization hosts.",
+          "why_it_matters": "Virtualization control-plane compromise can affect many hosted workloads at once.",
+          "recommended_attention": "Apply available mitigations or updates and inspect virtualization infrastructure for unauthorized access."
+        },
+        {
+          "heading": "iOS sandbox escape warning",
+          "what_happened": "Binance warned that a vulnerability in specified iOS 26 and 27 versions could let third-party apps read other applications’ private files, including wallet seed phrases and secret keys.",
+          "why_it_matters": "Exposure of wallet secrets and credentials could enable serious account or asset loss.",
+          "recommended_attention": "Review affected devices and applications, limit exposure, and monitor for an Apple fix."
+        },
+        {
+          "heading": "SAP maximum-severity flaws",
+          "what_happened": "SAP patched four maximum-severity vulnerabilities, including two enabling remote code execution, across NetWeaver, Web Dispatcher, and Gateway software.",
+          "why_it_matters": "These internet-facing and server-side components can provide a path into critical enterprise systems.",
+          "recommended_attention": "Prioritize SAP updates and verify whether exposed components require additional containment."
+        },
+        {
+          "heading": "Git recursive-clone code execution flaw",
+          "what_happened": "Git fixed a flaw that could allow a malicious repository to execute attacker code during recursive cloning with submodules.",
+          "why_it_matters": "Developer workflows that clone untrusted repositories could become an entry point for code execution.",
+          "recommended_attention": "Update Git clients and review automated cloning and build pipelines."
+        },
+        {
+          "heading": "SGLang compromise at NEAR AI",
+          "what_happened": "An attacker exploited a remote code execution flaw in SGLang and ran code on a NEAR AI inference server, potentially viewing requests processed there, including confidential-mode requests.",
+          "why_it_matters": "The incident raises risks for sensitive artificial-intelligence workloads and inference data.",
+          "recommended_attention": "Update affected inference infrastructure and review requests, secrets, and server activity."
+        },
+        {
+          "heading": "Fireworks AI breach expands",
+          "what_happened": "Fireworks AI said its investigation found broader malicious activity affecting account and billing information, secrets, datasets, incomplete models, and Notion AI chats for a limited set of accounts.",
+          "why_it_matters": "The exposed materials span operational data, proprietary assets, and potentially sensitive conversations.",
+          "recommended_attention": "Rotate secrets, identify affected accounts and datasets, and review model and chat exposure."
+        },
+        {
+          "heading": "Malicious Ethersphere releases",
+          "what_happened": "Attackers used release automation to publish malicious versions of Ethersphere’s bee-js and Swarm Desktop tools designed to steal wallet keys and passwords and install a backdoor.",
+          "why_it_matters": "Compromised software releases can reach users through trusted distribution channels.",
+          "recommended_attention": "Avoid the affected versions, verify software integrity, and rotate potentially exposed wallet credentials."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "N-able Takes N-central Cloud Offline After Researcher Discloses 33 Zero-Days with PoC Exploits",
+        "published_at": "2026-11-10T06:44:36+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html",
+        "category": "Vulnerability",
+        "summary": "N-able took hosted N-central environments offline and urged on-premises customers to shut down servers after public disclosure of more than 30 zero-day vulnerabilities with proof-of-concept exploits.",
+        "why_it_matters": "Remote monitoring and management infrastructure can provide broad access to customer environments."
+      },
+      {
+        "title": "Microsoft Patches 1,259 Flaws, Including Exploited Outlook Bug That May Expose NTLMv2 Hashes",
+        "published_at": "2026-11-11T08:17:53+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html",
+        "category": "Vulnerability",
+        "summary": "Microsoft released patches for 1,259 vulnerabilities, including an exploited Outlook bug that may expose NTLMv2 hashes.",
+        "why_it_matters": "The active exploitation and record patch volume make rapid enterprise remediation important."
+      },
+      {
+        "title": "Railway Says Stolen Customer AI Keys Led to $740,000 in Estimated Unauthorized Usage Charges",
+        "published_at": "2026-11-11T07:49:04+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html",
+        "category": "Cloud breach",
+        "summary": "Railway said customer artificial-intelligence provider keys stolen in an October breach generated an estimated $740,000 in unauthorized spending.",
+        "why_it_matters": "Compromised platform secrets caused direct financial loss and may have exposed other customer credentials."
+      },
+      {
+        "title": "Japanese furniture giant Nitori says hackers stole 37.6M customer records",
+        "published_at": "2026-11-10T20:54:55+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/",
+        "category": "Data breach",
+        "summary": "Nitori said an attacker accessed a system on its network and may have stolen 37.62 million customer records.",
+        "why_it_matters": "The potentially exposed dataset is extremely large and could create substantial customer-impact and response obligations."
+      },
+      {
+        "title": "Hackers Exploit Qubole's Trusted AWS Access to Breach Customer Accounts and Steal Data",
+        "published_at": "2026-11-09T17:51:21+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
+        "category": "Cloud security",
+        "summary": "An attacker used credentials for a Qubole AWS account to access multiple customers’ AWS environments and steal stored secrets and data.",
+        "why_it_matters": "Abused trusted access enabled cross-customer cloud compromise."
+      },
+      {
+        "title": "Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access",
+        "published_at": "2026-11-10T18:12:21+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
+        "category": "Vulnerability",
+        "summary": "Attackers exploited a critical Xen Orchestra authentication bypass that could grant administrator access and enable takeover of XCP-ng virtualization hosts.",
+        "why_it_matters": "Compromise of virtualization management can affect many hosted systems simultaneously."
+      },
+      {
+        "title": "Binance Warns of iOS Sandbox Escape That Could Expose Crypto Wallet Keys, No Fix Confirmed",
+        "published_at": "2026-11-10T12:15:31+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/binance-warns-of-ios-sandbox-escape.html",
+        "category": "Mobile security",
+        "summary": "Binance warned that an iOS sandbox escape could let apps read other applications’ files, including seed phrases, private keys, and login credentials.",
+        "why_it_matters": "Wallet secrets stored on affected devices could be exposed to malicious applications."
+      },
+      {
+        "title": "SAP Patches Four CVSS 10.0 Flaws, Including Two Enabling Remote Code Execution",
+        "published_at": "2026-11-10T10:02:40+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html",
+        "category": "Enterprise security",
+        "summary": "SAP fixed four maximum-severity flaws in NetWeaver, Web Dispatcher, and Gateway software, including two enabling remote code execution.",
+        "why_it_matters": "These components can expose critical enterprise systems when left vulnerable."
+      },
+      {
+        "title": "Git Patches Flaw That Lets Malicious Repositories Execute Code During Recursive Clones",
+        "published_at": "2026-11-10T19:23:10+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html",
+        "category": "Software supply chain",
+        "summary": "Git fixed an integer-truncation flaw that could allow malicious repositories to execute code during recursive clones involving submodules.",
+        "why_it_matters": "Untrusted source repositories could become an execution path into developer systems and build environments."
+      },
+      {
+        "title": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
+        "published_at": "2026-11-10T19:19:39+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
+        "category": "Artificial-intelligence security",
+        "summary": "An attacker exploited remote code execution in SGLang, ran code on a NEAR AI inference server, and potentially viewed requests processed there.",
+        "why_it_matters": "Inference servers may process sensitive prompts and data, including requests handled in confidential mode."
+      },
+      {
+        "title": "Fireworks AI Confirms Wider Breach Affecting Customer Datasets, Model Weights and Notion AI Chats",
+        "published_at": "2026-11-10T15:33:59+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
+        "category": "Artificial-intelligence breach",
+        "summary": "Fireworks AI disclosed broader malicious activity affecting account and billing information, secrets, datasets, incomplete models, and Notion AI chats for a limited set of accounts.",
+        "why_it_matters": "The incident spans credentials, proprietary artificial-intelligence assets, and potentially sensitive conversations."
+      },
+      {
+        "title": "Hackers Compromise Ethersphere's bee-js and Swarm Desktop to Deliver Wallet-Stealing Malware",
+        "published_at": "2026-11-09T17:36:28+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-compromise-etherspheres-bee-js.html",
+        "category": "Software supply chain",
+        "summary": "Attackers used Ethersphere release automation to publish malicious versions of bee-js and Swarm Desktop that steal wallet keys and passwords and install a backdoor.",
+        "why_it_matters": "Malicious trusted releases can compromise users through normal software-update channels."
+      }
+    ],
+    "generated_at": "2026-11-11T13:00:03.328840+00:00",
+    "window_start": "2026-11-09T13:00:03.328840+00:00",
+    "window_end": "2026-11-11T13:00:03.328840+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing for November 11th. N-able took its N-central hosted environments offline after more than 30 zero-day vulnerabilities were publicly disclosed, while on-premises customers were urged to shut down servers. Microsoft released patches for 1,259 vulnerabilities, including an exploited Outlook bug that may expose NTLM version 2 hashes. Railway reported that stolen customer artificial-intelligence keys led to about 740,000 dollars in unauthorized usage. Japanese retailer Nitori said an attacker may have stolen 37.62 million customer records. In cloud security, attackers abused trusted Amazon Web Services access through Qubole to reach multiple customer environments and steal secrets and data. Xen Orchestra users face an actively exploited authentication bypass that could enable administrator access to virtualization hosts. Binance also warned that an iPhone sandbox escape could expose cryptocurrency wallet keys. Other notable issues include four maximum-severity SAP flaws, a Git vulnerability affecting recursive clones, and a remote-code-execution breach involving SGLang at NEAR AI. Finally, malicious Ethersphere releases were used to steal wallet credentials, showing again how trusted software channels can become attack paths."
+  }
+}
