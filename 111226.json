@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "title": "Cybersecurity News Briefing — November 12, 2026",
+    "overview": {
+      "executive_summary": "Today’s most consequential developments include active exploitation of enterprise infrastructure, large-scale software supply-chain abuse, exposed cloud and AI credentials, and major vendor patch activity. Several incidents affect managed service providers, certificate authorities, cloud platforms, and widely deployed developer tools.",
+      "sections": [
+        {
+          "heading": "GitHub CI secret stealer",
+          "what_happened": "An attacker used 4,837 hijacked GitHub accounts to place a secret-stealing tool in at least 1,806 repositories.",
+          "why_it_matters": "The malware could access secrets and cloud credentials available to repository workflows.",
+          "recommended_attention": "Audit repository access, rotate exposed credentials, and review recent workflow and commit activity."
+        },
+        {
+          "heading": "ScreenConnect attacks",
+          "what_happened": "Compromised ScreenConnect environments were used to deploy rogue remote-access clients across at least 288 endpoints and 48 organizations.",
+          "why_it_matters": "Managed service providers and their customers may face cascading compromise.",
+          "recommended_attention": "Review ScreenConnect environments, third-party extensions, and unexpected remote-access software."
+        },
+        {
+          "heading": "N-central exploitation",
+          "what_happened": "N-able released hotfixes for zero-day vulnerabilities, while a further disclosure described exploits affecting some patched on-premise servers with an exposed Legacy API.",
+          "why_it_matters": "The flaws can enable root or Windows SYSTEM access in vulnerable configurations.",
+          "recommended_attention": "Apply available hotfixes and ensure the Legacy API is disabled or not internet-exposed."
+        },
+        {
+          "heading": "Apache HTTP/2 remote code execution",
+          "what_happened": "A critical flaw in Apache HTTP Server’s HTTP/2 module can allow unauthenticated remote code execution; version 2.4.71 fixes the issue.",
+          "why_it_matters": "Internet-facing servers with HTTP/2 enabled may be exposed to remote compromise.",
+          "recommended_attention": "Update affected Apache installations and assess whether HTTP/2 is enabled."
+        },
+        {
+          "heading": "Cisco BroadWorks active exploitation",
+          "what_happened": "The Cybersecurity and Infrastructure Security Agency added a Cisco BroadWorks flaw to its Known Exploited Vulnerabilities catalog.",
+          "why_it_matters": "The listing indicates confirmed exploitation of a high-severity enterprise communications vulnerability.",
+          "recommended_attention": "Prioritize patching and investigate systems for signs of exploitation."
+        },
+        {
+          "heading": "Railway breach and AI charges",
+          "what_happened": "Railway said stolen customer authentication secrets were used to generate approximately $740,000 in unauthorized AI usage, potentially affecting credentials for up to 100,000 workspaces.",
+          "why_it_matters": "Compromised application secrets can create both financial losses and broader cloud exposure.",
+          "recommended_attention": "Rotate Railway-stored secrets and review cloud, database, and AI-provider activity."
+        },
+        {
+          "heading": "Fireworks AI breach",
+          "what_happened": "Fireworks AI disclosed a wider breach affecting account and billing information, secrets, datasets, incomplete models, and Notion AI chat transcripts for a limited set of accounts.",
+          "why_it_matters": "The incident potentially exposed sensitive customer data and AI workloads through a third-party provider.",
+          "recommended_attention": "Review affected integrations, credentials, datasets, model assets, and AI conversation content."
+        },
+        {
+          "heading": "AntiFox AWS credential theft",
+          "what_happened": "Attackers used self-managed AntiFox AI penetration-testing instances hosted on Alibaba Cloud to target web services and AWS environments and steal production credentials.",
+          "why_it_matters": "Agentic tools are being used to automate credential theft and lateral movement in cloud environments.",
+          "recommended_attention": "Search for AntiFox-related activity, rotate AWS credentials, and review cloud identity and access logs."
+        },
+        {
+          "heading": "eMudhra certificate revocations",
+          "what_happened": "eMudhra revoked eight additional intermediate certificate authorities after finding improper private-key handling during certificate generation.",
+          "why_it_matters": "Trust in affected certificate chains may be disrupted, requiring certificate and trust-store review.",
+          "recommended_attention": "Identify certificates chaining to the revoked authorities and replace affected certificates."
+        },
+        {
+          "heading": "Microsoft Patch Tuesday",
+          "what_happened": "Microsoft patched 1,259 vulnerabilities, including an exploited Outlook flaw that may expose NTLMv2 hashes.",
+          "why_it_matters": "The unusually large patch volume and active exploitation increase enterprise remediation pressure.",
+          "recommended_attention": "Prioritize the exploited Outlook issue and assess exposure across Microsoft environments."
+        },
+        {
+          "heading": "GSocket persistence on Linux",
+          "what_happened": "Threat actors are abusing the legitimate GSocket remote-access tool to maintain access to Linux servers after patching the vulnerabilities used for initial entry.",
+          "why_it_matters": "Patching alone may not remove attacker persistence from compromised systems.",
+          "recommended_attention": "Hunt for unauthorized GSocket deployments and conduct post-compromise investigation after remediation."
+        },
+        {
+          "heading": "Xen Orchestra authentication bypass",
+          "what_happened": "Vates VMS warned that attackers are actively exploiting a critical Xen Orchestra authentication-bypass flaw to gain administrator access.",
+          "why_it_matters": "Successful exploitation can provide control of virtualized infrastructure.",
+          "recommended_attention": "Apply vendor guidance immediately and investigate administrative access and authentication logs."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Attacker Used 4,837 Hijacked GitHub Accounts to Run a CI Secret Stealer in 1,806+ Repositories",
+        "published_at": "2026-11-12T06:42:47+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html",
+        "category": "Supply chain security",
+        "summary": "An attacker used stolen credentials for 4,837 GitHub accounts to plant a secret stealer in at least 1,806 repositories.",
+        "why_it_matters": "The stealer targeted secrets and cloud credentials accessible to repository CI workflows."
+      },
+      {
+        "title": "ScreenConnect Attacks Target at Least 288 Endpoints Across 48 Organizations With Rogue Clients",
+        "published_at": "2026-11-12T04:39:48+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/screenconnect-attacks-target-at-least.html",
+        "category": "Incident response",
+        "summary": "Compromised ScreenConnect environments were used to deploy rogue remote-access clients across at least 288 endpoints and 48 organizations.",
+        "why_it_matters": "The campaign can spread through managed service providers to multiple customer environments."
+      },
+      {
+        "title": "New N-central Exploits Work Against Patched Servers, Enable Root RCE and Windows SYSTEM Access",
+        "published_at": "2026-11-12T11:51:43+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html",
+        "category": "Vulnerabilities",
+        "summary": "N-able is investigating additional vulnerability claims affecting on-premise N-central servers when the Legacy API is enabled and publicly exposed.",
+        "why_it_matters": "The reported exploits may enable root remote code execution or Windows SYSTEM access in vulnerable configurations."
+      },
+      {
+        "title": "Critical Apache HTTP/2 Flaw Could Let Unauthenticated Attackers Execute Code Remotely",
+        "published_at": "2026-11-12T05:12:26+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html",
+        "category": "Vulnerabilities",
+        "summary": "A critical flaw in Apache HTTP Server’s HTTP/2 module affects versions 2.4.55 through 2.4.70 and is fixed in 2.4.71.",
+        "why_it_matters": "Unauthenticated attackers may be able to execute code on affected servers with HTTP/2 enabled."
+      },
+      {
+        "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
+        "published_at": "2026-11-11T06:04:02+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
+        "category": "Active exploitation",
+        "summary": "The Cybersecurity and Infrastructure Security Agency added Cisco BroadWorks and Openwave Messaging flaws to its Known Exploited Vulnerabilities catalog.",
+        "why_it_matters": "The catalog additions cite active exploitation and require urgent remediation attention."
+      },
+      {
+        "title": "Railway Says Stolen Customer AI Keys Led to $740,000 in Estimated Unauthorized Usage Charges",
+        "published_at": "2026-11-11T07:49:04+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html",
+        "category": "Cloud security",
+        "summary": "Railway said stolen customer AI-provider keys from an October breach generated an estimated $740,000 in unauthorized spending.",
+        "why_it_matters": "The incident demonstrates how stolen application secrets can cause rapid financial damage and expose connected services."
+      },
+      {
+        "title": "Fireworks AI Confirms Wider Breach Affecting Customer Datasets, Model Weights and Notion AI Chats",
+        "published_at": "2026-11-10T15:33:59+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
+        "category": "Data breach",
+        "summary": "Fireworks AI reported that a wider breach affected account and billing information, secrets, datasets, incomplete models, and Notion AI chats for a limited set of accounts.",
+        "why_it_matters": "A compromise at an AI infrastructure provider can expose customer data and sensitive AI assets across multiple services."
+      },
+      {
+        "title": "AntiFox AI Pentesting Platform Linked to Attacks That Accessed AWS Production Secrets",
+        "published_at": "2026-11-11T15:34:27+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html",
+        "category": "Cloud attacks",
+        "summary": "Attackers used AntiFox instances hosted on Alibaba Cloud in campaigns that stole AWS credentials and moved laterally into compromised environments.",
+        "why_it_matters": "Agentic security tooling can be repurposed to automate cloud credential theft and intrusion activity."
+      },
+      {
+        "title": "eMudhra Revokes 8 More CAs It Previously Declared Unaffected by Key Compromise",
+        "published_at": "2026-11-11T12:00:53+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/emudhra-revokes-8-more-cas-it.html",
+        "category": "PKI security",
+        "summary": "eMudhra revoked eight additional intermediate certificate authorities after identifying improper private-key handling in its certificate-generation script.",
+        "why_it_matters": "Organizations using certificates chaining to the revoked authorities may need urgent replacement and trust-chain review."
+      },
+      {
+        "title": "Microsoft Patches 1,259 Flaws, Including Exploited Outlook Bug That May Expose NTLMv2 Hashes",
+        "published_at": "2026-11-11T08:17:53+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html",
+        "category": "Patch management",
+        "summary": "Microsoft released fixes for 1,259 vulnerabilities, including an exploited Outlook issue that may expose NTLMv2 hashes.",
+        "why_it_matters": "The large patch volume and active exploitation make prioritization especially important for enterprise defenders."
+      },
+      {
+        "title": "Hackers Plant GSocket on Linux Servers for Persistent Access",
+        "published_at": "2026-11-12T09:38:00+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-plant-gsocket-on-linux-servers-for-persistent-access/",
+        "category": "Linux security",
+        "summary": "Threat actors are abusing the legitimate GSocket remote-access tool to retain access to Linux servers after initial vulnerabilities are patched.",
+        "why_it_matters": "Organizations may remain compromised even after fixing the original entry point unless they hunt for persistence."
+      },
+      {
+        "title": "Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access",
+        "published_at": "2026-11-10T18:12:21+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
+        "category": "Active exploitation",
+        "summary": "Vates VMS warned that attackers are actively exploiting a critical Xen Orchestra authentication-bypass flaw to obtain administrator access.",
+        "why_it_matters": "Compromise of virtualization management infrastructure can affect many hosted systems and workloads."
+      }
+    ],
+    "generated_at": "2026-11-12T13:00:02.533648+00:00",
+    "window_start": "2026-11-10T13:00:02.533648+00:00",
+    "window_end": "2026-11-12T13:00:02.533648+00:00"
+  },
+  "tts": {
+    "text": "Here’s today’s cybersecurity briefing. The biggest concern is active access to enterprise infrastructure. Attackers used thousands of hijacked GitHub accounts to plant a secret stealer across more than eighteen hundred repositories, putting CI credentials and cloud secrets at risk. ScreenConnect attacks also reached at least 288 endpoints across 48 organizations through rogue remote-access clients. N-able’s N-central platform faces additional exploit claims, while Apache fixed a critical HTTP/2 remote-code-execution flaw. CISA, the Cybersecurity and Infrastructure Security Agency, added Cisco BroadWorks issues to its actively exploited list. Cloud exposure is another major theme: Railway reported about 740,000 dollars in unauthorized AI charges after customer keys were stolen, and Fireworks AI disclosed exposure of secrets, datasets, model assets, and some Notion AI chats. Defenders should also prioritize Microsoft’s 1,259-fix patch release, investigate GSocket persistence on Linux servers, and respond urgently to the actively exploited Xen Orchestra authentication bypass. Rotate exposed credentials, patch internet-facing systems, and review logs for unauthorized access."
+  }
+}
