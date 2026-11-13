@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "title": "Cybersecurity News Briefing — November 13, 2026",
+    "overview": {
+      "executive_summary": "The most consequential verified developments include active exploitation of perimeter and remote-management vulnerabilities, a major GitHub supply-chain campaign, coordinated malware infrastructure seizures, and espionage targeting Asian telecom networks. Several critical software flaws also require urgent patching or mitigation.",
+      "sections": [
+        {
+          "heading": "Check Point gateways targeted through PHP2Shell flaws",
+          "what_happened": "An unknown threat actor targeted unpatched Check Point Security Gateways using PHP2Shell vulnerabilities, then deployed the TSGA backdoor and wiped ESXi files.",
+          "why_it_matters": "The activity shows active exploitation of critical gateway flaws and follow-on impact against virtualization infrastructure.",
+          "recommended_attention": "Prioritize remediation of affected Check Point gateways and review systems for the described intrusion activity."
+        },
+        {
+          "heading": "N-central servers compromised despite hotfix deployment",
+          "what_happened": "Hackers exploited N-able N-central flaws and infected 21 servers, including 19 running Hotfix 2. N-able restricted certain features and integrations while remediation continued.",
+          "why_it_matters": "The reported compromises indicate that applying the latest hotfix did not prevent every affected system from being compromised.",
+          "recommended_attention": "Review N-central deployments, apply current vendor guidance, and assess exposed features and integrations."
+        },
+        {
+          "heading": "Thousands of GitHub accounts used in secret-stealing campaign",
+          "what_happened": "Attackers used 4,837 hijacked GitHub accounts to plant a CI secret stealer in at least 1,806 repositories, targeting secrets and cloud credentials accessible to workflows.",
+          "why_it_matters": "The campaign combines account compromise with repository write access to reach credentials across many development environments.",
+          "recommended_attention": "Audit repository changes, workflow activity, account access, and exposed CI or cloud credentials."
+        },
+        {
+          "heading": "Operation Endgame disrupts three malware operations",
+          "what_happened": "An international police operation took down servers behind Gootloader, CastleRAT, and StealC and seized about 6.4 million stolen logins linked to more than 40,000 victims.",
+          "why_it_matters": "The action disrupts malware infrastructure and exposes a large volume of compromised credentials.",
+          "recommended_attention": "Check for affected accounts and rotate credentials where exposure is possible."
+        },
+        {
+          "heading": "SCKit turns ScreenConnect access into an MSP attack path",
+          "what_happened": "A worm-like malware toolkit was deployed in ScreenConnect attacks against managed service providers, spreading from infected customer devices to MSP technicians and additional managed networks.",
+          "why_it_matters": "The campaign can use trusted remote-support relationships to expand from one environment into many connected customer networks.",
+          "recommended_attention": "Review ScreenConnect activity, customer-to-MSP trust paths, and unauthorized clients or extensions."
+        },
+        {
+          "heading": "Critical Apache HTTP/2 flaw enables potential remote code execution",
+          "what_happened": "A flaw in Apache HTTP Server's mod_http2 affects versions 2.4.55 through 2.4.70 and is fixed in version 2.4.71. The issue affects servers with HTTP/2 enabled.",
+          "why_it_matters": "An unauthenticated attacker may be able to execute code remotely on exposed servers.",
+          "recommended_attention": "Identify affected Apache deployments, especially those with HTTP/2 enabled, and update to the fixed version."
+        },
+        {
+          "heading": "SignDrop Windows zero-day offers SYSTEM access",
+          "what_happened": "Public exploit code for a Windows Common Log File System driver issue claims that a local user can gain SYSTEM privileges through path redirection involving prepared logs.",
+          "why_it_matters": "Public exploit code lowers the barrier to local privilege escalation on Windows systems.",
+          "recommended_attention": "Track vendor remediation and investigate unusual local privilege escalation activity."
+        },
+        {
+          "heading": "SilentAir intercepts telecom calls and SMS messages",
+          "what_happened": "A newly identified spying group used hacked equipment inside Asian mobile operators to intercept calls and texts of selected people, mostly in Taiwan. Attack sources were found in at least six Asian countries.",
+          "why_it_matters": "Compromise of telecom equipment can undermine calls and SMS-based two-factor authentication for targeted users.",
+          "recommended_attention": "Telecom operators should review equipment integrity and investigate suspicious access within affected networks."
+        },
+        {
+          "heading": "Critical Red Hat Quay flaw exposes private container images",
+          "what_happened": "A critical Red Hat Quay flaw allows an attacker with registry access to read and overwrite private container images in every repository. Anonymous access is enabled by default, and valid accounts can exploit it when anonymous access is disabled.",
+          "why_it_matters": "Container registry compromise can expose proprietary images and enable tampering with software supply chains.",
+          "recommended_attention": "Apply fixed Quay builds and review anonymous access, accounts, and image integrity."
+        },
+        {
+          "heading": "Citrix patches authentication-bypass and denial-of-service flaws",
+          "what_happened": "Citrix released patches for 12 flaws affecting NetScaler ADC, NetScaler Gateway, NetScaler Console, and Secure Access Client, including critical issues that could cause denial of service or authentication bypass.",
+          "why_it_matters": "NetScaler products sit at important access boundaries, making authentication bypass particularly consequential.",
+          "recommended_attention": "Prioritize affected Citrix appliances and verify that patches are deployed across exposed access infrastructure."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
+        "published_at": "2026-11-13T08:05:49+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
+        "category": "Active exploitation",
+        "summary": "An unknown threat actor targeted unpatched Check Point Security Gateways using PHP2Shell vulnerabilities, then deployed the TSGA backdoor and wiped ESXi files.",
+        "why_it_matters": "The activity shows active exploitation of critical gateway flaws and follow-on impact against virtualization infrastructure."
+      },
+      {
+        "title": "Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2",
+        "published_at": "2026-11-13T05:43:28+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html",
+        "category": "Active exploitation",
+        "summary": "Hackers exploited N-able N-central flaws and infected 21 servers, including 19 running Hotfix 2. N-able restricted certain features and integrations while remediation continued.",
+        "why_it_matters": "The reported compromises indicate that applying the latest hotfix did not prevent every affected system from being compromised."
+      },
+      {
+        "title": "Attacker Used 4,837 Hijacked GitHub Accounts to Run a CI Secret Stealer in 1,806+ Repositories",
+        "published_at": "2026-11-12T06:42:47+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html",
+        "category": "Supply-chain compromise",
+        "summary": "Attackers used 4,837 hijacked GitHub accounts to plant a CI secret stealer in at least 1,806 repositories, targeting secrets and cloud credentials accessible to workflows.",
+        "why_it_matters": "The campaign combines account compromise with repository write access to reach credentials across many development environments."
+      },
+      {
+        "title": "Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins",
+        "published_at": "2026-11-13T10:55:03+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
+        "category": "Law enforcement",
+        "summary": "An international police operation took down servers behind Gootloader, CastleRAT, and StealC and seized about 6.4 million stolen logins linked to more than 40,000 victims.",
+        "why_it_matters": "The action disrupts malware infrastructure and exposes a large volume of compromised credentials."
+      },
+      {
+        "title": "New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks",
+        "published_at": "2026-11-12T22:53:10+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
+        "category": "Managed service provider security",
+        "summary": "A worm-like malware toolkit was deployed in ScreenConnect attacks against managed service providers, spreading from infected customer devices to MSP technicians and additional managed networks.",
+        "why_it_matters": "The campaign can use trusted remote-support relationships to expand from one environment into many connected customer networks."
+      },
+      {
+        "title": "Critical Apache HTTP/2 Flaw Could Let Unauthenticated Attackers Execute Code Remotely",
+        "published_at": "2026-11-12T05:12:26+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could.html",
+        "category": "Critical vulnerability",
+        "summary": "A flaw in Apache HTTP Server's mod_http2 affects versions 2.4.55 through 2.4.70 and is fixed in version 2.4.71. The issue affects servers with HTTP/2 enabled.",
+        "why_it_matters": "An unauthenticated attacker may be able to execute code remotely on exposed servers."
+      },
+      {
+        "title": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
+        "published_at": "2026-11-12T17:50:27+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html",
+        "category": "Zero-day",
+        "summary": "Public exploit code for a Windows Common Log File System driver issue claims that a local user can gain SYSTEM privileges through path redirection involving prepared logs.",
+        "why_it_matters": "Public exploit code lowers the barrier to local privilege escalation on Windows systems."
+      },
+      {
+        "title": "SilentAir Hijacks Asian Telecom Networks to Intercept SMS 2FA Codes and Spy on Taiwanese Users",
+        "published_at": "2026-11-13T11:10:40+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html",
+        "category": "Telecom espionage",
+        "summary": "A newly identified spying group used hacked equipment inside Asian mobile operators to intercept calls and texts of selected people, mostly in Taiwan. Attack sources were found in at least six Asian countries.",
+        "why_it_matters": "Compromise of telecom equipment can undermine calls and SMS-based two-factor authentication for targeted users."
+      },
+      {
+        "title": "Critical Red Hat Quay Flaw Lets Attackers Read and Overwrite All Private Container Images in a Registry",
+        "published_at": "2026-11-12T16:27:01+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html",
+        "category": "Container security",
+        "summary": "A critical Red Hat Quay flaw allows an attacker with registry access to read and overwrite private container images in every repository. Anonymous access is enabled by default, and valid accounts can exploit it when anonymous access is disabled.",
+        "why_it_matters": "Container registry compromise can expose proprietary images and enable tampering with software supply chains."
+      },
+      {
+        "title": "Citrix Patches 12 NetScaler and Secure Access Client Flaws, Including Authentication Bypass",
+        "published_at": "2026-11-12T15:38:49+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html",
+        "category": "Network appliance security",
+        "summary": "Citrix released patches for 12 flaws affecting NetScaler ADC, NetScaler Gateway, NetScaler Console, and Secure Access Client, including critical issues that could cause denial of service or authentication bypass.",
+        "why_it_matters": "NetScaler products sit at important access boundaries, making authentication bypass particularly consequential."
+      }
+    ],
+    "generated_at": "2026-11-13T13:00:02.936789+00:00",
+    "window_start": "2026-11-11T13:00:02.936789+00:00",
+    "window_end": "2026-11-13T13:00:02.936789+00:00"
+  },
+  "tts": {
+    "text": "Here is your cybersecurity briefing for November 13, 2026. Attackers are actively exploiting Check Point gateway flaws to deploy a backdoor and wipe ESXi files, while N-able reports 21 compromised N-central servers, including systems running Hotfix 2. A major GitHub campaign used 4,837 hijacked accounts to plant a continuous integration secret stealer in more than 1,800 repositories. International police also disrupted Gootloader, CastleRAT, and StealC infrastructure, seizing about 6.4 million stolen logins. Managed service providers face another serious risk from SCKit, a worm-like malware spreading through ScreenConnect relationships. On the patching front, Apache fixed a critical HTTP/2 remote-code-execution flaw, and public exploit code for the Windows SignDrop zero-day can provide SYSTEM privileges. Telecom networks in Asia were reportedly compromised to intercept calls and SMS two-factor codes. Finally, Red Hat Quay users should address a flaw that can expose or overwrite private container images, and Citrix administrators should prioritize patches for NetScaler authentication-bypass issues."
+  }
+}
