@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "title": "Cybersecurity News Briefing — November 14, 2026",
+    "overview": {
+      "executive_summary": "The most consequential developments include active exploitation of enterprise vulnerabilities, hardware supply-chain compromise, attacks against telecom and cloud infrastructure, and major international disruption of malware operations.",
+      "sections": [
+        {
+          "heading": "CISA adds two vulnerabilities to its exploited catalog",
+          "what_happened": "CISA added CVE-2026-114713 affecting UnrealIRCd and CVE-2026-123039 affecting Check Point products to its Known Exploited Vulnerabilities catalog, citing active exploitation.",
+          "why_it_matters": "The catalog identifies vulnerabilities that pose significant risks and require rapid remediation for affected federal systems.",
+          "recommended_attention": "Check exposed assets for both CVEs and prioritize remediation and compromise assessment."
+        },
+        {
+          "heading": "Trezor wallets contained crypto-stealing implants",
+          "what_happened": "Trezor confirmed that three Safe 5 devices sold by Southeast Asian reseller CryptoBilis contained hidden hardware implants that copied recovery phrases and transmitted them over cellular networks.",
+          "why_it_matters": "The incident demonstrates a direct hardware supply-chain attack against cryptocurrency recovery credentials.",
+          "recommended_attention": "Verify reseller provenance and inspect affected devices before using them."
+        },
+        {
+          "heading": "Cyberattack disrupted German military drone operations",
+          "what_happened": "Quantum Systems said it detected an incident in late October that was part of an active cyberattack by hostile actors and affected drone operations.",
+          "why_it_matters": "The incident shows how cyberattacks can disrupt defense technology and operational capabilities.",
+          "recommended_attention": "Review access controls, incident evidence, and resilience for systems supporting military drone operations."
+        },
+        {
+          "heading": "Check Point gateways were used to deploy a wiper",
+          "what_happened": "Attackers targeted unpatched Check Point Security Gateways through PHP2Shell vulnerabilities, deployed the TSGA backdoor, and wiped files on VMware ESXi hosts.",
+          "why_it_matters": "The activity combined perimeter-device compromise, privilege escalation, persistence, and destructive impact against virtualization infrastructure.",
+          "recommended_attention": "Patch exposed gateways, investigate for TSGA, and protect ESXi systems from unauthorized access."
+        },
+        {
+          "heading": "N-able N-central zero-day was exploited after public disclosure",
+          "what_happened": "Attackers exploited the newly disclosed 4EverAble2Shell flaws against N-central servers and deployed cryptocurrency miners; researchers reported at least 21 affected systems, including 19 running the latest security update.",
+          "why_it_matters": "The campaign shows rapid exploitation of a remote-management platform used in enterprise environments.",
+          "recommended_attention": "Apply vendor mitigations, restrict vulnerable N-central features, and examine systems for mining activity."
+        },
+        {
+          "heading": "Thousands of GitHub accounts were used to steal cloud credentials",
+          "what_happened": "The wfx-loot campaign used 4,837 compromised GitHub accounts to probe 61,764 repositories, open pull requests, and push secrets-stealing malware.",
+          "why_it_matters": "Compromised developer identities and repository activity can expose cloud credentials across many organizations.",
+          "recommended_attention": "Audit GitHub identities, repositories, pull requests, secrets, and unusual automation activity."
+        },
+        {
+          "heading": "PostgreSQL fixed an authenticated remote-code-execution flaw",
+          "what_happened": "PostgreSQL updates fixed 52 flaws, including CVE-2026-6460, a type-confusion vulnerability that lets a database user who can create objects execute code on the server.",
+          "why_it_matters": "The flaw is long-standing, carries a CVSS score of 8.8, and full protection also requires rebuilding installed C-language extensions.",
+          "recommended_attention": "Update PostgreSQL, review object-creation privileges, and rebuild affected extensions."
+        },
+        {
+          "heading": "Attacks exposed weaknesses in AMD confidential virtual machines",
+          "what_happened": "The Mior and Skyfall attacks allow a malicious host to read data inside AMD SEV-SNP-protected virtual machines; Mior can also modify memory and fake a signed software report.",
+          "why_it_matters": "The findings challenge protections designed to keep cloud or server operators from accessing guest virtual-machine data.",
+          "recommended_attention": "Assess trust assumptions for hosted confidential-computing deployments and monitor hypervisor and firmware control."
+        },
+        {
+          "heading": "FBI linked more than $400 million in crypto theft to deepfake video calls",
+          "what_happened": "The FBI said North Korean-linked actors stole more than $400 million in cryptocurrency over 18 months through the FaceStealer social-engineering scheme, including deepfake video calls.",
+          "why_it_matters": "The campaign combines identity deception and social engineering to target high-value cryptocurrency operations.",
+          "recommended_attention": "Strengthen hiring, transaction-approval, and video-verification procedures for crypto-related roles."
+        },
+        {
+          "heading": "SilentAir intercepted SMS two-factor codes through telecom networks",
+          "what_happened": "The SilentAir group used hacked equipment inside Asian mobile operators to intercept calls and texts of selected people, mostly in Taiwan. Enea assessed with high confidence that it is a state-level actor.",
+          "why_it_matters": "Compromised telecom infrastructure can defeat SMS-based two-factor authentication and enable targeted surveillance.",
+          "recommended_attention": "Prefer phishing-resistant authentication and investigate telecom-provider trust and signaling risks."
+        },
+        {
+          "heading": "Operation Endgame dismantled malware infrastructure",
+          "what_happened": "An international police operation seized servers and domains used by Gootloader, CastleRAT, and StealC, along with about 6.4 million stolen logins belonging to more than 40,000 victims.",
+          "why_it_matters": "The operation disrupted malware used to steal passwords, gain computer access, and launch ransomware attacks.",
+          "recommended_attention": "Rotate potentially exposed credentials and review endpoint and identity telemetry for related infections."
+        },
+        {
+          "heading": "SCKit expanded ScreenConnect attacks through MSPs",
+          "what_happened": "The worm-like SCKit toolkit was deployed in ScreenConnect attacks targeting managed service providers and was designed to spread from customer devices to MSP technicians and additional managed networks.",
+          "why_it_matters": "Compromising an MSP can create a path into many downstream customer environments.",
+          "recommended_attention": "Patch ScreenConnect, isolate administrative systems, and review lateral movement between providers and customers."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "published_at": "2026-11-13T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "category": "Vulnerability management",
+        "summary": "CISA added CVE-2026-114713 affecting UnrealIRCd and CVE-2026-123039 affecting Check Point products to its Known Exploited Vulnerabilities catalog, citing active exploitation.",
+        "why_it_matters": "The catalog identifies vulnerabilities that pose significant risks and require rapid remediation for affected federal systems."
+      },
+      {
+        "title": "Trezor confirms crypto-stealing implants in three wallets, releases fix",
+        "published_at": "2026-11-13T19:38:36+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
+        "category": "Hardware supply chain",
+        "summary": "Trezor confirmed that three Safe 5 devices sold by Southeast Asian reseller CryptoBilis contained malicious hardware implants that copied recovery phrases and sent them to attackers over cellular networks.",
+        "why_it_matters": "The incident demonstrates a direct hardware supply-chain attack against cryptocurrency recovery credentials."
+      },
+      {
+        "title": "German military drone operations disrupted by cyberattack",
+        "published_at": "2026-11-13T17:31:56+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
+        "category": "Cyber operations",
+        "summary": "Quantum Systems confirmed that it detected an incident in late October that was part of an active cyberattack by hostile actors and affected drone operations.",
+        "why_it_matters": "The incident shows how cyberattacks can disrupt defense technology and operational capabilities."
+      },
+      {
+        "title": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
+        "published_at": "2026-11-13T08:05:49+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
+        "category": "Destructive attack",
+        "summary": "Attackers targeted unpatched Check Point Security Gateways through PHP2Shell vulnerabilities, deployed the TSGA backdoor, and wiped files on VMware ESXi hosts.",
+        "why_it_matters": "The activity combined perimeter-device compromise, privilege escalation, persistence, and destructive impact against virtualization infrastructure."
+      },
+      {
+        "title": "New N-able \"4EverAble2Shell\" zero-day exploited hours after PoC released",
+        "published_at": "2026-11-12T19:51:16+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
+        "category": "Zero-day exploitation",
+        "summary": "Attackers exploited newly disclosed N-able N-central flaws against servers and deployed cryptocurrency miners; researchers reported at least 21 affected systems, including 19 running the latest security update.",
+        "why_it_matters": "The campaign shows rapid exploitation of a remote-management platform used in enterprise environments."
+      },
+      {
+        "title": "Hackers compromise 4,800 GitHub accounts to steal cloud credentials",
+        "published_at": "2026-11-12T22:25:30+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
+        "category": "Cloud credential theft",
+        "summary": "The wfx-loot campaign used 4,837 compromised GitHub accounts to probe 61,764 repositories, open pull requests, and push secrets-stealing malware.",
+        "why_it_matters": "Compromised developer identities and repository activity can expose cloud credentials across many organizations."
+      },
+      {
+        "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
+        "published_at": "2026-11-13T16:53:08+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
+        "category": "Database security",
+        "summary": "PostgreSQL updates fixed 52 flaws, including CVE-2026-6460, a type-confusion vulnerability that lets a database user who can create objects execute code on the server.",
+        "why_it_matters": "The flaw carries a CVSS score of 8.8, and full protection also requires rebuilding installed C-language extensions."
+      },
+      {
+        "title": "New Mior and Skyfall Attacks Let Rogue Cloud Hosts Steal Secrets From AMD SEV-SNP VMs",
+        "published_at": "2026-11-13T15:27:05+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/new-mior-and-skyfall-attacks-let-rogue.html",
+        "category": "Cloud security",
+        "summary": "The Mior and Skyfall attacks allow a malicious host to read data inside AMD SEV-SNP-protected virtual machines; Mior can also modify memory and fake a signed software report.",
+        "why_it_matters": "The findings challenge protections designed to keep cloud or server operators from accessing guest virtual-machine data."
+      },
+      {
+        "title": "FBI Says North Korean Hackers Stole Over $400 Million in Crypto Using Deepfake Video Calls",
+        "published_at": "2026-11-13T14:28:58+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html",
+        "category": "Financial cybercrime",
+        "summary": "The FBI said North Korean-linked actors stole more than $400 million in cryptocurrency over 18 months through the FaceStealer social-engineering scheme, including deepfake video calls.",
+        "why_it_matters": "The campaign combines identity deception and social engineering to target high-value cryptocurrency operations."
+      },
+      {
+        "title": "SilentAir Hijacks Asian Telecom Networks to Intercept SMS 2FA Codes and Spy on Taiwanese Users",
+        "published_at": "2026-11-13T11:10:40+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html",
+        "category": "Telecom espionage",
+        "summary": "SilentAir used hacked equipment inside Asian mobile operators to intercept calls and texts of selected people, mostly in Taiwan. Enea assessed with high confidence that it is a state-level actor.",
+        "why_it_matters": "Compromised telecom infrastructure can defeat SMS-based two-factor authentication and enable targeted surveillance."
+      },
+      {
+        "title": "Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins",
+        "published_at": "2026-11-13T10:55:03+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
+        "category": "Law enforcement",
+        "summary": "An international police operation seized servers and domains used by Gootloader, CastleRAT, and StealC, along with about 6.4 million stolen logins belonging to more than 40,000 victims.",
+        "why_it_matters": "The operation disrupted malware used to steal passwords, gain computer access, and launch ransomware attacks."
+      },
+      {
+        "title": "SCKit Malware Turns ScreenConnect Support Sessions Into Potential MSP Attack Paths",
+        "published_at": "2026-11-12T13:08:28+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html",
+        "category": "Managed service providers",
+        "summary": "The worm-like SCKit toolkit was deployed in ScreenConnect attacks targeting managed service providers and was designed to spread from customer devices to MSP technicians and additional managed networks.",
+        "why_it_matters": "Compromising a managed service provider can create a path into many downstream customer environments."
+      }
+    ],
+    "generated_at": "2026-11-14T13:00:03.414613+00:00",
+    "window_start": "2026-11-12T13:00:03.414613+00:00",
+    "window_end": "2026-11-14T13:00:03.414613+00:00"
+  },
+  "tts": {
+    "text": "Here is your cybersecurity news briefing. CISA, the Cybersecurity and Infrastructure Security Agency, added two actively exploited vulnerabilities to its Known Exploited Vulnerabilities catalog, affecting UnrealIRCd and Check Point products. A separate campaign used flaws in Check Point gateways to deploy a backdoor and wipe VMware ESXi files. Trezor also confirmed hidden implants in three crypto wallets, stealing recovery phrases through cellular networks. Remote-management platforms remain under pressure: attackers exploited N-able N-central flaws against at least 21 servers, while SCKit malware used ScreenConnect attacks to spread through managed service providers, or MSPs. GitHub was hit by a campaign involving 4,837 compromised accounts and tens of thousands of repositories. Elsewhere, researchers disclosed attacks against AMD confidential virtual machines, and SilentAir reportedly intercepted calls and SMS two-factor codes through Asian telecom networks. The FBI attributed more than 400 million dollars in cryptocurrency theft to North Korean-linked actors using deepfake video calls. Finally, Operation Endgame seized malware infrastructure and about 6.4 million stolen logins."
+  }
+}
