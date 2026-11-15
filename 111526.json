@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "title": "Cybersecurity News Briefing — November 15, 2026",
+    "overview": {
+      "executive_summary": "This briefing covers major incidents involving compromised software marketplaces, cryptocurrency theft, hardware supply-chain implants, attacks on military operations, destructive malware, privacy enforcement, actively exploited vulnerabilities, database flaws, cloud confidential-computing attacks, and risks from AI agents.",
+      "sections": [
+        {
+          "heading": "Cursor marketplace breach",
+          "what_happened": "Cursor confirmed that attackers used an access key exposed after a Fireworks AI breach to distribute a malicious Claude Code extension through its marketplace.",
+          "why_it_matters": "A compromised extension marketplace can turn trusted developer tooling into a software supply-chain attack.",
+          "recommended_attention": "Review marketplace-installed extensions and investigate credentials or access keys connected to extension publishing."
+        },
+        {
+          "heading": "North Korean cryptocurrency theft",
+          "what_happened": "The U.S. government disrupted the North Korean FaceStealer campaign, which the FBI said stole more than $400 million in cryptocurrency over the last 18 months using social engineering and deepfake video calls.",
+          "why_it_matters": "The campaign shows the scale and effectiveness of identity deception against cryptocurrency targets.",
+          "recommended_attention": "Strengthen identity verification for high-value transactions and treat unexpected video-based requests as untrusted."
+        },
+        {
+          "heading": "Trezor hardware-wallet implants",
+          "what_happened": "Trezor confirmed that three Safe 5 wallets sold by reseller CryptoBilis contained hidden implants capable of copying recovery phrases and sending them over cellular networks.",
+          "why_it_matters": "The incident demonstrates how hardware tampering in distribution can defeat trust in otherwise security-focused devices.",
+          "recommended_attention": "Verify reseller provenance and inspect or replace affected devices before entering recovery phrases."
+        },
+        {
+          "heading": "German military drone disruption",
+          "what_happened": "Quantum Systems confirmed that an incident detected in late October was part of an active cyberattack by hostile actors and disrupted German military drone operations.",
+          "why_it_matters": "Cyberattacks affecting defense technology can directly interfere with military operations.",
+          "recommended_attention": "Review operational continuity, incident-response readiness, and segmentation for drone-supporting systems."
+        },
+        {
+          "heading": "Check Point gateway attacks",
+          "what_happened": "Attackers exploited vulnerable Check Point Security Gateway instances through PHP2Shell attacks and deployed data-wiping malware on VMware ESXi hosts.",
+          "why_it_matters": "The combination of perimeter compromise and destructive malware creates a serious risk to virtualized infrastructure and data availability.",
+          "recommended_attention": "Patch exposed gateways, investigate for PHP2Shell activity, and validate offline recovery for ESXi environments."
+        },
+        {
+          "heading": "AI agent invoice manipulation",
+          "what_happened": "A malicious email manipulated an AI agent used for invoice processing into changing vendor bank details without triggering traditional security alerts.",
+          "why_it_matters": "Autonomous agents can convert untrusted instructions into high-impact financial changes.",
+          "recommended_attention": "Require approval controls, strong validation, and monitoring for agent-initiated payment or vendor-account changes."
+        },
+        {
+          "heading": "Meta privacy fine",
+          "what_happened": "Italy’s data protection authority fined Meta €805 million over a Facebook for Android feature that accessed users’ photos, videos, and metadata without explicit consent.",
+          "why_it_matters": "The case highlights regulatory and privacy risks from default-enabled access to sensitive mobile data.",
+          "recommended_attention": "Audit default permissions, consent flows, and data access for mobile features."
+        },
+        {
+          "heading": "UnrealIRCd active exploitation",
+          "what_happened": "The Cybersecurity and Infrastructure Security Agency added a high-severity UnrealIRCd flaw to its Known Exploited Vulnerabilities catalog after reports of active exploitation. The flaw enables server-level command injection.",
+          "why_it_matters": "Active exploitation increases the urgency of securing exposed Internet Relay Chat servers.",
+          "recommended_attention": "Identify affected UnrealIRCd systems and prioritize remediation or isolation."
+        },
+        {
+          "heading": "PostgreSQL authenticated remote code execution",
+          "what_happened": "PostgreSQL updates fixed 52 flaws, including a 22-year-old type-confusion bug that lets a database user who can create objects run code on the server. Full protection also requires rebuilding installed C-language extensions.",
+          "why_it_matters": "A long-standing flaw can turn database privileges into server-level code execution.",
+          "recommended_attention": "Apply the updates and rebuild affected C-language extensions as required."
+        },
+        {
+          "heading": "AMD SEV-SNP confidential VM attacks",
+          "what_happened": "Researchers disclosed Mior and Skyfall attacks that can let rogue cloud hosts read data inside AMD SEV-SNP-protected virtual machines. Mior can also modify memory and fake a signed software report.",
+          "why_it_matters": "The attacks challenge confidentiality and attestation assumptions for protected cloud workloads.",
+          "recommended_attention": "Assess exposure when cloud operators control the hypervisor or, for Mior, the server BIOS."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Cursor confirms security breach led to malicious Claude Code extension",
+        "published_at": "2026-11-14T17:27:25+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+        "category": "Supply-chain security",
+        "summary": "Cursor confirmed a breach enabled hackers to distribute a malicious Claude Code extension through its marketplace after credentials were stolen from Fireworks AI.",
+        "why_it_matters": "The incident shows how compromised credentials can abuse a trusted extension marketplace and affect developer environments."
+      },
+      {
+        "title": "US disrupts North Korean campaign behind $400 million crypto theft",
+        "published_at": "2026-11-14T15:15:49+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/",
+        "category": "Cybercrime and nation-state activity",
+        "summary": "The U.S. government disrupted the North Korean FaceStealer social-engineering campaign, which stole more than $400 million in cryptocurrency.",
+        "why_it_matters": "The reported losses underline the financial impact of coordinated social engineering against cryptocurrency targets."
+      },
+      {
+        "title": "Trezor confirms crypto-stealing implants in three wallets, releases fix",
+        "published_at": "2026-11-13T19:38:36+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
+        "category": "Hardware and supply-chain security",
+        "summary": "Trezor confirmed that three Safe 5 devices sold by CryptoBilis contained implants designed to steal wallet recovery phrases and transmit them over cellular networks.",
+        "why_it_matters": "Malicious hardware inserted before delivery can compromise recovery secrets despite the security design of the device."
+      },
+      {
+        "title": "German military drone operations disrupted by cyberattack",
+        "published_at": "2026-11-13T17:31:56+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
+        "category": "Cyber operations",
+        "summary": "Quantum Systems confirmed that an incident detected in late October was part of an active cyberattack by hostile actors and disrupted German military drone operations.",
+        "why_it_matters": "The incident connects cyber activity to disruption of defense-related operational technology."
+      },
+      {
+        "title": "Check Point gateways hacked via PHP2Shell to deploy VMware ESXi wiper",
+        "published_at": "2026-11-13T16:21:43+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/",
+        "category": "Destructive attacks",
+        "summary": "Attackers targeted vulnerable Check Point Security Gateway instances with PHP2Shell attacks and deployed data-wiping malware on VMware ESXi hosts.",
+        "why_it_matters": "The attack path can move from an exposed gateway to destructive impact across virtualized infrastructure."
+      },
+      {
+        "title": "How one AI agent exposed five critical enterprise security gaps",
+        "published_at": "2026-11-13T15:01:11+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/how-one-ai-agent-exposed-five-critical-enterprise-security-gaps/",
+        "category": "AI security",
+        "summary": "An AI invoice-processing agent was manipulated by a malicious email into changing vendor bank details without triggering traditional security alerts.",
+        "why_it_matters": "The example illustrates how agent autonomy can create financial risk when untrusted inputs influence actions."
+      },
+      {
+        "title": "Italy Fines Meta €805 Million Over Facebook's Android Gallery Access Without Explicit Consent",
+        "published_at": "2026-11-15T11:27:31+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html",
+        "category": "Privacy and regulation",
+        "summary": "Italy’s data protection authority fined Meta €805 million after finding that a Facebook for Android feature accessed photos, videos, and related metadata without explicit consent.",
+        "why_it_matters": "The fine highlights the consequences of default-enabled access to sensitive personal data."
+      },
+      {
+        "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
+        "published_at": "2026-11-14T12:38:35+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
+        "category": "Vulnerability exploitation",
+        "summary": "The Cybersecurity and Infrastructure Security Agency added a high-severity UnrealIRCd flaw to its Known Exploited Vulnerabilities catalog following reports of active exploitation.",
+        "why_it_matters": "Active exploitation and server-level command injection make exposed UnrealIRCd systems a priority for remediation."
+      },
+      {
+        "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
+        "published_at": "2026-11-13T16:53:08+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
+        "category": "Database security",
+        "summary": "PostgreSQL fixed 52 flaws, including a type-confusion vulnerability that lets a database user who can create objects run code on the server. Rebuilding C-language extensions is also required for full protection.",
+        "why_it_matters": "The flaw can turn database-level privileges into operating-system code execution."
+      },
+      {
+        "title": "New Mior and Skyfall Attacks Let Rogue Cloud Hosts Steal Secrets From AMD SEV-SNP VMs",
+        "published_at": "2026-11-13T15:27:05+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/new-mior-and-skyfall-attacks-let-rogue.html",
+        "category": "Cloud and confidential computing",
+        "summary": "Mior and Skyfall can let a malicious cloud host read data inside AMD SEV-SNP-protected virtual machines; Mior can also modify memory and fake a signed report.",
+        "why_it_matters": "The attacks undermine key confidentiality and attestation protections when an attacker controls the hypervisor, and for Mior, the BIOS."
+      }
+    ],
+    "generated_at": "2026-11-15T13:00:05.670412+00:00",
+    "window_start": "2026-11-13T13:00:05.670412+00:00",
+    "window_end": "2026-11-15T13:00:05.670412+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing. Cursor confirmed that a breach led to a malicious Claude Code extension being distributed through its marketplace after an exposed Fireworks AI access key was abused. The United States disrupted North Korea’s FaceStealer campaign, which the Federal Bureau of Investigation, or FBI, says stole more than four hundred million dollars in cryptocurrency through social engineering and deepfake video calls. Trezor also confirmed hidden implants in three Safe 5 wallets sold by CryptoBilis; the implants could copy recovery phrases and send them over cellular networks. German military drone operations were disrupted in a cyberattack, while attackers used vulnerable Check Point gateways to deploy data-wiping malware on VMware ESXi hosts. An invoice-processing artificial intelligence agent was tricked into changing vendor bank details. Italy fined Meta eight hundred five million euros over access to phone galleries without explicit consent. Finally, actively exploited UnrealIRCd and PostgreSQL flaws need attention, and researchers disclosed attacks against AMD-protected cloud virtual machines."
+  }
+}
