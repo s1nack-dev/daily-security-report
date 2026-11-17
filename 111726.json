@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "title": "Cybersecurity News Briefing — November 17, 2026",
+    "overview": {
+      "executive_summary": "Today’s most consequential stories include a major Optimizely supply-chain attack affecting visitors to prominent websites, continuing exploitation of enterprise management platforms, breaches involving Uber and Barracuda, and accelerating use of artificial intelligence in cyberattacks.",
+      "sections": [
+        {
+          "heading": "Optimizely supply-chain attack",
+          "what_happened": "Attackers compromised Optimizely scripts delivered to websites operated by at least 178 organizations, including CNN, the BBC, and Zoom. The scripts served card-skimming code and iOS exploit kits.",
+          "why_it_matters": "A compromise of a widely used web service exposed visitors across many unrelated organizations to malicious code.",
+          "recommended_attention": "Organizations using Optimizely should review affected scripts and monitor visitors and payment activity."
+        },
+        {
+          "heading": "AI agents used in offensive cyber operations",
+          "what_happened": "Google said threat actors are deploying autonomous multi-agent frameworks to discover vulnerabilities, build exploits from software patches, and execute multi-stage intrusions.",
+          "why_it_matters": "Autonomous workflows could increase the speed and scale of vulnerability exploitation.",
+          "recommended_attention": "Review defenses against automated reconnaissance, exploit development, and multi-stage attacks."
+        },
+        {
+          "heading": "Uber driver data breach",
+          "what_happened": "Uber notified nearly 150,000 drivers that attackers stole their data after breaching AI infrastructure provider Fireworks in early October.",
+          "why_it_matters": "The incident shows how a compromise at an infrastructure provider can affect a large population of customers or workers.",
+          "recommended_attention": "Affected organizations should assess third-party exposure and review breach notifications."
+        },
+        {
+          "heading": "Barracuda cloud breach linked to ARTEX",
+          "what_happened": "Hackers breached Barracuda’s cloud environment using a stolen cloud access key and the ARTEX artificial intelligence penetration-testing framework.",
+          "why_it_matters": "The incident combines compromised cloud credentials with an AI-powered framework in an attack on a security company.",
+          "recommended_attention": "Audit cloud access keys and investigate use of offensive automation in cloud environments."
+        },
+        {
+          "heading": "ScreenConnect attacks continue",
+          "what_happened": "ConnectWise said attacks targeting on-premises ScreenConnect environments continue where identified third-party extensions remain enabled and recommended version 26.6.5 or later.",
+          "why_it_matters": "Remote monitoring and management environments can provide attackers with broad access to connected systems.",
+          "recommended_attention": "Update technician clients and disable or remove affected third-party extensions."
+        },
+        {
+          "heading": "N-central flaws exploited to deploy crypto miners",
+          "what_happened": "N-able patched 17 flaws in N-central, while attackers exploited earlier bugs to deploy cryptocurrency miners.",
+          "why_it_matters": "The activity demonstrates active exploitation of remote monitoring and management infrastructure.",
+          "recommended_attention": "Apply the critical update and check systems for unauthorized mining activity."
+        },
+        {
+          "heading": "Danfoss refrigeration controller flaws",
+          "what_happened": "Researchers disclosed six unpatched flaws in Danfoss AK-SM800A refrigeration controllers that could allow remote takeover without login. The newest firmware does not fix them.",
+          "why_it_matters": "Industrial refrigeration systems may be remotely exposed while no vendor patch is available.",
+          "recommended_attention": "Follow guidance from cybersecurity agencies and isolate exposed controllers where possible."
+        },
+        {
+          "heading": "iPhone microphone permission bypass",
+          "what_happened": "Researchers detailed a patched Apple audio-service flaw that allowed apps to record audio even after users denied microphone permission. Apple’s first updates containing the fix were released on August 17.",
+          "why_it_matters": "The flaw undermined a core privacy control on iPhones and iPads.",
+          "recommended_attention": "Ensure affected Apple devices have received the security update."
+        },
+        {
+          "heading": "Microsoft 365 global outage",
+          "what_happened": "Microsoft said a software bug introduced in July caused last week’s worldwide Microsoft 365 outage, leaving more than 80 percent of networking gateway servers unresponsive.",
+          "why_it_matters": "A months-old defect caused a cascading failure across a widely used cloud productivity platform.",
+          "recommended_attention": "Review cloud resilience, dependency mapping, and outage response plans."
+        },
+        {
+          "heading": "Ransomware affiliate extradited",
+          "what_happened": "A Kazakh national was extradited from Italy to face charges alleging attacks against United States schools, hospitals, and healthcare entities as a ransomware affiliate.",
+          "why_it_matters": "The case highlights continued legal action against individuals accused of targeting critical public and healthcare organizations.",
+          "recommended_attention": "Organizations in these sectors should maintain ransomware readiness and recovery capabilities."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Hijacked Optimizely Scripts Served Card Skimmer and iOS Exploit Kits to CNN, BBC and Zoom Visitors",
+        "published_at": "2026-11-17T07:12:13+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
+        "category": "Supply-chain attack",
+        "summary": "Attackers exploited a flaw in Optimizely Web Experimentation to plant malicious code in scripts loaded by websites operated by at least 178 organizations, including CNN, the BBC, and Zoom.",
+        "why_it_matters": "A compromised web service exposed visitors across many organizations to code designed to steal payment information and exploit iOS vulnerabilities."
+      },
+      {
+        "title": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
+        "published_at": "2026-11-16T14:00:00+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html",
+        "category": "Artificial intelligence and threats",
+        "summary": "Google said threat actors are using autonomous multi-agent offensive frameworks to discover vulnerabilities, build exploits from software patches, and conduct multi-stage intrusions.",
+        "why_it_matters": "Autonomous artificial intelligence workflows could accelerate attacks beyond the pace of manual operations."
+      },
+      {
+        "title": "Uber notifies drivers of data breach affecting nearly 150,000 people",
+        "published_at": "2026-11-17T08:35:42+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
+        "category": "Data breach",
+        "summary": "Uber is notifying nearly 150,000 drivers that attackers stole their data after breaching AI infrastructure provider Fireworks in early October.",
+        "why_it_matters": "The incident illustrates how a breach at an infrastructure provider can affect a large population connected to another company."
+      },
+      {
+        "title": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
+        "published_at": "2026-11-16T19:57:13+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/",
+        "category": "Cloud security",
+        "summary": "Hackers breached Barracuda’s cloud environment using a stolen cloud access key and the ARTEX artificial intelligence penetration-testing framework.",
+        "why_it_matters": "The attack combines stolen cloud credentials with AI-powered offensive tooling against a security company."
+      },
+      {
+        "title": "ConnectWise Warns ScreenConnect Attacks Continue as SCKit Targets Unpatched Systems",
+        "published_at": "2026-11-17T06:29:27+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html",
+        "category": "Active exploitation",
+        "summary": "ConnectWise said attacks against on-premises ScreenConnect environments continue where identified third-party extensions remain enabled, and recommended version 26.6.5 or later.",
+        "why_it_matters": "Remote monitoring and management environments can provide attackers with broad access to connected systems."
+      },
+      {
+        "title": "N-able Patches 17 N-central Flaws as Attackers Exploit Earlier Bugs to Deploy Crypto Miners",
+        "published_at": "2026-11-17T05:00:34+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
+        "category": "Vulnerability exploitation",
+        "summary": "N-able released a critical N-central update addressing 17 flaws, while attackers exploited earlier bugs to deploy cryptocurrency miners.",
+        "why_it_matters": "The activity shows that remote monitoring and management platforms are being actively targeted."
+      },
+      {
+        "title": "Six Unpatched Danfoss Refrigeration Controller Flaws Could Allow Remote Takeover Without Login",
+        "published_at": "2026-11-16T12:34:21+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/six-unpatched-danfoss-refrigeration.html",
+        "category": "Operational technology",
+        "summary": "Researchers disclosed six flaws in Danfoss AK-SM800A refrigeration controllers that could enable remote takeover without login. No patch is available, and firmware version 5.4.0 does not fix them.",
+        "why_it_matters": "Exposed industrial refrigeration controllers may remain vulnerable while operators wait for remediation."
+      },
+      {
+        "title": "Researchers Detail iPhone Flaw That Let Apps Record Audio Despite Denied Microphone Permission",
+        "published_at": "2026-11-17T12:14:36+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/researchers-detail-iphone-flaw-that-let.html",
+        "category": "Mobile privacy",
+        "summary": "A now-patched Apple audio-service flaw let apps record audio even after users denied microphone permission. The first updates containing the fix were released on August 17.",
+        "why_it_matters": "The vulnerability undermined a core privacy control on iPhones and iPads."
+      },
+      {
+        "title": "Microsoft says months-old bug caused global Microsoft 365 outage",
+        "published_at": "2026-11-16T16:43:24+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-months-old-bug-caused-global-microsoft-365-outage/",
+        "category": "Cloud resilience",
+        "summary": "Microsoft said a software bug introduced in July caused last week’s worldwide Microsoft 365 outage, leaving more than 80 percent of networking gateway servers unresponsive.",
+        "why_it_matters": "A defect present for months triggered a cascading failure across a widely used cloud platform."
+      },
+      {
+        "title": "Ransomware affiliate suspect extradited to US, faces 27 years in prison",
+        "published_at": "2026-11-17T07:25:44+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/alleged-inc-lynx-ransomware-affiliate-extradited-to-us-faces-27-years-in-prison/",
+        "category": "Ransomware enforcement",
+        "summary": "A Kazakh national was extradited from Italy to face charges alleging ransomware attacks against United States schools, hospitals, and healthcare entities.",
+        "why_it_matters": "The case reflects continued legal action against alleged ransomware affiliates targeting public and healthcare organizations."
+      }
+    ],
+    "generated_at": "2026-11-17T13:00:03.263093+00:00",
+    "window_start": "2026-11-15T13:00:03.263093+00:00",
+    "window_end": "2026-11-17T13:00:03.263093+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing. First, a major supply-chain attack involving Optimizely scripts affected visitors to websites operated by at least 178 organizations, including CNN, the BBC, and Zoom. The malicious code included card-skimming functionality and iOS exploit kits. Google also reported that threat actors are using autonomous artificial intelligence, or AI, agents to discover vulnerabilities, build exploits, and conduct multi-stage intrusions. In related news, hackers breached Barracuda’s cloud environment using a stolen access key and the ARTEX AI penetration-testing framework. Uber is notifying nearly 150,000 drivers after attackers stole data through a breach at infrastructure provider Fireworks. Enterprise management platforms remain under pressure: ScreenConnect attacks continue against unpatched environments, while N-able patched 17 N-central flaws after earlier bugs were exploited to deploy cryptocurrency miners. Researchers also disclosed six unpatched flaws in Danfoss refrigeration controllers that could allow remote takeover without login. Finally, Apple’s now-patched audio-service flaw could let apps record audio despite denied microphone permission, and Microsoft attributed its global Microsoft 365 outage to a months-old software bug. Organizations should prioritize patching, cloud access-key reviews, and third-party supply-chain monitoring."
+  }
+}
