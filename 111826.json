@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "title": "Top Cybersecurity Stories",
+    "overview": {
+      "executive_summary": "The most consequential candidates include actively exploited vulnerabilities, critical remote-code-execution risks, software supply-chain compromises, major cyberattacks, and significant data exposure.",
+      "sections": [
+        {
+          "heading": "Java4Shell requires immediate patching",
+          "what_happened": "CISA urged organizations to immediately patch CVE-2026-114938, a critical Oracle Java memory-corruption vulnerability that may allow unauthenticated remote code execution.",
+          "why_it_matters": "The flaw affects Java installations and runtimes, including those bundled with applications, containers, and appliances.",
+          "recommended_attention": "Identify affected Java deployments and prioritize patching, especially for internet-facing systems."
+        },
+        {
+          "heading": "Puppet vulnerability added to CISA’s exploited catalog",
+          "what_happened": "CISA added CVE-2026-115731, a Perforce Puppet deserialization vulnerability, to its Known Exploited Vulnerabilities catalog based on evidence of active exploitation.",
+          "why_it_matters": "Puppet Enterprise is used for infrastructure and configuration management, making vulnerable management servers consequential targets.",
+          "recommended_attention": "Prioritize remediation and assess whether exposed systems may have been compromised."
+        },
+        {
+          "heading": "Apache Roller flaw exploited in attacks",
+          "what_happened": "Apache released updates for a critical Roller vulnerability that threat actors are exploiting to gain code execution on vulnerable servers.",
+          "why_it_matters": "Active exploitation creates immediate risk for organizations operating affected Roller servers.",
+          "recommended_attention": "Apply the available security updates and review vulnerable systems for signs of exploitation."
+        },
+        {
+          "heading": "Microsoft agent-framework package compromised",
+          "what_happened": "Attackers compromised Microsoft’s agent-framework package and published malicious versions 1.26.1 and 1.26.2 designed to run a credential stealer on Python startup.",
+          "why_it_matters": "A compromised package can turn routine development activity into credential theft and cloud-account exposure.",
+          "recommended_attention": "Check package usage and versions, remove malicious releases, and investigate potentially exposed credentials."
+        },
+        {
+          "heading": "Fugaku supercomputer taken offline after breach",
+          "what_happened": "Japan’s RIKEN Center for Computational Science took the Fugaku supercomputer offline following a security breach.",
+          "why_it_matters": "The incident affected a major national computing resource and demonstrates the operational impact of a successful compromise.",
+          "recommended_attention": "Monitor further incident disclosures and review controls protecting high-value computing infrastructure."
+        },
+        {
+          "heading": "Hijacked Optimizely scripts delivered attack code",
+          "what_happened": "An attacker exploited Optimizely Web Experimentation to insert malicious code into scripts loaded by customer websites; visitors to sites operated by at least 178 organizations received the code.",
+          "why_it_matters": "Compromised third-party scripts can expose visitors across many unrelated websites to card-skimming and exploit-kit activity.",
+          "recommended_attention": "Audit Optimizely integrations, review script integrity, and assess visitor-impact evidence."
+        },
+        {
+          "heading": "Uber discloses breach affecting drivers",
+          "what_happened": "Uber notified nearly 150,000 drivers that attackers stole their data after breaching AI infrastructure provider Fireworks in early October.",
+          "why_it_matters": "The incident illustrates how compromise of a service provider can expose data belonging to a large population.",
+          "recommended_attention": "Review the notification details, determine affected data, and assess third-party access and monitoring controls."
+        },
+        {
+          "heading": "Cold Relic uses stolen cloud data for further compromise",
+          "what_happened": "The Russia-linked Cold Relic group used stolen Google Workspace data from one cloud compromise as a launchpad for linked intrusions that resulted in a second U.S. organization’s compromise.",
+          "why_it_matters": "The activity shows how one cloud intrusion can enable follow-on third-party compromises.",
+          "recommended_attention": "Review cloud-account access, session activity, and third-party trust relationships for linked intrusion indicators."
+        },
+        {
+          "heading": "Trigram campaign targets developers with infostealers",
+          "what_happened": "The Trigram campaign impersonated about 50 artificial intelligence and blockchain brands to trick developers into executing an infostealer themselves.",
+          "why_it_matters": "Developer-focused social engineering can expose credentials and intellectual property across technology organizations.",
+          "recommended_attention": "Warn developers about impersonation campaigns and strengthen controls around downloaded and executed tools."
+        },
+        {
+          "heading": "Tor deploys emergency update during DDoS attack",
+          "what_happened": "The Tor Project released an emergency update to strengthen network relay defenses during an ongoing distributed denial-of-service attack that overwhelmed relays and affected most operators.",
+          "why_it_matters": "The attack disrupted infrastructure supporting privacy-focused communications and required an emergency defensive release.",
+          "recommended_attention": "Apply the update and monitor relay availability and attack-related service degradation."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "Critical Java Vulnerability Requires Immediate Patching",
+        "published_at": "2026-11-17T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching",
+        "category": "Vulnerability",
+        "summary": "CISA urged immediate patching of CVE-2026-114938, a critical Java memory-corruption vulnerability known as Java4Shell that may allow unauthenticated remote code execution through specially crafted Base64 input.",
+        "why_it_matters": "Java runtimes may be embedded in third-party applications, containers, and appliances, making inventory and remediation difficult."
+      },
+      {
+        "title": "Hackers Exploiting Critical Puppet RCE Flaw Affecting Enterprise Management Servers",
+        "published_at": "2026-11-18T08:24:31+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html",
+        "category": "Active Exploitation",
+        "summary": "CISA added Perforce Puppet CVE-2026-115731 to its Known Exploited Vulnerabilities catalog, citing reports of active exploitation.",
+        "why_it_matters": "The vulnerability affects an enterprise infrastructure-as-code and configuration-management platform."
+      },
+      {
+        "title": "Apache warns of Roller RCE vulnerability exploited in attacks",
+        "published_at": "2026-11-18T10:35:05+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/",
+        "category": "Active Exploitation",
+        "summary": "Apache released security updates for a critical Roller vulnerability that threat actors are exploiting to gain code execution on vulnerable servers.",
+        "why_it_matters": "Active exploitation raises immediate risk for organizations running affected servers."
+      },
+      {
+        "title": "Attackers Compromise Microsoft's Agent Framework PyPI Package to Steal Cloud Credentials",
+        "published_at": "2026-11-18T06:45:26+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+        "category": "Supply Chain",
+        "summary": "Attackers compromised Microsoft’s agent-framework package and published malicious versions 1.26.1 and 1.26.2 that run a credential stealer on Python startup.",
+        "why_it_matters": "The incident creates a direct path from developer dependency use to credential and cloud-access theft."
+      },
+      {
+        "title": "Japan takes Fugaku supercomputer offlline after cyberattack",
+        "published_at": "2026-11-17T20:51:21+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
+        "category": "Cyberattack",
+        "summary": "Japan’s RIKEN Center for Computational Science took the Fugaku supercomputer offline following a security breach.",
+        "why_it_matters": "The breach disrupted a major national computing resource."
+      },
+      {
+        "title": "Hijacked Optimizely Scripts Served Card Skimmer and iOS Exploit Kits to CNN, BBC and Zoom Visitors",
+        "published_at": "2026-11-17T07:12:13+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
+        "category": "Web Supply Chain",
+        "summary": "An attacker exploited Optimizely Web Experimentation to plant malicious code in customer-loaded scripts, reaching visitors to sites operated by at least 178 organizations.",
+        "why_it_matters": "A compromised third-party script can distribute attack code across many otherwise unrelated websites."
+      },
+      {
+        "title": "Uber notifies drivers of data breach affecting nearly 150,000 people",
+        "published_at": "2026-11-17T08:35:42+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
+        "category": "Data Breach",
+        "summary": "Uber notified nearly 150,000 drivers that attackers stole their data after breaching AI infrastructure provider Fireworks in early October.",
+        "why_it_matters": "The breach demonstrates the potential downstream impact of a compromised service provider."
+      },
+      {
+        "title": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
+        "published_at": "2026-11-18T05:58:04+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
+        "category": "Cyber Espionage",
+        "summary": "Cold Relic used stolen Google Workspace data from one cloud compromise to support linked intrusions that resulted in a second U.S. organization’s compromise.",
+        "why_it_matters": "A single cloud compromise can become a launchpad for follow-on third-party intrusions."
+      },
+      {
+        "title": "Trigram Campaign Impersonates About 50 AI and Blockchain Brands to Target Devs with Infostealers",
+        "published_at": "2026-11-17T15:17:28+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html",
+        "category": "Social Engineering",
+        "summary": "The Trigram campaign impersonated about 50 artificial intelligence and blockchain brands to trick developers into executing an infostealer.",
+        "why_it_matters": "Developer-targeted impersonation can expose credentials and sensitive technology assets."
+      },
+      {
+        "title": "Tor releases emergency update amid ongoing DDoS attack",
+        "published_at": "2026-11-17T18:04:15+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/tor-releases-emergency-update-amid-ongoing-ddos-attack/",
+        "category": "Availability Attack",
+        "summary": "The Tor Project released an emergency update to strengthen relay defenses during an ongoing distributed denial-of-service attack that overwhelmed relays and affected most operators.",
+        "why_it_matters": "The attack caused widespread relay disruption and required an emergency defensive release."
+      }
+    ],
+    "generated_at": "2026-11-18T13:00:03.143870+00:00",
+    "window_start": "2026-11-16T13:00:03.143870+00:00",
+    "window_end": "2026-11-18T13:00:03.143870+00:00"
+  },
+  "tts": {
+    "text": "Here’s your cybersecurity briefing. First, CISA urged immediate patching for Java4Shell, a critical Java memory-corruption flaw that may allow unauthenticated remote code execution. Java runtimes can be bundled inside applications, containers, and appliances, so organizations should check their full software inventory. CISA also added a Perforce Puppet vulnerability to its Known Exploited Vulnerabilities, or KEV, catalog after reports of active exploitation. Apache separately warned that a critical Roller flaw is being exploited for code execution. In supply-chain news, attackers compromised Microsoft’s agent-framework Python package with versions designed to steal credentials at startup. Japan took the Fugaku supercomputer offline after a breach. A hijacked Optimizely service delivered malicious scripts to visitors across at least 178 organizations. Uber said nearly 150,000 drivers were affected by data stolen through a provider breach. The Cold Relic group used stolen Google Workspace data to compromise another organization, while the Trigram campaign impersonated roughly 50 technology brands to target developers. Finally, Tor released an emergency update during an ongoing distributed denial-of-service, or DDoS, attack."
+  }
+}
