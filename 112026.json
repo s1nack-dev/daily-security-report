@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "title": "Cybersecurity News Briefing — November 20, 2026",
+    "overview": {
+      "executive_summary": "The most consequential developments include active exploitation of critical enterprise infrastructure flaws, major software vulnerabilities affecting widely deployed platforms, and significant data exposure incidents. VMware vCenter, Cisco Expressway, NGINX, Apache Roller, PHP, and industrial-control products require urgent review where affected versions are deployed.",
+      "sections": [
+        {
+          "heading": "VMware vCenter zero-day",
+          "what_happened": "A critical authentication-bypass flaw in VMware vCenter Server has been exploited in attacks since September, including activity attributed to a suspected China-linked group.",
+          "why_it_matters": "Attackers can gain unauthorized administrative access and steal data from a central virtualization-management system.",
+          "recommended_attention": "Apply Broadcom’s fixed versions and review exposed vCenter systems and recent activity."
+        },
+        {
+          "heading": "Cisco Expressway exploitation",
+          "what_happened": "Threat actors exploited a critical Cisco Expressway flaw shortly after a proof-of-concept exploit became public, breaching four devices and reaching an internal network.",
+          "why_it_matters": "The vulnerability can be exploited remotely without authentication and carries a 9.8 severity score.",
+          "recommended_attention": "Prioritize Cisco’s security updates and investigate internet-accessible Expressway appliances."
+        },
+        {
+          "heading": "F5 BIG-IP emergency patches",
+          "what_happened": "F5 released emergency patches for critical BIG-IP vulnerabilities that can cause denial of service or potentially enable remote code execution in specific configurations.",
+          "why_it_matters": "BIG-IP devices handle network traffic, so exploitation could disrupt services or compromise edge infrastructure.",
+          "recommended_attention": "Identify affected configurations and apply the emergency patches."
+        },
+        {
+          "heading": "NGINX nginx2root flaws",
+          "what_happened": "A decade-old NGINX HTTP/2 vulnerability can allow unauthenticated attackers to execute code on servers with HTTP/2 enabled. Fixed versions were released.",
+          "why_it_matters": "The flaw affects open-source NGINX versions dating back to 2015 and can be chained with a Linux kernel bug to gain root access.",
+          "recommended_attention": "Update affected NGINX deployments and check whether HTTP/2 is enabled."
+        },
+        {
+          "heading": "Apache Roller active exploitation",
+          "what_happened": "A critical Apache Roller vulnerability involving unauthenticated deserialization in the XML-RPC endpoint is under active exploitation.",
+          "why_it_matters": "The flaw can lead to remote code execution without authentication.",
+          "recommended_attention": "Patch Apache Roller immediately and investigate exposed XML-RPC endpoints."
+        },
+        {
+          "heading": "PHP critical security updates",
+          "what_happened": "PHP released updates addressing multiple critical flaws, including vulnerabilities that could allow unauthenticated remote code execution. A related issue, phpAfterShell, affects default file-based session handling under specific conditions.",
+          "why_it_matters": "PHP is widely used on servers, and successful exploitation could allow attackers to run code in affected applications.",
+          "recommended_attention": "Update all supported PHP deployments and assess applications using file-based sessions."
+        },
+        {
+          "heading": "Drupal installer flaw",
+          "what_happened": "Drupal patched a critical core vulnerability that can allow unauthenticated attackers, under specific conditions, to use the built-in installer to attempt to reinstall a site.",
+          "why_it_matters": "A successful attack could result in site takeover or remote code execution.",
+          "recommended_attention": "Apply fixed Drupal releases and verify that vulnerable installer conditions are not exposed."
+        },
+        {
+          "heading": "CISA adds four exploited flaws to KEV",
+          "what_happened": "The Cybersecurity and Infrastructure Security Agency added vulnerabilities affecting Synology DiskStation Manager, BerriAI LiteLLM, Apache Axis, and Vanderbilt University Research Electronic Data Capture to its Known Exploited Vulnerabilities catalog.",
+          "why_it_matters": "CISA cited evidence of active exploitation linked to ransomware, cryptomining, and large language model-jacking attacks.",
+          "recommended_attention": "Check inventories for these products and prioritize remediation according to CISA guidance."
+        },
+        {
+          "heading": "OpenPLC unauthenticated admin-account creation",
+          "what_happened": "A race condition in Autonomy Logic OpenPLC Runtime versions 4.2.4 and earlier can allow several unauthenticated administrator accounts to be created.",
+          "why_it_matters": "The affected products support critical-manufacturing, energy, transportation, and water-related environments.",
+          "recommended_attention": "Update to OpenPLC Runtime 4.3.0 or later and review accounts created on affected systems."
+        },
+        {
+          "heading": "Elecbrakes trailer-brake vulnerabilities",
+          "what_happened": "CISA reported three vulnerabilities affecting Elecbrakes EB2, VM1, and ELBC2000 products. Exploitation could control trailer brakes, modify firmware, disable brake lights, or disable other safety features.",
+          "why_it_matters": "The advisory carries a 9.6 severity score and concerns transportation safety systems deployed in Australia and New Zealand.",
+          "recommended_attention": "Identify affected versions and apply the vendor fix."
+        },
+        {
+          "heading": "SBC Medical Group data exposure",
+          "what_happened": "SBC Medical Group reported that two cybersecurity incidents exposed sensitive customer and employee information belonging to 1.6 million people.",
+          "why_it_matters": "The incident affects a large population and includes personal data.",
+          "recommended_attention": "Monitor the company’s filings and provide affected individuals with incident guidance as available."
+        },
+        {
+          "heading": "Linux KVM host-memory exposure",
+          "what_happened": "Researchers demonstrated that a Linux Kernel-based Virtual Machine flaw could let a guest virtual machine read about 127 GB of cloud-server memory on AMD hosts with nested virtualization enabled.",
+          "why_it_matters": "On shared infrastructure, exposed memory may include data from other customers’ virtual machines.",
+          "recommended_attention": "Deploy fixed kernels and review AMD hosts using nested virtualization."
+        }
+      ]
+    },
+    "stories": [
+      {
+        "title": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
+        "published_at": "2026-11-20T09:38:15+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html",
+        "category": "Active exploitation",
+        "summary": "A suspected China-nexus group exploited a critical VMware vCenter authentication-bypass flaw in zero-day attacks beginning in early September 2026.",
+        "why_it_matters": "The flaw can provide unauthorized access to vCenter, the central console for managing ESX hosts and virtual machines, and attackers used it to gain admin access and steal data."
+      },
+      {
+        "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
+        "published_at": "2026-11-20T10:32:50+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
+        "category": "Active exploitation",
+        "summary": "Threat actors exploited CVE-2026-76466 in Cisco Expressway shortly after a proof-of-concept exploit was publicly released, breaching four devices at a Russian organization and reaching its internal network.",
+        "why_it_matters": "The 9.8-severity flaw can be exploited remotely without authentication."
+      },
+      {
+        "title": "F5 releases emergency patches for critical BIG-IP RCE flaws",
+        "published_at": "2026-11-20T10:57:43+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/",
+        "category": "Network security",
+        "summary": "F5 warned customers to patch five critical BIG-IP vulnerabilities that attackers can exploit to trigger denial of service or gain remote code execution.",
+        "why_it_matters": "BIG-IP systems are key network-edge infrastructure, making disruption or compromise potentially consequential."
+      },
+      {
+        "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
+        "published_at": "2026-11-18T18:31:17+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html",
+        "category": "Web infrastructure",
+        "summary": "The nginx2root flaw, present in NGINX open-source code since version 1.9.5, can allow unauthenticated code execution on servers with HTTP/2 enabled. Fixed versions 1.31.9 and 1.30.7 were released.",
+        "why_it_matters": "Researchers said the flaw can be chained with a Linux kernel bug to gain root access."
+      },
+      {
+        "title": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
+        "published_at": "2026-11-18T17:10:45+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html",
+        "category": "Active exploitation",
+        "summary": "A critical Apache Roller vulnerability involving unauthenticated deserialization in the XML-RPC endpoint is under active exploitation in the wild.",
+        "why_it_matters": "The CVSS 9.8 flaw can lead to remote code execution without authentication."
+      },
+      {
+        "title": "PHP Fixes 7 Critical Flaws, Including Bugs That Could Allow Remote Code Execution",
+        "published_at": "2026-11-19T15:18:07+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html",
+        "category": "Software security",
+        "summary": "The PHP Foundation released security updates addressing multiple critical flaws, including bugs that could enable remote code execution on affected deployments.",
+        "why_it_matters": "The vulnerabilities affect supported PHP versions and could expose servers running PHP applications."
+      },
+      {
+        "title": "Drupal Patches Critical Installer Flaw That Could Give Unauthenticated Attackers Control of Sites",
+        "published_at": "2026-11-19T14:33:06+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html",
+        "category": "Web application security",
+        "summary": "Drupal patched a critical core vulnerability that can allow unauthenticated attackers under specific conditions to use the built-in installer to attempt to reinstall a site.",
+        "why_it_matters": "A successful attack could lead to site takeover or remote code execution."
+      },
+      {
+        "title": "CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks",
+        "published_at": "2026-11-19T08:00:00+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
+        "category": "Active exploitation",
+        "summary": "CISA added vulnerabilities in Synology DiskStation Manager, BerriAI LiteLLM, Apache Axis, and Vanderbilt University Research Electronic Data Capture to its Known Exploited Vulnerabilities catalog.",
+        "why_it_matters": "CISA cited evidence of active exploitation connected to ransomware, cryptomining, and large language model-jacking attacks."
+      },
+      {
+        "title": "Autonomy Logic OpenPLC Runtime",
+        "published_at": "2026-11-19T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-01",
+        "category": "Industrial control systems",
+        "summary": "A race condition in OpenPLC Runtime version 4.2.4 and earlier can allow multiple concurrent requests to create several unauthenticated administrator accounts. CISA recommends updating to version 4.3.0 or later.",
+        "why_it_matters": "The affected runtime is used across critical-manufacturing, energy, transportation, and water-related sectors."
+      },
+      {
+        "title": "Elecbrakes EB2, VM1, ELBC2000",
+        "published_at": "2026-11-19T12:00:00+00:00",
+        "source": "CISA",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-02",
+        "category": "Industrial control systems",
+        "summary": "CISA reported three vulnerabilities in Elecbrakes EB2, VM1, and ELBC2000 products that could allow attackers to control trailer brakes, modify firmware, disable brake lights, or disable other safety features.",
+        "why_it_matters": "The advisory reports a 9.6 severity score and concerns transportation safety products deployed in Australia and New Zealand."
+      },
+      {
+        "title": "Hackers steal data of 1.6 million SBC Medical Group customers",
+        "published_at": "2026-11-19T22:25:42+00:00",
+        "source": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/",
+        "category": "Data breach",
+        "summary": "SBC Medical Group disclosed in a filing with the U.S. Securities and Exchange Commission that two cybersecurity incidents exposed sensitive customer and employee information belonging to 1.6 million people.",
+        "why_it_matters": "The reported scale and inclusion of personal data make this a significant privacy incident."
+      },
+      {
+        "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
+        "published_at": "2026-11-20T12:20:00+00:00",
+        "source": "The Hacker News",
+        "url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
+        "category": "Cloud and virtualization security",
+        "summary": "A Linux Kernel-based Virtual Machine flaw allowed researchers to read about 127 GB of cloud-server memory from inside a guest virtual machine on an AMD host with nested virtualization enabled.",
+        "why_it_matters": "On shared servers, exposed memory can include data belonging to other customers’ virtual machines."
+      }
+    ],
+    "generated_at": "2026-11-20T13:00:03.615268+00:00",
+    "window_start": "2026-11-18T13:00:03.615268+00:00",
+    "window_end": "2026-11-20T13:00:03.615268+00:00"
+  },
+  "tts": {
+    "text": "Here’s today’s cybersecurity briefing. The most urgent story is a VMware vCenter zero-day exploited since September by a suspected China-linked group. Attackers gained administrative access and stole data, so affected vCenter systems need immediate patching and review. Cisco Expressway is also being exploited after a proof-of-concept became public, with four devices breached and an internal network reached. F5 issued emergency patches for critical BIG-IP flaws that can cause outages or possibly remote code execution. NGINX disclosed a decade-old HTTP/2 issue that can let unauthenticated attackers run code, while Apache Roller faces active exploitation of a flaw that requires no authentication. PHP and Drupal both released fixes for critical remote-code-execution risks. CISA added four actively exploited vulnerabilities to its Known Exploited Vulnerabilities catalog, involving Synology, LiteLLM, Apache Axis, and REDCap. In industrial systems, OpenPLC can allow unauthenticated administrator accounts, while Elecbrakes flaws could affect trailer braking and safety features. Finally, SBC Medical Group reported data exposure affecting 1.6 million people, and a Linux KVM flaw exposed host memory from guest virtual machines on certain AMD systems."
+  }
+}
